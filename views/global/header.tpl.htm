@@ -18,25 +18,25 @@
 			<div class="R2-Top-block R2-Top-blockBelow R2-height50 R2-xs-height39">
 				<ul class="browsableStreamTabs R2-borderTopLightest">
 					<li class="browsableStreamTabs-item">
-						<a class="R2-link R2-link--darker <?php if (!$_GET['app'] OR $_GET['app'] == 'explore') { ?>R2-link--darken<?php } ?>" href="<?php echo base_url(); ?>">首页</a>
+						<a class="R2-link <?php if (!$_GET['app'] OR $_GET['app'] == 'explore') { ?>R2-link--darker<?php } ?> R2-link--darken" href="<?php echo base_url(); ?>">首页</a>
 					</li>
 					<?php if ($this->user_id) { ?>
 					<li class="browsableStreamTabs-item">
-						<a class="R2-link R2-link--darker <?php if (!$_GET['app'] OR $_GET['app'] == 'home') { ?>R2-link--darken<?php } ?>" href="home/">For you</a>
+						<a class="R2-link <?php if (!$_GET['app'] OR $_GET['app'] == 'home') { ?>R2-link--darker<?php } ?> R2-link--darken" href="home/">For you</a>
 					</li>
 					<?php } ?>
 					<li class="browsableStreamTabs-item">
-						<a class="R2-link R2-link--darker" href="question/">问题</a>
+						<a class="R2-link <?php if (!$_GET['app'] OR $_GET['app'] == 'question') { ?>R2-link--darker<?php } ?> R2-link--darken" href="question/">问题</a>
 					</li>
 					<li class="browsableStreamTabs-item">
-						<a class="R2-link R2-link--darker" href="article/">文章</a>
+						<a class="R2-link <?php if (!$_GET['app'] OR $_GET['app'] == 'article') { ?>R2-link--darker<?php } ?> R2-link--darken" href="article/">文章</a>
 					</li>
 					<li class="browsableStreamTabs-item">
-						<a class="R2-link R2-link--darker" href="topic/">话题</a>
+						<a class="R2-link <?php if (!$_GET['app'] OR $_GET['app'] == 'topic') { ?>R2-link--darker<?php } ?> R2-link--darken" href="topic/">话题</a>
 					</li>
 					<?php if ($this->user_id) { ?>
 					<li class="browsableStreamTabs-item">
-						<a class="R2-link R2-link--darker" href="inbox/">私信</a>
+						<a class="R2-link <?php if (!$_GET['app'] OR $_GET['app'] == 'inbox') { ?>R2-link--darker<?php } ?> R2-link--darken" href="inbox/">私信</a>
 					</li>
 					<?php } ?>
 				</ul>
