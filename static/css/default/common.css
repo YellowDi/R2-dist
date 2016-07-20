@@ -4476,3 +4476,19 @@ blockquote {
         font-size: 15px
     }
 }
+
+/*** Project-R2(popover) ***/
+
+.R2-popover {
+    overflow: hidden;
+    position: absolute;
+    z-index: 900;
+    font-size: 12px;
+    text-align: center;
+    padding: 15px;
+    visibility: hidden;
+    pointer-events: auto
+}
+.R2-popover.is-active {
+    visibility: visible
+}
