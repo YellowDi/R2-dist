@@ -47,7 +47,7 @@
 						<a class="R2-link <?php if (!$_GET['app'] OR $_GET['app'] == 'inbox') { ?>R2-link--darker<?php } ?> R2-link--darken" href="inbox/">私信</a>
 					</li>
 					<li class="browsableStreamTabs-item">
-						<a class="R2-link R2-link--darken" href="account/setting/profile/">设置</a>
+						<a class="R2-link <?php if (!$_GET['app'] OR $_GET['app'] == 'account') { ?>R2-link--darker<?php } ?> R2-link--darken" href="account/setting/profile/">设置</a>
 					</li>
 					  <?php if ($this->user_info['permission']['is_administortar'] OR $this->user_info['permission']['is_moderator']) { ?>
 							<li class="browsableStreamTabs-item">
