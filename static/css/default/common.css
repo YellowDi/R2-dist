@@ -4279,12 +4279,21 @@ blockquote {
     color: rgba(0, 0, 0, .8);
     border-color: rgba(0, 0, 0, .6)
 }
+.R2-button--primary, .R2-button--primary .label, .R2-button--primary.R2-button--link {
+    color: #00ab6b
+}
 .R2-button--primary {
     border-color: #02b875
 }
 .R2-button--primary:active, .R2-button--primary:focus, .R2-button--primary:hover {
     border-color: #00ab6b;
     color: #1c9963
+}
+.R2-button--primary.R2-button--chromeless:active, .R2-button--primary.R2-button--chromeless:focus, .R2-button--primary.R2-button--chromeless:hover {
+    color: #1c9963
+}
+.R2-button--primary.button--link:active, .R2-button--primary.button--link:focus, .R2-button--primary.button--link:hover {
+    color: #00ab6b
 }
 .R2-button--chromeless, .R2-button--link {
     border-radius: 0;
