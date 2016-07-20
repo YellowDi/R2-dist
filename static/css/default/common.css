@@ -4365,7 +4365,8 @@ blockquote {
 /*** Project-R2(header) ***/
 
 .R2-Top {
-    position: absolute;
+    /*position: absolute;*/
+		position: relative;
     display: block;
     z-index: 500;
     width: 100%;
