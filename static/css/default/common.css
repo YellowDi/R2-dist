@@ -4279,6 +4279,18 @@ blockquote {
     color: rgba(0, 0, 0, .8);
     border-color: rgba(0, 0, 0, .6)
 }
+.R2-button--chromeless, .R2-button--link {
+    border-radius: 0;
+    box-shadow: none;
+    height: auto;
+    line-height: inherit;
+    border-width: 0;
+    padding: 0;
+    vertical-align: baseline;
+    color: rgba(0, 0, 0, .44);
+    white-space: normal;
+    text-align: left
+}
 .R2-button--primary, .R2-button--primary .label, .R2-button--primary.R2-button--link {
     color: #00ab6b
 }
@@ -4294,18 +4306,6 @@ blockquote {
 }
 .R2-button--primary.button--link:active, .R2-button--primary.button--link:focus, .R2-button--primary.button--link:hover {
     color: #00ab6b
-}
-.R2-button--chromeless, .R2-button--link {
-    border-radius: 0;
-    box-shadow: none;
-    height: auto;
-    line-height: inherit;
-    border-width: 0;
-    padding: 0;
-    vertical-align: baseline;
-    color: rgba(0, 0, 0, .44);
-    white-space: normal;
-    text-align: left
 }
 .R2-button--chromeless:active, .R2-button--chromeless:focus, .R2-button--chromeless:hover, .R2-button--link:active, .R2-button--link:focus, .R2-button--link:hover {
     color: rgba(0, 0, 0, .6);
