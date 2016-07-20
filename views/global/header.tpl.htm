@@ -13,19 +13,9 @@
 					<?php if ($this->user_id) { ?>
 						<a href="people/<?php echo $this->user_info['url_token']; ?>" class="R2-button R2-button--chromeless is-inSiteNavBar">
 							<div class="R2-avatar">
-								<img src="<?php echo get_avatar_url($this->user_info['uid'], 'mid'); ?>" class="R2-avatar-image R2-avatar-image--icon" alt="<?php echo $this->user_info['user_name']; ?>">
+								<img src="<?php echo get_avatar_url($this->user_info['uid'], 'max'); ?>" class="R2-avatar-image R2-avatar-image--icon" alt="<?php echo $this->user_info['user_name']; ?>">
 							</div>
 						</a>
-						<div class="aw-dropdown dropdown-list pull-right">
-			        <ul class="aw-dropdown-list">
-			          <li><a href="inbox/"><i class="icon icon-inbox"></i> <?php _e('私信'); ?><span class="badge badge-important collapse" id="inbox_unread">0</span></a></li>
-			          <li class="hidden-xs"><a href="account/setting/profile/"><i class="icon icon-setting"></i> <?php _e('设置'); ?></a></li>
-			          <?php if ($this->user_info['permission']['is_administortar'] OR $this->user_info['permission']['is_moderator']) { ?>
-			          <li class="hidden-xs"><a href="admin/"><i class="icon icon-job"></i> <?php _e('管理'); ?></a></li>
-			          <?php } ?>
-			          <li><a href="account/logout/"><i class="icon icon-logout"></i> <?php _e('退出'); ?></a></li>
-			        </ul>
-			      </div>
 					<?php } else { ?>
 					<a class="R2-button R2-button--primary R2-button--chromeless is-inSiteNavBar R2-marginRight15 R2-lineHeight30 R2-height32" href="account/login/">登录 / 注册</a>
 					<?php } ?>
