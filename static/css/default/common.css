@@ -192,14 +192,14 @@ html {
 body {
     margin: 0;
     height: 100%;
-    color: rgba(0,0,0,.8);
-		font-size: 18px;
+    color: rgba(0, 0, 0, .8);
+    font-size: 18px;
     line-height: 1.4;
     background: #fafafa;
 }
 body, input, button, select, textarea, h1, h2, h3, h4, h5, h6 {
-    font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen,Ubuntu,Cantarell,"Open Sans","Helvetica Neue",sans-serif;
-		text-rendering: optimizeLegibility;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+    text-rendering: optimizeLegibility;
     -webkit-font-smoothing: antialiased;
 }
 ul, ol {
@@ -4170,5 +4170,268 @@ blockquote {
     }
     .aw-footer {
         padding: 20px 0 0px;
+    }
+}
+
+/*** Project-R2(basic) ***/
+
+@media screen and (max-width:991px) {
+    .R2-sm-hide {
+        display: none!important
+    }
+}
+.R2-clearfix:after, .R2-clearfix:before {
+    display: table;
+    content: " "
+}
+.R2-clearfix:after {
+    clear: both
+}
+.R2-floatLeft {
+    float: left!important;
+}
+.R2-floatRight {
+    float: right!important;
+}
+.R2-marginAuto {
+    margin: 0 auto;
+}
+.R2-maxWidth1000 {
+    max-width: 1000px!important;
+}
+.R2-marginRight15 {
+    margin-right: 15px!important;
+}
+.R2-paddingLeft20 {
+    padding-left: 20px!important;
+}
+.R2-paddingRight20 {
+    padding-right: 20px!important;
+}
+.R2-height32 {
+    height: 32px!important;
+}
+.R2-height50 {
+    height: 50px!important
+}
+.R2-height65 {
+    height: 65px!important;
+}
+@media screen and (max-width:767px) {
+    .R2-xs-height39 {
+        height: 39px!important
+    }
+    .R2-xs-height56 {
+        height: 56px!important
+    }
+}
+.R2-lineHeight30 {
+    line-height: 30px!important
+}
+.R2-borderTopLightest {
+    border-top: 1px solid rgba(0, 0, 0, .05)!important
+}
+
+/*** Project-R2(button) ***/
+
+.R2-button {
+    display: inline-block;
+    position: relative;
+    height: 37px;
+    padding: 0 16px;
+    color: rgba(0, 0, 0, .44);
+    background: rgba(0, 0, 0, 0);
+    font-size: 14px;
+    text-align: center;
+    text-decoration: none;
+    cursor: pointer;
+    border: 1px solid rgba(0, 0, 0, .15);
+    vertical-align: bottom;
+    white-space: nowrap;
+    text-rendering: auto;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    box-sizing: border-box;
+    border-radius: 999em;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+    letter-spacing: 0;
+    font-weight: 400;
+    font-style: normal;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    -moz-font-feature-settings: "liga" on;
+}
+.R2-button:active {
+    outline: 0
+}
+.R2-button {
+    line-height: 35px
+}
+.R2-button:hover {
+    color: rgba(0, 0, 0, .6);
+    border-color: rgba(0, 0, 0, .44)
+}
+.R2-button:active, .R2-button:focus {
+    outline: 0;
+    color: rgba(0, 0, 0, .8);
+    border-color: rgba(0, 0, 0, .6)
+}
+.R2-button--primary {
+    border-color: #02b875
+}
+.R2-button--primary:active, .R2-button--primary:focus, .R2-button--primary:hover {
+    border-color: #00ab6b;
+    color: #1c9963
+}
+.R2-button--chromeless, .R2-button--link {
+    border-radius: 0;
+    box-shadow: none;
+    height: auto;
+    line-height: inherit;
+    border-width: 0;
+    padding: 0;
+    vertical-align: baseline;
+    color: rgba(0, 0, 0, .44);
+    white-space: normal;
+    text-align: left
+}
+.R2-button--chromeless:active, .R2-button--chromeless:focus, .R2-button--chromeless:hover, .R2-button--link:active, .R2-button--link:focus, .R2-button--link:hover {
+    color: rgba(0, 0, 0, .6);
+    border-width: 0
+}
+.R2-buttonSet>.R2-button, .R2-buttonSet>.R2-buttonSet-inner>.R2-button {
+    margin-right: 8px;
+    vertical-align: middle;
+}
+.R2-buttonSet .R2-button--chromeless, .R2-buttonSet .R2-button--link {
+    height: 37px;
+    line-height: 35px;
+}
+.R2-buttonSet>.R2-button--chromeless:not(.R2-button--circle) {
+    margin-right: 0;
+    padding-right: 8px;
+}
+@media screen and (max-width:767px) {
+    .R2-button.is-inSiteNavBar {
+        margin-right: 10px
+    }
+}
+.R2-link {
+    color: inherit;
+    text-decoration: none;
+    cursor: pointer
+}
+.R2-link:active, .R2-link:focus, .R2-link:hover {
+    color: inherit;
+    text-decoration: underline
+}
+.R2-link--darker {
+    color: rgba(0, 0, 0, .8)
+}
+.R2-link.R2-link--darken:hover {
+    color: rgba(0, 0, 0, .6)
+}
+.R2-link--darker.R2-link--darken:hover {
+    color: rgba(0, 0, 0, .9)
+}
+.R2-link--darken:not(.R2-link--underline):active, .R2-link--darken:not(.R2-link--underline):focus, .R2-link--darken:not(.R2-link--underline):hover {
+    text-decoration: none
+}
+
+/*** Project-R2(header) ***/
+
+.R2-Top {
+    position: absolute;
+    display: block;
+    z-index: 500;
+    width: 100%;
+    font-size: 14px;
+    background: #fff;
+    color: rgba(0, 0, 0, .44);
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+    letter-spacing: 0;
+    font-weight: 400;
+    font-style: normal;
+    box-sizing: border-box;
+    top: 0;
+    box-shadow: 0 0 1px rgba(0, 0, 0, .15);
+}
+.R2-Top-inner {
+    position: relative;
+}
+.R2-Top-inner:after, .R2-Top-inner:before {
+    display: table;
+    content: " "
+}
+.R2-Top-inner:after {
+    clear: both
+}
+.R2-Top-block {
+    position: relative;
+    z-index: 500;
+}
+.R2-Top-block:not(.R2-Top-blockCenter) {
+    position: relative;
+    z-index: 500
+}
+.R2-Top-blockCenter {
+    position: absolute;
+    left: 0;
+    right: 0;
+    text-align: center;
+    height: 100%
+}
+.R2-Top-blockBelow {
+    box-sizing: border-box
+}
+.R2-logo {
+    position: relative;
+    display: inline-block;
+    padding-top: 10px;
+    padding-left: 12px;
+    padding-right: 14px;
+    z-index: 700;
+    border: 0;
+}
+.R2-Top .R2-logo {
+    padding-left: 0;
+    margin-left: -4px;
+}
+.R2-logo img {
+    width: 45px;
+    height: 45px;
+}
+.browsableStreamTabs {
+    -ms-flex-direction: row;
+    flex-direction: row;
+    text-align: left;
+    height: 100%;
+    overflow-x: hidden;
+    overflow-y: hidden;
+    color: rgba(0, 0, 0, .44)
+}
+.browsableStreamTabs-item {
+    display: table-cell;
+    padding: 13px 20px 15px 0;
+    font-size: 16px;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+    letter-spacing: 0;
+    font-weight: 400;
+    font-style: normal;
+    white-space: nowrap
+}
+@media (max-width:767px) {
+    .browsableStreamTabs {
+        padding-bottom: 5px;
+        overflow-x: scroll;
+        -webkit-overflow-scrolling: touch;
+        -ms-overflow-style: -ms-autohiding-scrollbar
+    }
+    .browsableStreamTabs-item {
+        padding: 10px 14px 11px 0;
+        font-size: 15px
     }
 }
