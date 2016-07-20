@@ -4362,11 +4362,30 @@ blockquote {
     text-decoration: none
 }
 
+/*** Project-R2(avatar) ***/
+
+.R2-avatar {
+    display: block;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    line-height: normal
+}
+.R2-avatar-image {
+    display: inline-block;
+    vertical-align: middle;
+    border-radius: 100%
+}
+.R2-avatar-image--icon {
+    width: 32px;
+    height: 32px
+}
+
 /*** Project-R2(header) ***/
 
 .R2-Top {
     /*position: absolute;*/
-		position: relative;
+    position: relative;
     display: block;
     z-index: 500;
     width: 100%;

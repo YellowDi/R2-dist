@@ -5,12 +5,20 @@
 	<div class="R2-Top R2-clearfix">
 		<div class="R2-Top-inner R2-marginAuto R2-maxWidth1000 R2-paddingLeft20 R2-paddingRight20">
 			<div class="R2-Top-block R2-Top-blockLeft R2-floatLeft R2-height65 R2-xs-height56">
-				<a href="http://r2vg.com" class="R2-logo"><img src="http://7xp0k6.com1.z0.glb.clouddn.com/Logo.png" alt="R2VG Logo"></a>
+				<a href="/" class="R2-logo"><img src="http://7xp0k6.com1.z0.glb.clouddn.com/Logo.png" alt="R2VG Logo"></a>
 			</div>
 			<div class="R2-Top-block R2-Top-blockRight R2-floatRight R2-height65 R2-xs-height56">
 				<div class="R2-buttonSet">
-					<a class="R2-button R2-button--chromeless is-inSiteNavBar R2-sm-hide R2-marginRight15 R2-lineHeight30 R2-height32" href="http://r2vg.com/publish/">提问</a>
-					<a class="R2-button R2-button--primary R2-button--chromeless is-inSiteNavBar R2-marginRight15 R2-lineHeight30 R2-height32" href="http://r2vg.com/account/login/">登录 / 注册</a>
+					<a class="R2-button R2-button--chromeless is-inSiteNavBar R2-sm-hide R2-marginRight15 R2-lineHeight30 R2-height32" href="publish/">提问</a>
+					<?php if ($this->user_id) { ?>
+						<a href="people/<?php echo $this->user_info['url_token']; ?>" class="R2-button R2-button--chromeless is-inSiteNavBar">
+							<div class="R2-avatar">
+								<img src="<?php echo get_avatar_url($this->user_info['uid'], 'mid'); ?>" class="R2-avatar-image R2-avatar-image--icon" alt="<?php echo $this->user_info['user_name']; ?>">
+							</div>
+						</a>
+					<?php } else { ?>
+					<a class="R2-button R2-button--primary R2-button--chromeless is-inSiteNavBar R2-marginRight15 R2-lineHeight30 R2-height32" href="account/login/">登录 / 注册</a>
+					<?php } ?>
 				</div>
 			</div>
 		</div>
