@@ -4311,6 +4311,18 @@ blockquote {
     color: rgba(0, 0, 0, .6);
     border-width: 0
 }
+.R2-Top .R2-buttonSet:last-child {
+    margin-right: 0
+}
+.R2-Top .R2-buttonSet {
+    line-height: 44px;
+}
+.R2-Top .R2-buttonSet, .R2-Top-block>.R2-button {
+    margin: 10px;
+    display: inline-block;
+    white-space: nowrap;
+    vertical-align: top;
+}
 .R2-buttonSet>.R2-button, .R2-buttonSet>.R2-buttonSet-inner>.R2-button {
     margin-right: 8px;
     vertical-align: middle;
