@@ -1,25 +1,34 @@
-<div class="aw-mod aw-text-align-justify">
-	<div class="mod-head">
-		<a href="topic/channel-hot" class="pull-right"><?php _e('更多'); ?> &gt;</a>
-		<h3><?php if ($this->feature_info){ ?><?php _e('该专题包含'); ?> <?php _e('%s 个话题', $this->feature_info['topic_count']); ?><?php } else { ?><?php _e('热门话题'); ?><?php } ?></h3>
+<div class="R2-sidebar2-content">
+	<div class="R2-heading R2-clearfix R2-heading--borderedBottom R2-heading--allCaps R2-heading--normal R2-heading--simple">
+		<div class="R2-clearfix">
+			<div class="R2-heading-content R2--floatLeft">
+				<span class="R2-heading-title">热门标签</span>
+			</div>
+		</div>
 	</div>
-	<div class="mod-body">
+	<ul class="R2-marginTop20">
 		<?php if (is_array($this->sidebar_hot_topics)) { ?>
-		<?php foreach($this->sidebar_hot_topics AS $key => $val) {?>
-			<dl>
-				<dt class="pull-left aw-border-radius-5">
-					<a href="topic/<?php echo $val['topic_title'];?>"><img alt="" src="<?php echo get_topic_pic_url('mid', $val['topic_pic']); ?>" /></a>
-				</dt>
-				<dd class="pull-left">
-					<p class="clearfix">
-						<span class="topic-tag">
-							<a href="topic/<?php echo $val['topic_title'];?>" class="text" data-id="<?php echo $val['topic_id']; ?>"><?php echo $val['topic_title'];?></a>
-						</span>
-					</p>
-					<p><?php _e('%s 个问题', '<b>' . $val['discuss_count'] . '</b>'); ?>, <?php _e('%s 人关注', '<b>' . $val['focus_count'] . '</b>'); ?></p>
-				</dd>
-			</dl>
+			<?php foreach($this->sidebar_hot_topics AS $key => $val) {?>
+				<li class="catalogPreview-item">
+					<div class="R2-heading-items--avatar">
+						<a class="R2-link R2-avatar" href="topic/<?php echo $val['topic_title'];?>">
+							<img src="<?php echo get_topic_pic_url('mid', $val['topic_pic']); ?>" class="R2-avatar-image R2-avatar-image--icon R2-avatar-image--outlined">
+						</a>
+					</div>
+					<div class="R2-heading-items--title">
+						<div class="R2-titleLockup R2-clearfix">
+							<div class="R2-titleLockup-title">
+								<a class="R2-link R2-link--darker R2-link--darken" href="topic/<?php echo $val['topic_title'];?>" data-id="<?php echo $val['topic_id']; ?>"><?php echo $val['topic_title'];?></a>
+							</div>
+							<div class="R2-titleLockup-meta">
+								<div class="R2-titleLockup-creator">
+									<a class="R2-link R2-link--darken" href="topic/<?php echo $val['topic_title'];?>"><?php _e('%s 个问题', '<span>' . $val['discuss_count'] . '</span>'); ?></a>
+								</div>
+							</div>
+						</div>
+					</div>
+				</li>
+			<?php } ?>
 		<?php } ?>
-		<?php } ?>
-	</div>
+	</ul>
 </div>

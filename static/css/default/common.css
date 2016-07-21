@@ -4199,6 +4199,9 @@ blockquote {
 .R2-marginAuto {
     margin: 0 auto;
 }
+.R2-marginTop20 {
+    margin-top: 20px!important
+}
 .R2-marginBottom10 {
     margin-bottom: 10px!important
 }
@@ -4686,19 +4689,20 @@ blockquote {
 }
 .R2-postArticle--title {
     margin-top: 0;
-    font-size: 31px;
-    margin-left: -1.94px;
-    line-height: 1.12;
+    font-size: 24px;
+		font-weight: 700;
+		font-style: normal;
+    margin-left: -1.5px;
+    line-height: 1.18;
     letter-spacing: -.022em;
 }
 .R2-postArticle--text {
-    margin-top: 22px;
     font-size: 18px;
     font-weight: 400;
     font-style: normal;
     line-height: 1.5;
     letter-spacing: -.004em;
-		color: rgba(0,0,0,.8);
+    color: rgba(0, 0, 0, .8);
 }
 .R2-postArticle-content {
     position: relative;
@@ -4768,7 +4772,7 @@ blockquote {
     }
 }
 .R2-sidebar .R2-heading {
-	margin-top: 40px;
+    margin-top: 40px;
 }
 
 /*** Project-R2(heading) ***/
@@ -4804,6 +4808,44 @@ blockquote {
 }
 .R2-heading--normal, .R2-heading--normal .R2-heading-content, .R2-heading--normal .R2-heading-title {
     color: rgba(0, 0, 0, .44)
+}
+.R2-heading-items {
+    margin: 20px;
+}
+.R2-heading-items--avatar {
+    display: table-cell;
+    padding-right: 18px;
+    padding-top: 2px;
+    vertical-align: top;
+}
+.R2-heading-items--title {
+    display: table-cell;
+    vertical-align: top;
+}
+.R2-titleLockup {
+    font-size: 14px;
+    line-height: 1.2;
+}
+.R2-titleLockup-title {
+    color: rgba(0, 0, 0, .8);
+}
+.R2-titleLockup-meta {
+    display: -ms-flexbox;
+    display: flex;
+    color: rgba(0, 0, 0, .44);
+    padding-top: 1px;
+}
+.R2-titleLockup-creator {
+    -ms-flex-positive: 1;
+    flex-grow: 1;
+    -ms-flex-negative: 1;
+    flex-shrink: 1;
+    max-width: 100%;
+    min-width: 0;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    padding-top: 2px
 }
 
 /*** Project-R2(promo) ***/
