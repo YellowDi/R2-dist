@@ -9,15 +9,16 @@
 			</div>
 			<div class="R2-Top-block R2-Top-blockRight R2-floatRight R2-height65 R2-xs-height56">
 				<div class="R2-buttonSet">
-					<a class="R2-button R2-button--chromeless is-inSiteNavBar R2-sm-hide R2-marginRight15 R2-lineHeight30 R2-height32" href="publish/">提问</a>
 					<?php if ($this->user_id) { ?>
+					<a class="R2-button R2-button--primary R2-button--chromeless is-inSiteNavBar R2-sm-hide R2-marginRight15 R2-lineHeight30 R2-height32" href="publish/">提问</a>
 						<a href="people/<?php echo $this->user_info['url_token']; ?>" class="R2-button R2-button--chromeless is-inSiteNavBar">
 							<div class="R2-avatar">
 								<img src="<?php echo get_avatar_url($this->user_info['uid'], 'max'); ?>" class="R2-avatar-image R2-avatar-image--icon" alt="<?php echo $this->user_info['user_name']; ?>">
 							</div>
 						</a>
 					<?php } else { ?>
-					<a class="R2-button R2-button--primary R2-button--chromeless is-inSiteNavBar R2-marginRight15 R2-lineHeight30 R2-height32" href="account/login/">登录 / 注册</a>
+						<a class="R2-button R2-button--chromeless is-inSiteNavBar R2-sm-hide R2-marginRight15 R2-lineHeight30 R2-height32" href="publish/">提问</a>
+						<a class="R2-button R2-button--primary R2-button--chromeless is-inSiteNavBar R2-marginRight15 R2-lineHeight30 R2-height32" href="account/login/">登录 / 注册</a>
 					<?php } ?>
 				</div>
 			</div>
