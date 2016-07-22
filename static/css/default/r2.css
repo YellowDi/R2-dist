@@ -170,7 +170,7 @@ td, th {
     padding-left: .45em
 }
 .middotDivider:after {
-    content: 'Â·'
+    content: '·'
 }
 .subscript {
     margin-left: 2px;
