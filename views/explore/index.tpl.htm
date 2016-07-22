@@ -18,22 +18,26 @@
 		</div>
 	<?php } ?>
 
-</div>
+	<div class="u-foreground homeContainer-content u-maxWidth1000 u-marginAuto u-clearfix u-sizeViewHeightMin100">
+		<div class="u-clearfix u-positionRelative">
 
-	<div class="R2-foreground R2-homeContainer-content R2-maxWidth1000 R2-marginAuto R2-clearfix R2-sizeViewHeightMin100">
-		<div class="R2-clearfix R2-positionRelative">
-			<div class="R2-homeContainer-stream">
-				<?php echo $this->posts_list_bit; ?>
+			<div class="homeContainer-stream">
+				<div class="js-homeStream">
+					<?php echo $this->posts_list_bit; ?>
+				</div>
 			</div>
-			<div class="R2-sidebar R2-sidebar--width340">
-				<div class="R2-sidebar-contentWrapper R2-sidebar-contentWrapper2">
+
+			<div class="js-sidebar2 sidebar sidebar--width340">
+				<div class="sidebar-contentWrapper sidebar-contentWrapper2">
 					<?php TPL::output('block/sidebar_feature.tpl.htm'); ?>
 					<?php TPL::output('block/sidebar_hot_topics.tpl.htm'); ?>
 					<?php TPL::output('block/sidebar_hot_users.tpl.htm'); ?>
 				</div>
 			</div>
+
 		</div>
 	</div>
 
+</div>
 
 <?php TPL::output('global/footer.tpl.htm'); ?>
