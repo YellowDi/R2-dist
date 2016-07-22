@@ -1,295 +1,208 @@
-<?php TPL::output('global/header.tpl.htm'); ?>
+<?php TPL::output('global/header-less.tpl.htm'); ?>
 
-<div class="aw-container-wrap">
-    <div class="container">
-        <div class="row">
-            <div class="aw-content-wrap clearfix">
-                <div class="col-sm-12 col-md-9 aw-main-content aw-article-content">
-                    <div class="aw-mod aw-topic-bar" id="question_topic_editor" data-type="article" data-id="<?php echo $this->article_info['id']; ?>">
-                        <div class="tag-bar clearfix">
-                            <?php if ($this->article_topics) { ?>
-                            <?php foreach($this->article_topics as $key => $val) { ?>
-                            <span class="topic-tag" data-id="<?php echo $val['topic_id']; ?>">
-                                <a class="text" href="topic/<?php echo $val['url_token']; ?>"><?php echo $val['topic_title']; ?></a>
-                            </span>
-                            <?php } ?>
-                            <?php } ?>
-
-                            <?php if ($this->user_info['permission']['is_administortar'] OR $this->user_info['permission']['is_moderator']) { ?><span class="icon-inverse aw-edit-topic"><i class="icon icon-edit"></i> <?php if (sizeof($this->article_topics) == 0) { ?><?php _e('添加话题')?><?php } ?></span><?php } ?>
-                        </div>
-                    </div>
-                    <div class="aw-mod aw-question-detail">
-                        <div class="mod-head">
-                            <h1>
-                                <?php echo $this->article_info['title']; ?>
-                            </h1>
-
-                            <?php if ($this->user_info['permission']['is_administortar'] OR $this->user_info['permission']['is_moderator']) { ?>
-                            <div class="operate clearfix">
-                                <!-- 下拉菜单 -->
-                                <div class="btn-group pull-left">
-                                    <a class="btn btn-gray dropdown-toggle" data-toggle="dropdown" href="javascript:;">...</a>
-                                    <div class="dropdown-menu aw-dropdown pull-right" role="menu" aria-labelledby="dropdownMenu">
-                                        <ul class="aw-dropdown-list">
-                                            <li>
-                                                <a href="javascript:;" onclick="AWS.ajax_request(G_BASE_URL + '/article/ajax/lock/', 'article_id=<?php echo $this->article_info['id']; ?>');"><?php if ($this->article_info['lock']) { ?><?php _e('解除锁定'); ?><?php } else { ?><?php _e('锁定文章'); ?><?php } ?></a>
-                                            </li>
-                                            <li>
-                                                <a href="javascript:;" onclick="AWS.dialog('confirm', {'message' : '<?php _e('确认删除?'); ?>'}, function(){AWS.ajax_request(G_BASE_URL + '/article/ajax/remove_article/', 'article_id=<?php echo $this->article_info['id']; ?>');});"><?php _e('删除文章'); ?></a>
-                                            </li>
-                                            <li>
-                                                <a href="javascript:;" onclick="AWS.ajax_request(G_BASE_URL + '/article/ajax/set_recommend/', 'action=<?php if ($this->article_info['is_recommend']) { ?>un<?php } ?>set&article_id=<?php echo $this->article_info['id']; ?>');"><?php if ($this->article_info['is_recommend']) { ?><?php _e('取消推荐'); ?><?php } else { ?><?php _e('推荐文章'); ?><?php } ?></a>
-                                            </li>
-                                            <li>
-                                                <a href="javascript:;" onclick="AWS.dialog('recommend', {'type': 'article', 'item_id': <?php echo $this->article_info['id']; ?>, 'focus_id': <?php if ($this->article_info['chapter_id']) { echo $this->article_info['chapter_id']; } else { ?>''<?php } ?>});"><?php _e('添加到帮助中心'); ?></a>
-                                            </li>
-                                        </ul>
-                                    </div>
-                                </div>
-                                <!-- end 下拉菜单 -->
-                            </div>
-                            <?php } ?>
-                        </div>
-                        <div class="mod-body">
-                            <div class="content markitup-box">
-                                <?php echo $this->article_info['message']; ?>
-
-                                <?php if ($this->article_info['attachs']) {  ?>
-                                <div class="aw-upload-img-list">
-                                <?php foreach ($this->article_info['attachs'] AS $attach) { ?>
-                                <?php if ($attach['is_image'] AND (!$this->article_info['attachs_ids'] OR !in_array($attach['id'], $this->article_info['attachs_ids']))) { ?>
-                                    <a href="<?php echo $attach['attachment']; ?>" target="_blank" data-fancybox-group="thumb" rel="lightbox"><img src="<?php echo $attach['attachment']; ?>" class="img-polaroid" alt="<?php echo $attach['file_name']; ?>" /></a>
-                                <?php } ?>
-                                <?php } ?>
-                                </div>
-                                <?php } ?>
-
-                                <?php if ($this->article_info['attachs']) {  ?>
-                                <ul class="aw-upload-file-list">
-                                    <?php foreach ($this->article_info['attachs'] AS $attach) { ?>
-                                    <?php if (!$attach['is_image'] AND (!$this->article_info['attachs_ids'] OR !in_array($attach['id'], $this->article_info['attachs_ids']))) { ?>
-                                        <li><a href="<?php echo download_url($attach['file_name'], $attach['attachment']); ?>"><i class="icon icon-attach"></i> <?php echo $attach['file_name']; ?></a></li>
-                                    <?php } ?>
-                                    <?php } ?>
-                                </ul>
-                                <?php } ?>
-                            </div>
-                            <div class="meta clearfix">
-                                <div class="aw-article-vote pull-left<?php if (!$this->user_id OR $this->user_id == $this->article_info['uid']) { ?> disabled<?php } ?>">
-                                    <a href="javascript:;" class="agree<?php if ($this->article_info['vote_info']['rating'] == 1) { ?> active<?php } ?>" onclick="AWS.User.article_vote($(this), <?php echo $this->article_info['id']; ?>, 1);"><i class="icon icon-agree"></i> <b><?php echo $this->article_info['votes']; ?></b></a>
-                                    <?php if ($this->user_id AND $this->user_id != $this->article_info['uid']) { ?>
-                                    <a href="javascript:;" class="disagree<?php if ($this->article_info['vote_info']['rating'] == -1) { ?> active<?php } ?>" onclick="AWS.User.article_vote($(this), <?php echo $this->article_info['id']; ?>, -1);"><i class="icon icon-disagree"></i></a>
-                                    <?php } ?>
-                                </div>
-
-                                <span class="pull-right  more-operate">
-                                    <?php if ((!$this->article_info['lock'] AND ($this->article_info['uid'] == $this->user_id OR $this->user_info['permission']['edit_article'])) OR $this->user_info['permission']['is_administortar'] OR $this->user_info['permission']['is_moderator']) { ?>
-                                    <a class="text-color-999" href="publish/article/<?php echo $this->article_info['id']; ?>"><i class="icon icon-edit"></i> <?php _e('编辑'); ?></a>
-                                    <?php } ?>
-
-                                    <?php if ($this->user_id) { ?><a href="javascript:;" onclick="AWS.dialog('favorite', {item_id:<?php echo $this->article_info['id']; ?>, item_type:'article'});" class="text-color-999"><i class="icon icon-favor"></i> <?php _e('收藏'); ?></a><?php } ?>
-
-                                    <a class="text-color-999 dropdown-toggle" data-toggle="dropdown">
-                                        <i class="icon icon-share"></i> <?php _e('分享'); ?>
-                                    </a>
-                                    <div aria-labelledby="dropdownMenu" role="menu" class="aw-dropdown shareout pull-right">
-                                        <ul class="aw-dropdown-list">
-                                            <li><a onclick="AWS.User.share_out({webid: 'tsina', content: $(this).parents('.aw-question-detail').find('.markitup-box')});"><i class="icon icon-weibo"></i> <?php _e('微博'); ?></a></li>
-											<li><a onclick="AWS.User.share_out({webid: 'qzone', content: $(this).parents('.aw-question-detail')});"><i class="icon icon-qzone"></i> <?php _e('QZONE'); ?></a></li>
-											<li><a onclick="AWS.User.share_out({webid: 'weixin', content: $(this).parents('.aw-question-detail')});"><i class="icon icon-wechat"></i> <?php _e('微信'); ?></a></li>
-                                        </ul>
-                                    </div>
-
-                                    <em class="text-color-999"><?php echo date_friendly($this->article_info['add_time'], 604800, 'Y-m-d'); ?></em>
-                                </span>
-                            </div>
-                        </div>
-                        <div class="mod-footer">
-                            <?php if ($this->article_info['vote_users']) { ?>
-                            <div class="aw-article-voter">
-                                <?php foreach ($this->article_info['vote_users'] AS $key => $val) { ?>
-                                <a href="people/<?php echo $val['url_token']; ?>" class="voter" data-toggle="tooltip" data-placement="right" data-original-title="<?php echo $val['user_name']; ?>"><img alt="<?php echo $val['user_name']; ?>" src="<?php echo get_avatar_url($val['uid'], 'mid'); ?>" /></a>
-                                <?php } ?>
-                                <!--<a class="more-voters">...</a>-->
-                            </div>
-                            <?php } ?>
-                        </div>
-                    </div>
-
-                    <!-- 文章评论 -->
-                    <div class="aw-mod">
-                        <div class="mod-head common-head">
-                            <h2><?php _e('%s 个评论', $this->comments_count); ?></h2>
-                        </div>
-
-                        <div class="mod-body aw-feed-list">
-                            <?php if ($this->comments) { ?>
-
-                                <?php foreach ($this->comments AS $key => $val) { ?>
-                                <div class="aw-item" id="answer_list_<?php echo $val['id']; ?>">
-                                    <div class="mod-head">
-                                        <a class="aw-user-img aw-border-radius-5" href="people/<?php echo $val['user_info']['url_token']; ?>">
-                                            <img src="<?php echo get_avatar_url($val['uid'], 'mid'); ?>" alt="<?php echo $val['user_info']['user_name']; ?>" />
-                                        </a>
-                                        <p>
-                                            <a href="people/<?php echo $val['user_info']['url_token']; ?>"><?php echo $val['user_info']['user_name']; ?></a><?php if ($val['at_user_info']) { ?> <?php _e('回复'); ?> <a href="people/<?php echo $val['at_user_info']['url_token']; ?>"><?php echo $val['at_user_info']['user_name']; ?></a><?php } ?>
-                                        </p>
-                                    </div>
-                                    <div class="mod-body">
-                                        <div class="markitup-box">
-                                            <?php echo nl2br($val['message']); ?>
-                                        </div>
-                                    </div>
-                                    <div class="mod-footer">
-                                        <div class="meta">
-                                            <span class="pull-right text-color-999"><?php echo date_friendly($val['add_time']); ?></span>
-                                            <?php if ($this->user_id) { ?>
-                                                <a class="text-color-999 <?php if ($val['vote_info']['rating'] == 1) { ?> active<?php } ?>" onclick="AWS.User.article_comment_vote($(this), <?php echo $val['id']; ?>, 1)"><i class="icon icon-agree"></i> <?php echo $val['votes']; ?> <?php if ($val['vote_info']['rating'] == 1) { ?><?php _e('我已赞'); ?><?php } else { ?><?php _e('赞'); ?><?php } ?></a>
-                                                <a class="aw-article-comment text-color-999" data-id="<?php echo $val['user_info']['uid']; ?>"><i class="icon icon-comment"></i> <?php _e('回复'); ?></a>
-                                                <?php if ($this->user_info['permission']['is_administortar'] OR $this->user_info['permission']['is_moderator']) { ?>
-                                                <a class="text-color-999" onclick="AWS.dialog('confirm', {'message' : '<?php _e('确认删除?'); ?>'}, function(){AWS.ajax_request(G_BASE_URL + '/article/ajax/remove_comment/', 'comment_id=<?php echo $val['id']; ?>');});"><i class="icon icon-trash"></i> <?php _e('删除'); ?></a>
-                                                <?php } ?>
-                                            <?php } ?>
-                                        </div>
-                                    </div>
-                                </div>
-                                <?php } ?>
-                            <?php } ?>
-                        </div>
-
-                        <?php if ($_GET['item_id']) { ?>
-                        <div class="mod-footer">
-                                <a href="article/<?php echo $this->article_info['id']; ?>" class="aw-load-more-content">
-                                    <span><?php _e('查看全部评论'); ?></span>
-                                </a>
-                        </div>
-                        <?php } ?>
-
-                        <?php if ($this->pagination) { ?>
-                            <div class="clearfix"><?php echo $this->pagination; ?></div>
-                        <?php } ?>
-                    </div>
-                    <!-- end 文章评论 -->
-
-                    <!-- 回复编辑器 -->
-                    <div class="aw-mod aw-article-replay-box">
-                        <a name="answer_form"></a>
-                        <?php if ($this->article_info['lock']) { ?>
-                        <p align="center"><?php _e('该文章目前已经被锁定, 无法添加新评论'); ?></p>
-                        <?php } else if (!$this->user_id) { ?>
-                        <p align="center"><?php _e('要回复文章请先<a href="account/login/">登录</a>或<a href="account/register/">注册</a>'); ?></p>
-                        <?php } else { ?>
-                        <form action="article/ajax/save_comment/" onsubmit="return false;" method="post" id="answer_form">
-                        <input type="hidden" name="post_hash" value="<?php echo new_post_hash(); ?>" />
-                        <input type="hidden" name="article_id" value="<?php echo $this->article_info['id']; ?>" />
-                        <div class="mod-head">
-                            <a href="people/" class="aw-user-name"><img alt="<?php echo $this->user_info['user_name']; ?>" src="<?php echo get_avatar_url($this->user_info['uid'], 'mid'); ?>" /></a>
-                        </div>
-                        <div class="mod-body">
-                            <textarea rows="3" name="message" id="comment_editor" class="form-control autosize" placeholder="写下你的评论..."  /></textarea>
-                        </div>
-                        <div class="mod-footer clearfix">
-                            <a href="javascript:;" onclick="AWS.ajax_post($('#answer_form'), AWS.ajax_processer, 'reply');" class="btn btn-normal btn-success pull-right btn-submit btn-reply"><?php _e('回复'); ?></a>
-                            <?php if ($this->human_valid) { ?>
-                            <em class="auth-img pull-right"><img src="" onclick="this.src = G_BASE_URL + '/account/captcha/' + Math.floor(Math.random() * 10000);" id="captcha" /></em>
-                            <input class="pull-right form-control" type="text" name="seccode_verify" placeholder="<?php _e('验证码'); ?>" />
-                            <?php } ?>
-                        </div>
-                        </form>
-                        <?php } ?>
-                    </div>
-                    <!-- end 回复编辑器 -->
+<div class="site-main surface-container">
+  <div class="surface">
+    <div class="screenContent surface-content is-supplementalPostContentLoaded">
+      <article class="u-sizeViewHeightMin100 postArticle postArticle--full">
+        <header class="container u-maxWidth740">
+          <div class="postMetaHeader u-paddingBottom10 row">
+            <div class="col u-size12of12 js-postMetaLockup">
+              <div class="postMetaLockup postMetaLockup--authorWithBio u-flex js-postMetaLockup">
+                <div class="u-flex0">
+                  <a class="link avatar u-baseColor--link" href="people/<?php echo $this->article_info['user_info']['url_token']; ?>">
+                    <img src="<?php echo get_avatar_url($this->article_info['uid'], 'max'); ?>" class="avatar-image avatar-image--smaller" alt="<?php echo $this->article_info['user_info']['user_name']; ?>">
+                  </a>
                 </div>
-                <!-- 侧边栏 -->
-                <div class="col-sm-12 col-md-3 aw-side-bar hidden-sm hidden-xs">
-                    <!-- 发起人 -->
-                    <?php if ($this->article_info['anonymous'] == 0) { ?>
-                    <div class="aw-mod user-detail">
-                        <div class="mod-head">
-                            <h3><?php _e('发起人'); ?></h3>
-                        </div>
-                        <div class="mod-body">
-                            <dl>
-                                <dt class="pull-left aw-border-radius-5">
-                                    <a href="people/<?php echo $this->article_info['user_info']['url_token']; ?>"><img alt="<?php echo $this->article_info['user_info']['user_name']; ?>" src="<?php echo get_avatar_url($this->article_info['uid'], 'mid'); ?>" /></a>
-                                </dt>
-                                <dd class="pull-left">
-                                    <a class="aw-user-name" href="people/<?php echo $this->article_info['user_info']['url_token']; ?>" data-id="<?php echo $this->article_info['user_info']['uid']; ?>"><?php echo $this->article_info['user_info']['user_name'];?></a>
-                                    <?php if ($this->article_info['user_info']['verified']) { ?>
-                                        <i class="icon-v<?php if ($this->article_info['user_info']['verified'] == 'enterprise') { ?> i-ve<?php } ?>" title="<?php if ($this->article_info['user_info']['verified'] == 'enterprise') { ?>企业认证<?php } else { ?>个人认证<?php } ?>"></i>
-                                    <?php } ?>
-
-                                    <?php if ($this->article_info['user_info']['uid'] != $this->user_id AND $this->user_id) { ?>
-                                    <a class="icon-inverse follow tooltips icon icon-plus <?php if ($this->user_follow_check) { ?> active<?php } ?>" onclick="AWS.User.follow($(this), 'user', <?php echo $this->article_info['user_info']['uid']; ?>);"></a>
-                                    <?php } ?>
-                                    <p><?php echo $this->article_info['user_info']['signature']; ?></p>
-                                </dd>
-                            </dl>
-                        </div>
-                        <div class="mod-footer clearfix">
-                            <?php if ($this->reputation_topics) { ?>
-                            <div class="aw-topic-bar">
-                                <div class="topic-bar clearfix">
-                                    <span class="pull-left text-color-999">
-                                        <?php _e('擅长话题'); ?> : &nbsp;
-                                    </span>
-                                    <?php foreach ($this->reputation_topics AS $key => $val) { ?>
-                                    <span class="topic-tag">
-                                        <a href="topic/<?php echo $val['url_token']; ?>" class="text" data-id="<?php echo $val['topic_id']; ?>"><?php echo $val['topic_title']; ?></a>
-                                    </span>
-                                    <?php } ?>
-                                </div>
-                            </div>
-                            <?php } ?>
-                        </div>
-                    </div>
-                    <?php } ?>
-                    <!-- end 发起人 -->
-
-                    <?php if ($this->recommend_posts) { ?>
-                    <!-- 推荐内容 -->
-                    <div class="aw-mod">
-                        <div class="mod-head">
-                            <h3><?php _e('推荐内容'); ?></h3>
-                        </div>
-                        <div class="mod-body">
-                            <ul>
-                                <?php foreach($this->recommend_posts AS $key => $val) { ?>
-                                <li>
-                                    <?php if ($val['question_id']) { ?>
-                                    <a href="question/<?php echo $val['question_id']; ?>"><?php echo $val['question_content']; ?></a>
-                                    <?php } else { ?>
-                                    <a href="article/<?php echo $val['id']; ?>"><?php echo $val['title']; ?></a>
-                                    <?php } ?>
-                                </li>
-                                <?php } ?>
-                            </ul>
-                        </div>
-                    </div>
-                    <!-- end 推荐内容 -->
-                    <?php } ?>
-
-                    <?php if ($this->question_related_list) { ?>
-                    <!-- 相关问题 -->
-                    <div class="aw-mod aw-text-align-justify question-related-list">
-                        <div class="mod-head">
-                            <h3><?php _e('相关问题'); ?></h3>
-                        </div>
-                        <div class="mod-body font-size-12">
-                            <ul>
-                                <?php foreach($this->question_related_list AS $key => $val) { ?>
-                                <li><a href="question/<?php echo $val['question_id']; ?>"><?php echo $val['question_content']; ?></a></li>
-                                <?php } ?>
-                            </ul>
-                        </div>
-                    </div>
-                    <!-- end 相关问题 -->
-                    <?php } ?>
+                <div class="u-flex1 u-paddingLeft15 u-overflowHidden">
+                  <a class="link link link--darken link--darker u-baseColor--link" href="people/<?php echo $this->article_info['user_info']['url_token']; ?>" data-id="<?php echo $this->article_info['user_info']['uid']; ?>"><?php echo $this->article_info['user_info']['user_name'];?></a>
+                  <div class="postMetaInline"><?php echo date_friendly($this->article_info['add_time'], 604800, 'Y-m-d'); ?></div>
                 </div>
-                <!-- end 侧边栏 -->
+              </div>
             </div>
-        </div>
+          </div>
+        </header>
+        <main class="postArticle-content js-postField js-notesSource">
+          <section class="section--body section--first section--last">
+            <div class="section-divider layoutSingleColumn"><hr class="section-divider"></div>
+            <div class="section-content">
+              <div class="section-inner layoutSingleColumn">
+                <h3 class="graf--h3 graf--startsWithDoubleQuote graf--leading graf--title"><?php echo $this->article_info['title']; ?></h3>
+                <p class="graf--p graf-after--p"><?php echo $this->article_info['message']; ?></p>
+              </div>
+            </div>
+          </section>
+        </main>
+
+        <footer class="u-paddingTop10">
+
+          <?php if ($this->article_topics) { ?>
+          <div class="container u-maxWidth740">
+            <div class="row"><div class="col u-size12of12"></div></div>
+            <div class="row">
+              <div class="col u-size12of12 js-postTags">
+                <div class="postTags">
+                  <?php foreach($this->article_topics as $key => $val) { ?>
+                  <div class="tags tags--postTags tags--borderless" >
+                    <a class="link u-baseColor--link" href="topic/<?php echo $val['url_token']; ?>" data-id="<?php echo $val['topic_id']; ?>"><?php echo $val['topic_title']; ?></a>
+                  </div>
+                  <?php } ?>
+                </div>
+              </div>
+            </div>
+          </div>
+          <?php } ?>
+
+          <div class="js-postBundleWrapper postBundleWrapper">
+            <div class="relatedPostGridContainer">
+              <div class="relatedPostGrid container u-maxWidth740">
+                <div class="heading u-clearfix u-margin10 u-fontSizeSmaller u-textColorDark"><div class="u-clearfix"><div class="heading-content u-floatLeft"><span class="heading-title heading-title--semibold u-margin10 u-fontSizeSmaller u-textColorDark">相关内容</span></div></div></div>
+              </div>
+            </div>
+          </div>
+
+          <div class="responsesWrapper supplementalPostContent js-responsesWrapper">
+            <div class="container u-maxWidth740">
+              <div class="responsesStreamWrapper u-maxWidth640 js-responsesStreamWrapper">
+
+                <div class="container u-maxWidth640 responsesStream-title">
+                  <div class="row">
+                    <div class="col u-size12of12">
+                      <div class="heading u-clearfix">
+                        <div class="u-clearfix">
+                          <div class="heading-content u-floatLeft">
+                            <span class="heading-title heading-title--semibold"><?php _e('%s 个评论', $this->comments_count); ?></span>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <?php if ($this->article_info['lock']) { ?>
+
+                  <div class="container u-maxWidth640 js-showOtherResponses">
+                    <div class="row">
+                      <button class="button button--primary button--withChrome u-accentColor--buttonNormal responsesStream-showOtherResponses cardChromeless u-sizeFullWidth">该文章目前已经被锁定, 无法添加新评论</button>
+                    </div>
+                  </div>
+
+                <?php } else if (!$this->user_id) { ?>
+
+                  <div class="container u-maxWidth640 js-showOtherResponses">
+                    <div class="row">
+                      <button class="button button--primary button--withChrome u-accentColor--buttonNormal responsesStream-showOtherResponses cardChromeless u-sizeFullWidth">要回复文章请先<a href="account/login/">登录</a>或<a href="account/register/">注册</a></button>
+                    </div>
+                  </div>
+
+                <?php } else { ?>
+
+                  <div class="container u-maxWidth640 responsesStream-editor cardChromeless">
+                    <div class="row">
+                      <div class="col u-size12of12">
+                        <div class="inlineNewPostControl js-inlineNewPostControl blockGroup blockGroup-list">
+                          <div class="inlineEditor js-inlineEditor">
+                            <div class="block block--inset block--list block--preview js-block js-inlineEditorContent">
+
+                              <form action="article/ajax/save_comment/" onsubmit="return false;" method="post" id="answer_form">
+
+                                <input type="hidden" name="post_hash" value="<?php echo new_post_hash(); ?>" />
+                                <input type="hidden" name="article_id" value="<?php echo $this->article_info['id']; ?>" />
+
+                                <div class="inlineEditor-header">
+                                  <div class="inlineEditor-avatar">
+                                    <div class="avatar avatar--inline"><img src="<?php echo get_avatar_url($this->user_info['uid'], 'max'); ?>" class="avatar-image u-size36x36 u-xs-size32x32" alt="<?php echo $this->user_info['user_name']; ?>"></div>
+                                  </div>
+                                  <div class="inlineEditor-headerContent"></div>
+                                </div>
+
+                                <div class="block-streamText">
+                                  <div class="block-content">
+                                    <article class="postArticle postArticle--short">
+                                      <div class="layoutSingleColumn">
+                                        <main class="postArticle-content js-postField js-notesSource editable">
+                                          <section class="section--body section--first section--last">
+                                            <div class="section-content">
+                                              <div class="section-inner layoutSingleColumn">
+                                                <textarea rows="3" name="message" id="comment_editor" class="form-control autosize" placeholder="写下你的评论..."  /></textarea>
+                                              </div>
+                                            </div>
+                                          </section>
+                                        </main>
+                                      </div>
+                                    </article>
+                                  </div>
+                                </div>
+
+                                <div class="inlineEditor-actions">
+                                  <div class="u-floatLeft">
+                                    <div class="buttonSet">
+                                      <a href="javascript:;" onclick="AWS.ajax_post($('#answer_form'), AWS.ajax_processer, 'reply');" class="button button--primary button--withChrome u-accentColor--buttonNormal js-publishButton">回复</a>
+                                    </div>
+                                  </div>
+                                </div>
+
+                              </form>
+
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                <?php } ?>
+
+                <?php if ($this->comments) { ?>
+                  <div class="responsesStream js-responsesStream">
+                    <?php foreach ($this->comments AS $key => $val) { ?>
+                      <div class="streamItem streamItem--postPreview js-streamItem" id="answer_list_<?php echo $val['id']; ?>">
+                        <div class="streamItem-card streamItem-card--postPreview streamItem-card--hPadding20 streamItem-card--borderRadius3 cardChromeless">
+                          <div class="streamItem-cardInner streamItem-cardInner--postPreview">
+                            <article class="postArticle js-postArticle js-trackedPost postArticle--short">
+
+                              <div class="u-clearfix u-marginBottom10">
+                                <div class="postMetaInline u-floatLeft">
+                                  <div class="postMetaInline-avatar">
+                                    <a class="link avatar u-baseColor--link" href="people/<?php echo $val['user_info']['url_token']; ?>"><img src="<?php echo get_avatar_url($val['uid'], 'mid'); ?>" class="avatar-image u-size36x36 u-xs-size32x32" alt="<?php echo $val['user_info']['user_name']; ?>"></a>
+                                  </div>
+                                  <div class="postMetaInline-authorLockup">
+                                    <a class="link link link--darken link--accent u-accentColor--textNormal u-accentColor--textDarken u-baseColor--link" href="people/<?php echo $val['user_info']['url_token']; ?>"><?php echo $val['user_info']['user_name']; ?></a>
+                                    <div class="u-fontSizeSmallest js-postMetaInlineSupplemental">
+                                      <a class="link link--darken" href="javascript:;"><?php echo date_friendly($val['add_time']); ?></a>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+
+                              <div class="layoutSingleColumn js-inlineExpandBody">
+                                <div class="postArticle-content js-postField">
+                                  <section class="section--body section--first section--last">
+                                    <div class="section-content">
+                                      <div class="section-inner layoutSingleColumn">
+                                        <p class="graf--p graf--leading"><?php echo nl2br($val['message']); ?></p>
+                                      </div>
+                                    </div>
+                                  </section>
+                                </div>
+                              </div>
+
+                            </article>
+                          </div>
+                        </div>
+                      </div>
+                    <?php } ?>
+                  </div>
+                <?php } ?>
+
+              </div>
+            </div>
+          </div>
+
+        </footer>
+
+      </article>
     </div>
+  </div>
 </div>
 
 <script type="text/javascript">
