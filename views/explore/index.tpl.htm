@@ -1,19 +1,24 @@
 <?php TPL::output('global/header.tpl.htm'); ?>
 
+<div class="homeContainer js-homepage u-backgroundGrayLightest u-clearfix">
+
 	<?php if ($this->user_id) { ?>
-	<?php TPL::output('block/content_nav_menu.tpl.htm'); ?>
+		<?php TPL::output('block/content_nav_menu.tpl.htm'); ?>
 	<?php } else { ?>
-	<div class="R2-promo R2-promo--hero R2-xs-backgroundImageNone R2-maxWidth1000 R2-marginAuto R2-promo--catalogHomeHero" style="background-image:url(http://7xp0k6.com1.z0.glb.clouddn.com/promo-bg.png);background-color:#020733;">
-	  <div class="R2-promo-content is-darkGradientBackgrounded R2-maxWidth1000 R2-marginAuto">
-	    <h1 class="R2-promo-title">玩游戏的人都是我的朋友</h1>
-	    <h2 class="R2-promo-subtitle">希望 R2VG 这个网站能够陪伴大家度过大量美好的马桶和游戏的时光！</h2>
-	    <h3 class="R2-promo-text">登录提问或是解答其他人的疑问</h3>
-	    <div class="R2-buttonSet"><a class="R2-button R2-button--filled R2-button--large R2-button--withChrome" href="account/login/">立即加入</a>
-	      <a class="R2-button R2-button--primary R2-button--large R2-button--withChrome" href="/">了解更多</a>
-	    </div>
-	  </div>
-	</div>
+		<div class="promo promo--hero u-xs-backgroundImageNone u-maxWidth1000 u-marginAuto promo--catalogHomeHero js-promo" style="background-image:url(http://7xp0k6.com1.z0.glb.clouddn.com/promo-bg.png);background-color:#020733;">
+			<div class="promo-content is-darkGradientBackgrounded u-maxWidth1000 u-marginAuto">
+				<h1 class="promo-title">玩游戏的人都是我的朋友</h1>
+				<h2 class="promo-subtitle">希望 R2VG 这个网站能够陪伴大家度过大量美好的马桶和游戏的时光！</h2>
+				<h3 class="promo-text">登录提问或是解答其他人的疑问</h3>
+				<div class="buttonSet">
+					<a class="button button--filled button--large button--withChrome u-baseColor--buttonNormal" href="account/login/">立即加入</a>
+					<a class="button button--primary button--large button--withChrome u-accentColor--buttonNormal" href="http://r2vg.com/article/1">了解更多</a>
+				</div>
+			</div>
+		</div>
 	<?php } ?>
+
+</div>
 
 	<div class="R2-foreground R2-homeContainer-content R2-maxWidth1000 R2-marginAuto R2-clearfix R2-sizeViewHeightMin100">
 		<div class="R2-clearfix R2-positionRelative">
