@@ -1,54 +1,55 @@
 <?php if ($this->posts_list) { ?>
 	<?php foreach($this->posts_list as $key => $val) { ?>
-		<div class="R2-streamItem <?php if ($val['question_id']) { ?><?php if ($val['answer_count'] == 0) { ?>active<?php } ?><?php } else {?>article<?php } ?>" data-topic-id="<?php foreach ($val['topics'] AS $k => $v) { ?><?php echo $v['topic_id']; ?>,<?php } ?>">
-			<div class="R2-streamItem-card R2-streamItem-card--hPadding20 R2-streamItem-card--borderRadius3 cardChromeless">
-				<div class="R2-streamItem-cardInner">
-					<article class="R2-postArticle R2-postArticle--short">
-						<div class="R2-clearfix R2-marginBottom10">
-							<div class="R2-postMetaInline R2-floatLeft">
-								<div class="R2-postMetaInline-avatar">
+		<div class="streamItem streamItem--postPreview js-streamItem <?php if ($val['question_id']) { ?><?php if ($val['answer_count'] == 0) { ?>active<?php } ?><?php } else {?>article<?php } ?>" data-topic-id="<?php foreach ($val['topics'] AS $k => $v) { ?><?php echo $v['topic_id']; ?>,<?php } ?>">
+			<div class="streamItem-card streamItem-card--postPreview streamItem-card--hPadding20 streamItem-card--borderRadius3 cardChromeless">
+				<div class="streamItem-cardInner streamItem-cardInner--postPreview">
+					<article class="postArticle js-postArticle js-trackedPost postArticle--short">
+
+						<div class="u-clearfix">
+							<div class="postMetaInline u-floatLeft">
+								<div class="postMetaInline-avatar">
 									<?php if ($val['anonymous'] == 0) { ?>
-									<a class="R2-link R2-avatar" data-id="<?php echo $val['user_info']['uid']; ?>" href="people/<?php echo $val['user_info']['url_token']; ?>" rel="nofollow">
-										<img src="<?php echo get_avatar_url($val['user_info']['uid'], 'max'); ?>" class="R2-avatar-image R2-size36x36 R2-xs-size32x32" alt="">
-									</a>
+										<a class="link avatar u-baseColor--link" href="people/<?php echo $val['user_info']['url_token']; ?>" data-id="<?php echo $val['user_info']['uid']; ?>" rel="nofollow">
+											<img src="<?php echo get_avatar_url($val['user_info']['uid'], 'max'); ?>" class="avatar-image u-size36x36 u-xs-size32x32">
+										</a>
 									<?php } else { ?>
-										<a class="R2-link R2-avatar" href="javascript:;">
-											<img src="<?php echo G_STATIC_URL; ?>/common/avatar-max-img.png" alt="<?php _e('匿名用户'); ?>" title="<?php _e('匿名用户'); ?>" class="R2-avatar-image R2-size36x36 R2-xs-size32x32" />
+										<a class="link avatar u-baseColor--link" href="javascript:;">
+											<img src="<?php echo G_STATIC_URL; ?>/common/avatar-max-img.png" alt="<?php _e('匿名用户'); ?>" title="<?php _e('匿名用户'); ?>" class="avatar-image u-size36x36 u-xs-size32x32" />
 										</a>
 									<?php } ?>
 								</div>
-								<div class="R2-postMetaInline-authorLockup">
+								<div class="postMetaInline-authorLockup">
 									<?php if ($val['question_id']) { ?>
 										<?php if ($val['answer_count'] > 0) { ?>
 											<?php if ($val['answer_info']['anonymous']) { ?>
-												<a class="R2-link R2-link--darken R2-link--accent" href="javascript:;">匿名用户</a>
+												<a class="link link--darken link--accent" href="javascript:;">匿名用户</a>
 											<?php } else { ?>
-												<a class="R2-link R2-link--darken R2-link--accent" href="people/<?php echo $val['user_info']['url_token']; ?>" data-id="<?php echo $val['answer_info']['user_info']['uid']; ?>"><?php echo $val['answer_info']['user_info']['user_name']; ?></a>
+												<a class="link link--darken link--accent" href="people/<?php echo $val['user_info']['url_token']; ?>" data-id="<?php echo $val['answer_info']['user_info']['uid']; ?>"><?php echo $val['answer_info']['user_info']['user_name']; ?></a>
 											<?php } ?>
 											<?php _e('回复了问题'); ?>
-												<div class="R2-fontSizeSmallest">
-													<a class="R2-link R2-link--darken" href="question/<?php echo $val['question_id']; ?>"><?php echo date_friendly($val['update_time']); ?></a>
+												<div class="fontSizeSmallest">
+													<a class="link link--darken" href="question/<?php echo $val['question_id']; ?>"><?php echo date_friendly($val['update_time']); ?></a>
 													<span class="middotDivider"></span>
 													<span class="readingTime"><?php _e('%s 次浏览', $val['view_count']); ?></span>
 												</div>
 										<?php } else { ?>
 											<?php if ($val['anonymous'] == 0) { ?>
-												<a class="R2-link R2-link--darken R2-link--accent" href="people/<?php echo $val['user_info']['url_token']; ?>"><?php echo $val['user_info']['user_name']; ?></a>
+												<a class="link link--darken link--accent" href="people/<?php echo $val['user_info']['url_token']; ?>"><?php echo $val['user_info']['user_name']; ?></a>
 											<?php } else { ?>
-												<a class="R2-link R2-link--darken R2-link--accent" href="javascript:;">匿名用户</a>
+												<a class="link link--darken link--accent" href="javascript:;">匿名用户</a>
 											<?php } ?>
 											<?php _e('发起了问题'); ?>
-											<div class="R2-fontSizeSmallest">
-												<a class="R2-link R2-link--darken" href="question/<?php echo $val['question_id']; ?>"><?php echo date_friendly($val['update_time']); ?></a>
+											<div class="fontSizeSmallest">
+												<a class="link link--darken" href="question/<?php echo $val['question_id']; ?>"><?php echo date_friendly($val['update_time']); ?></a>
 												<span class="middotDivider"></span>
 												<span class="readingTime"><?php _e('%s 次浏览', $val['view_count']); ?></span>
 											</div>
 										<?php } ?>
 									<?php } else { ?>
-										<a class="R2-link R2-link--darken R2-link--accent" href="people/<?php echo $val['user_info']['url_token']; ?>"><?php echo $val['user_info']['user_name']; ?></a>
+										<a class="link link--darken link--accent" href="people/<?php echo $val['user_info']['url_token']; ?>"><?php echo $val['user_info']['user_name']; ?></a>
 										<?php _e('发表了文章'); ?>
-										<div class="R2-fontSizeSmallest">
-											<a class="R2-link R2-link--darken" href="article/<?php echo $val['id']; ?>"><?php echo date_friendly($val['add_time']); ?></a>
+										<div class="fontSizeSmallest">
+											<a class="link link--darken" href="article/<?php echo $val['id']; ?>"><?php echo date_friendly($val['add_time']); ?></a>
 											<span class="middotDivider"></span>
 											<span class="readingTime"><?php _e('%s 次浏览', $val['views']); ?></span>
 										</div>
@@ -56,50 +57,66 @@
 								</div>
 							</div>
 						</div>
-						<div class="R2-layoutSingleColumn">
+
+						<div class="layoutSingleColumn">
 							<?php if ($val['question_id']) { ?>
-							<a href="question/<?php echo $val['question_id']; ?>">
-								<div class="R2-postArticle-content">
-									<h2 class="R2-postArticle--title">
-										<?php echo $val['question_content']; ?>
+								<a href="question/<?php echo $val['question_id']; ?>">
+									<div class="postArticle-content js-postField">
+										<section class="section--body section--first section--last">
+											<div class="section-divider layoutSingleColumn"><hr class="section-divider"></div>
+											<div class="section-content">
+												<div class="section-inner layoutSingleColumn">
+													<h3 class="graf--h3 graf-after--figure graf--last graf--title"><?php echo $val['question_content']; ?></h3>
+													<p class="graf--p graf-after--h3 graf--last"><?php echo nl2br(trim(strip_tags(FORMAT::parse_attachs(FORMAT::parse_bbcode($val['message']))))); ?></p>
+												</div>
+											</div>
+										</section>
+									</div>
+								</a>
 							<?php } else { ?>
-							<a href="article/<?php echo $val['id']; ?>">
-								<div class="R2-postArticle-content">
-									<h2 class="R2-postArticle--title">
-										<?php echo $val['title']; ?>
+								<a href="article/<?php echo $val['id']; ?>">
+									<div class="postArticle-content js-postField">
+										<section class="section--body section--first section--last">
+											<div class="section-divider layoutSingleColumn"><hr class="section-divider"></div>
+											<div class="section-content">
+												<div class="section-inner layoutSingleColumn">
+													<h3 class="graf--h3 graf-after--figure graf--last graf--title"><?php echo $val['title']; ?></h3>
+													<p class="graf--p graf-after--h3 graf--last"><?php echo nl2br(trim(strip_tags(FORMAT::parse_attachs(FORMAT::parse_bbcode($val['message']))))); ?></p>
+												</div>
+											</div>
+										</section>
+									</div>
+								</a>
 							<?php } ?>
-									</h2>
-									<p class="R2-postArticle--text">
-										<?php echo nl2br(trim(strip_tags(FORMAT::parse_attachs(FORMAT::parse_bbcode($val['message']))))); ?>
-									</p>
-								</div>
-							</a>
 						</div>
-						<div class="R2-postArticle-readMore">
+
+						<div class="postArticle-readMore">
 							<?php if (cjk_strlen($val['message']) > 130) { ?>
-							<a class="R2-button R2-button--smaller R2-button--chromeless" href="article/<?php echo $val['id']; ?>">查看全部</a>
+							<a class="button button--smaller button--chromeless u-baseColor--buttonNormal" href="article/<?php echo $val['id']; ?>">查看全部</a>
 							<?php } ?>
 						</div>
-						<div class="R2-clearfix R2-paddingTop10">
+
+						<div class="u-clearfix u-paddingTop10">
 							<?php if ($val['question_id']) { ?>
-								<div class="R2-buttonSet R2-buttonSet--withLabels R2-floatLeft">
-									<div class="R2-buttonSet-inner">
-										<a class="R2-button R2-button--chromeless" href=""><?php _e('%s 人关注', $val['focus_count']); ?></a>
+								<div class="buttonSet buttonSet--withLabels u-floatLeft">
+									<div class="buttonSet-inner">
+										<a class="button button--chromeless" href="question/<?php echo $val['question_id']; ?>"><?php _e('%s 人关注', $val['focus_count']); ?></a>
 									</div>
 								</div>
-								<div class="R2-buttonSet R2-floatRight">
-									<div class="R2-buttonSet-inner">
-										<a class="R2-button R2-button--chromeless" href="question/<?php echo $val['question_id']; ?>"><?php _e('%s 个回复', $val['answer_count']); ?></a>
+								<div class="buttonSet u-floatRight">
+									<div class="buttonSet-inner">
+										<a class="button button--chromeless" href="question/<?php echo $val['question_id']; ?>"><?php _e('%s 个回复', $val['answer_count']); ?></a>
 									</div>
 								</div>
 							<?php } else { ?>
-								<div class="R2-buttonSet R2-floatRight">
-									<div class="R2-buttonSet-inner">
-										<a class="R2-button R2-button--chromeless" href="article/<?php echo $val['id']; ?>"><?php _e('%s 个评论', $val['comments']); ?></a>
+								<div class="buttonSet u-floatRight">
+									<div class="buttonSet-inner">
+										<a class="button button--chromeless" href="article/<?php echo $val['id']; ?>"><?php _e('%s 个评论', $val['comments']); ?></a>
 									</div>
 								</div>
 							<?php } ?>
 						</div>
+
 					</article>
 				</div>
 			</div>
