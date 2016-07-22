@@ -1,8 +1,43 @@
-<div class="R2-sidebar2-content">
-	<div class="R2-heading R2-clearfix R2-heading--borderedBottom R2-heading--allCaps R2-heading--normal R2-heading--simple">
-		<div class="R2-clearfix">
-			<div class="R2-heading-content R2--floatLeft">
-				<span class="R2-heading-title">热门用户</span>
+<div class="streamItem streamItem--catalogPreview js-streamItem">
+	<div class="streamItem-card streamItem-card--catalogPreview">
+		<div class="streamItem-cardInner streamItem-cardInner--catalogPreview">
+			<div class="catalogPreview catalogPreview--borderless">
+
+				<div class="catalogPreview-header">
+					<a href="people/">
+						<div class="catalogPreview-name">用户推荐</div>
+						<div class="catalogPreview-description"></div>
+					</a>
+				</div>
+
+				<ul class="catalogPreview-items">
+				<?php if (is_array($this->sidebar_hot_users)) { ?>
+					<?php foreach($this->sidebar_hot_users AS $key => $val) {?>
+						<li class="catalogPreview-item">
+							<div class="compactPostPreview">
+								<div class="compactPostPreview-avatar">
+									<a class="link avatar u-baseColor--link" href="people/<?php echo $val['url_token']; ?>">
+										<img src="<?php echo get_avatar_url($val['uid'], 'max'); ?>" class="avatar-image avatar-image--icon avatar-image--outlined" alt="<?php echo $val['user_name']; ?>">
+									</a>
+								</div>
+								<div class="compactPostPreview-title">
+									<div class="titleLockup u-clearfix">
+										<div class="titleLockup-title">
+											<a class="link link--darker link--darken u-accentColor--textDarken u-baseColor--link" href="people/<?php echo $val['url_token']; ?>" data-id="<?php echo $val['uid']; ?>"><?php echo $val['user_name']; ?></a>
+										</div>
+										<div class="titleLockup-meta">
+											<div class="titleLockup-creator">
+												<a class="link link--darken" href="topic/<?php echo $val['topic_title'];?>"><?php _e('%s 个问题', '<b>' . $val['answer_count'] . '</b>'); ?>, <?php _e('%s 次赞同', '<b>' . $val['agree_count'] . '</b>'); ?></a>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</li>
+					<?php } ?>
+				<?php } ?>
+				</ul>
+
 			</div>
 		</div>
 	</div>
