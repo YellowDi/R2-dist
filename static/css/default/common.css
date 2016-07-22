@@ -174,7 +174,7 @@ select {
     padding: 6px;
     resize: none;
     box-shadow: none;
-    border-color: #ccc;
+    border-color: #fff;
 }
 .form-control:focus {
     border-color: #499ef3 !important;
@@ -4175,6 +4175,50 @@ blockquote {
 
 /*** Project-R2(basic) ***/
 
+.R2-h3 {
+    font-weight: 700;
+    font-style: normal;
+    font-size: 36px;
+    margin-left: -2.25px;
+    line-height: 1.15;
+    letter-spacing: -.02em;
+    color: rgba(0, 0, 0, .8);
+}
+.R2-p {
+    margin-top: 29px;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 21px;
+    line-height: 1.58;
+    letter-spacing: -.003em;
+}
+.R2-overflowScroll {
+    overflow: scroll!important
+}
+.R2-overflowHidden {
+    overflow: hidden!important
+}
+.R2-overflowVisible {
+    overflow: visible!important
+}
+.R2-inlineBlock {
+    display: inline-block!important
+}
+.R2-block {
+    display: block!important
+}
+.R2-flex {
+    display: -ms-flexbox!important;
+    display: flex!important;
+}
+.R2-flex0 {
+    -ms-flex: 0 0 auto;
+    flex: 0 0 auto
+}
+.R2-flex1 {
+    -ms-flex: 1 1 auto;
+    flex: 1 1 auto
+}
 @media screen and (max-width:991px) {
     .R2-sm-hide {
         display: none!important
@@ -4196,6 +4240,12 @@ blockquote {
 .R2-floatRight {
     float: right!important;
 }
+.R2-size10of12, .R2-size11of12, .R2-size12of12, .R2-size1of12, .R2-size2of12, .R2-size3of12, .R2-size4of12, .R2-size5of12, .R2-size6of12, .R2-size7of12, .R2-size8of12, .R2-size9of12 {
+    float: left!important
+}
+.R2-size12of12 {
+    width: 100%!important
+}
 .R2-marginAuto {
     margin: 0 auto;
 }
@@ -4204,6 +4254,9 @@ blockquote {
 }
 .R2-marginBottom10 {
     margin-bottom: 10px!important
+}
+.R2-maxWidth740 {
+    max-width: 740px!important;
 }
 .R2-maxWidth1000 {
     max-width: 1000px!important;
@@ -4214,11 +4267,17 @@ blockquote {
 .R2-paddingTop10 {
     padding-top: 10px!important
 }
+.R2-paddingLeft15 {
+    padding-left: 15px!important;
+}
 .R2-paddingLeft20 {
     padding-left: 20px!important;
 }
 .R2-paddingRight20 {
     padding-right: 20px!important;
+}
+.R2-paddingBottom10 {
+    padding-bottom: 10px!important;
 }
 .R2-height32 {
     height: 32px!important;
@@ -4489,6 +4548,10 @@ blockquote {
     width: 32px;
     height: 32px
 }
+.R2-avatar-image--smaller {
+    width: 40px;
+    height: 40px
+}
 
 /*** Project-R2(header) ***/
 
@@ -4588,6 +4651,21 @@ blockquote {
 
 /*** Project-R2(container) ***/
 
+.R2-container {
+    padding-right: 20px;
+    padding-left: 20px;
+    margin-right: auto;
+    margin-left: auto;
+}
+.R2-col, .R2-container, .R2-row {
+    box-sizing: border-box;
+}
+.R2-col {
+    position: relative;
+    min-height: 1px;
+    padding-right: 20px;
+    padding-left: 20px
+}
 .R2-homeContainer-content {
     padding: 35px 0 0 0;
 }
@@ -4640,11 +4718,6 @@ blockquote {
     padding-right: 20px;
     padding-left: 20px
 }
-.R2-layoutSingleColumn {
-    width: auto!important;
-    margin-left: 0;
-    margin-right: 0;
-}
 
 /*** Project-R2(postArticle) ***/
 
@@ -4690,8 +4763,8 @@ blockquote {
 .R2-postArticle--title {
     margin-top: 0;
     font-size: 24px;
-		font-weight: 700;
-		font-style: normal;
+    font-weight: 700;
+    font-style: normal;
     margin-left: -1.5px;
     line-height: 1.18;
     letter-spacing: -.022em;
@@ -4925,4 +4998,66 @@ blockquote {
         background: #e368d6;
         border-color: #e368d6
     }
+}
+
+/*** Project-R2(Article) ***/
+
+.R2-postArticle {
+    position: relative;
+    transform: translateZ(0);
+    overflow: hidden;
+}
+.R2-postArticle:after, .R2-postArticle:before {
+    display: table;
+    content: " "
+}
+.R2-postArticle:after {
+    clear: both
+}
+.R2-postMetaHeader {
+    padding-top: 35px
+}
+.R2-postMetaLockup--authorWithBio {
+    font-size: 15px;
+}
+.R2-postMetaLockup--authorWithBio .R2-postMetaInline {
+    font-size: 13px;
+    line-height: 1.4;
+    margin-top: 2px;
+}
+.R2-postArticle-content {
+    position: relative;
+    margin-bottom: 0
+}
+.R2-postArticle-content:after, .R2-postArticle-content:before {
+    display: table;
+    content: " "
+}
+.R2-postArticle-content:after {
+    clear: both
+}
+.R2-postArticle-content, .R2-postArticle-content:focus {
+    outline: 0;
+    word-break: break-word;
+    word-wrap: break-word
+}
+
+/*** Project-R2(section) ***/
+
+.R2-postArticle-content .R2-section--first:not(.is-imageBackgrounded) {
+    padding-top: 75px
+}
+.R2-postArticle--full.postArticle--response>.R2-postArticle-content .R2-section--first, .R2-postArticle:not(.R2-postArticle--letter)>.R2-postArticle-content .R2-section--first {
+    margin-top: 20px;
+    padding-top: 0
+}
+.R2-postArticle-content>section {
+    position: relative;
+    clear: both
+}
+.R2-section--last {
+    padding-bottom: 5px;
+}
+.R2-section-inner {
+    position: relative;
 }
