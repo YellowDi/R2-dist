@@ -24,6 +24,8 @@
 <link href="<?php echo G_STATIC_URL; ?>/css/<?php echo $this->template_name; ?>/<?php echo $this->template_name; ?>.css" rel="stylesheet" type="text/css" />
 <?php } ?>
 
+<link href="<?php echo G_STATIC_URL; ?>/css/<?php echo $this->template_name; ?>/r2.css" rel="stylesheet" type="text/css" />
+
 <?php $post_hash_var_name = strtoupper(md5(TIMESTAMP . $this->userinfo['salt'])); ?>
 <script type="text/javascript">
 	var _<?php echo $post_hash_var_name; ?>="<?php echo new_post_hash(); ?>";
