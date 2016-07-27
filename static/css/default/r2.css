@@ -6319,6 +6319,7 @@ section.is-darkBackgrounded {
     border-radius: 3px;
     box-shadow: 0 2px 6px 0 rgba(0, 0, 0, .44);
     padding: 0;
+    width: 520px;
     max-width: 520px
 }
 .overlay--dark .overlay-title, .overlay--dark .overlay-title--context {
