@@ -10,12 +10,17 @@
               <div class="postMetaLockup postMetaLockup--authorWithBio u-flex js-postMetaLockup">
                 <div class="u-flex0">
                   <a class="link avatar u-baseColor--link" href="people/<?php echo $this->article_info['user_info']['url_token']; ?>">
-                    <img src="<?php echo get_avatar_url($this->article_info['uid'], 'max'); ?>" class="avatar-image avatar-image--smaller" alt="<?php echo $this->article_info['user_info']['user_name']; ?>">
+                    <img src="<?php echo get_avatar_url($this->article_info['uid'], 'max'); ?>" class="avatar-image avatar-image--small" alt="<?php echo $this->article_info['user_info']['user_name']; ?>">
                   </a>
                 </div>
                 <div class="u-flex1 u-paddingLeft15 u-overflowHidden">
                   <a class="link link link--darken link--darker u-baseColor--link" href="people/<?php echo $this->article_info['user_info']['url_token']; ?>" data-id="<?php echo $this->article_info['user_info']['uid']; ?>"><?php echo $this->article_info['user_info']['user_name'];?></a>
                   <div class="postMetaInline"><?php echo date_friendly($this->article_info['add_time'], 604800, 'Y-m-d'); ?></div>
+                  <div class="postMetaInline u-noWrapWithEllipsis u-xs-normalWrap u-xs-lineClamp2">
+                    <?php if ((!$this->article_info['lock'] AND ($this->article_info['uid'] == $this->user_id OR $this->user_info['permission']['edit_article'])) OR $this->user_info['permission']['is_administortar'] OR $this->user_info['permission']['is_moderator']) { ?>
+                      <a class="link" href="publish/article/<?php echo $this->article_info['id']; ?>"><i class="icon icon-edit"></i> <?php _e('编辑'); ?></a>
+                    <?php } ?>
+                  </div>
                 </div>
               </div>
             </div>
