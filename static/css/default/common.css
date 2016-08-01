@@ -177,7 +177,7 @@ select {
     border-color: #fff;
 }
 .form-control:focus {
-    border-color: #499ef3 !important;
+    border-color: #fff !important;
     box-shadow: none;
 }
 .btn-group.open .aw-dropdown, .aw-feed-list .more-operate.open .aw-dropdown, .aw-question-detail .more-operate.open .aw-dropdown, .aw-article-list .aw-item .mod-footer .more-operate.open .aw-dropdown {
