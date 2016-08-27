@@ -44,9 +44,9 @@
 .aw-user-center-follow-mod #contents_user_topics li{min-height: 75px;}
 
 /* 动态 */
-.tab-pane #contents_user_actions li, #overview ul li{padding-top:10px;border-top: 1px solid #f5f5f5;}
+/*.tab-pane #contents_user_actions li, #overview ul li{padding-top:10px;border-top: 1px solid #f5f5f5;}
 .tab-pane #contents_user_actions li:first-child, #overview ul li:first-child{padding-top:0;border-top: none;}
-.aw-user-center-tab .tab-pane p .aw-user-name, .aw-user-center-tab .tab-pane p .aw-topic-name {font-size: 14px;}
+.aw-user-center-tab .tab-pane p .aw-user-name, .aw-user-center-tab .tab-pane p .aw-topic-name {font-size: 14px;}*/
 /* 详细资料 */
 .aw-user-center-details{padding:0 60px;}
 .aw-user-center-details dl{height: auto;overflow: hidden;line-height: 22px;margin:0;padding:15px 0 15px 10px;border-top:1px dotted #c1cad4;}
