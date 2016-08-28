@@ -217,11 +217,11 @@ dd {
 }
 a {
     cursor: pointer;
-    color: #155faa;
+    color: inherit;
 }
 a:hover {
     text-decoration: none;
-    color: #499ef3;
+    color: inherit;
 }
 a:focus {
     outline: none !important;
