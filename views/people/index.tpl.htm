@@ -54,131 +54,103 @@
     <div class="tab-content">
       <div class="tab-pane active" id="overview">
 
-        <!-- 回答 -->
+        <!-- 详细资料 -->
         <div class="js-profileStreamBlock u-maxWidth640 u-marginAuto">
           <div class="streamItem streamItem--heading js-streamItem">
             <div class="streamItemHeading container u-maxWidth640">
               <div class="heading u-clearfix heading--streamSection">
                 <div class="u-clearfix">
                   <div class="heading-content u-floatLeft">
-                    <span class="heading-title heading-title--semibold">回答</span>
-                  </div>
-                  <div class="heading-content u-floatRight">
-                    <a class="link link--dark link--darken u-accentColor--textDarken u-baseColor--link" href="#answers" id="page_answers" data-toggle="tab">查看更多</a>
+                    <span class="heading-title heading-title--semibold">详细资料</span>
                   </div>
                 </div>
               </div>
             </div>
           </div>
-          <?php if ($this->user_actions_answers) { ?>
-          <?php foreach ($this->user_actions_answers AS $key => $val) { ?>
           <div class="streamItem streamItem--postPreview js-streamItem">
             <div class="streamItem-card streamItem-card--postPreview streamItem-card--hPadding20 streamItem-card--borderRadius3 cardChromeless">
               <div class="streamItem-cardInner streamItem-cardInner--postPreview">
-                <article class="postArticle postArticle--short js-postArticle js-trackedPost">
-                  <div class="u-clearfix u-marginBottom10">
-                    <div class="postMetaInline u-floatLeft">
-                      <div class="postMetaInline-avatar"></div>
-                      <div class="postMetaInline-authorLockup"></div>
-                    </div>
-                  </div>
-                  <div class="layoutSingleColumn">
-                    <a href="<?php echo $val['link']; ?>">
-                      <div class="postArticle-content js-postField">
-                        <section class="section--body section--first section--last">
-                          <div class="section-divider layoutSingleColumn"><hr class="section-divider"></div>
-                          <div class="section-content">
-                            <div class="section-inner layoutSingleColumn">
-                              <h3 name="2683" id="2683" class="graf--h3 graf--leading graf--title"><?php echo $val['title']; ?></h3>
-                              <p class="graf--p graf-after--h3"><?php echo cjk_substr($val['answer_info']['answer_content'], 0, 130, 'UTF-8', '...'); ?></p>
-                            </div>
-                          </div>
-                        </section>
-                      </div>
-                    </a>
-                  </div>
-                  <div class="postArticle-readMore">
-                    <a class="button button--smaller button--chromeless u-baseColor--buttonNormal" href="<?php echo $val['link']; ?>">阅读更多</a>
-                  </div>
-                  <div class="u-clearfix u-paddingTop10">
-                    <div class="buttonSet buttonSet--withLabels u-floatLeft">
-                      <div class="buttonSet-inner">
-                        <span class="aw-border-radius-5 count pull-left"><i class="icon icon-agree"></i><?php echo $val['answer_info']['agree_count']; ?></span>
-                      </div>
-                    </div>
-                  </div>
-                </article>
-              </div>
-            </div>
-          </div>
-          <?php } ?>
-          <?php } else { ?>
-            <p class="padding10 text-center"><?php _e('没有内容'); ?></p>
-          <?php } ?>
-        </div>
-        <!-- end 回答 -->
+                <div class="aw-mod">
+                  <div class="mod-body aw-user-center-details">
+                    <?php if (get_setting('sina_weibo_enabled') == 'Y' AND $this->sina_weibo_url) { ?>
+                      <dl>
+                        <dt><span><?php _e('绑定认证'); ?>:</span></dt>
+                        <?php if ($this->sina_weibo_url AND get_setting('sina_weibo_enabled') == 'Y') { ?><dd><a href="<?php if ($this->sina_weibo_url) { ?><?php echo $this->sina_weibo_url; ?><?php } else { ?>javascript:;<?php } ?>" class="text-color-999"><i class="icon icon-weibo"></i><?php _e('微博'); ?></a></dd><?php } ?>
+                      </dl>
+                    <?php } ?>
+                      <dl>
+                        <dt><span><?php _e('个人成就'); ?>:</span></dt>
+                        <dd>
+                          <p class="meta">
+                            <span><i class="icon icon-agree"></i><?php _e('赞同'); ?>: <em class="aw-text-color-orange"><?php echo $this->user['agree_count']; ?></em></span>
+                            <span><i class="icon icon-thank"></i><?php _e('感谢'); ?>: <em class="aw-text-color-orange"><?php echo $this->user['thanks_count']; ?></em></span>
+                          </p>
+                        </dd>
+                      </dl>
+                    <?php if ($this->user['area_name']) { ?>
+                      <dl>
+                        <dt><span><?php _e('现居'); ?>:</span></dt>
+                        <dd><?php echo $this->user['area_name']; ?></dd>
+                      </dl>
+                    <?php } ?>
+                    <?php if ($this->education_experience_list) { ?>
+                      <dl>
+                        <dt><span><?php _e('教育经历'); ?>:</span></dt>
+                        <dd>
+                          <ul>
+                            <?php foreach($this->education_experience_list as $k => $v) { ?>
+                            <li><?php echo $v['education_years']; ?> <?php _e('年'); ?> <?php _e('就读于%s', $v['school_name']); ?> <?php echo $v['departments']; ?></li>
+                            <?php } ?>
+                          </ul>
+                        </dd>
+                      </dl>
+                    <?php } ?>
+                    <?php if ($this->work_experience_list) { ?>
+                      <dl>
+                        <dt><span><?php _e('职业经历'); ?>:</span></dt>
+                        <dd>
+                          <ul>
+                            <?php foreach($this->work_experience_list as $k => $v) { ?>
+                              <li>
+                                <?php echo $v['start_year']; ?> - <?php if ($v['end_year'] == -1) { ?><?php _e('至今'); ?><?php } else { ?><?php echo $v['end_year']; ?><?php } ?> <?php _e('就职于%s', $v['company_name']); ?> <?php if ($v['job_name']) { ?> <?php _e('担任 %s', $v['job_name']); ?> <?php } ?>
+                              </li>
+                            <?php } ?>
+                          </ul>
+                        </dd>
+                      </dl>
+                    <?php } ?>
+                    <?php if ($this->user['last_active']) { ?>
+                      <dl>
+                        <dt><span><?php _e('最后活跃'); ?>:</span></dt>
+                        <dd><?php echo date_friendly($this->user['last_active']); ?></dd>
+                      </dl>
+                    <?php } ?>
 
-        <!-- 提问 -->
-        <div class="js-profileStreamBlock u-maxWidth640 u-marginAuto">
-          <div class="streamItem streamItem--heading js-streamItem">
-            <div class="streamItemHeading container u-maxWidth640">
-              <div class="heading u-clearfix heading--streamSection">
-                <div class="u-clearfix">
-                  <div class="heading-content u-floatLeft">
-                    <span class="heading-title heading-title--semibold">提问</span>
-                  </div>
-                  <div class="heading-content u-floatRight">
-                    <a class="link link--dark link--darken u-accentColor--textDarken u-baseColor--link" href="#questions" id="page_questions" data-toggle="tab">查看更多</a>
+                    <?php if ($this->reputation_topics) { ?>
+                      <dl>
+                        <dt><span><?php _e('擅长话题'); ?>:</span></dt>
+                        <dd class="aw-user-center-details-good-topic">
+                          <?php foreach ($this->reputation_topics AS $key => $val) { ?>
+                            <div>
+                              <span class="topic-tag">
+                                <a href="topic/<?php echo $val['url_token']; ?>" class="text" data-id="<?php echo $val['topic_id']; ?>"><?php echo $val['topic_title']; ?></a>
+                              </span>
+                              <span>
+                                <i class="icon icon-agree"></i> <?php echo $val['agree_count']; ?>&nbsp;&nbsp;
+                                <i class="icon icon-thank"></i> <?php echo $val['thanks_count']; ?>
+                              </span>
+                            </div>
+                          <?php } ?>
+                        </dd>
+                      </dl>
+                    <?php } ?>
                   </div>
                 </div>
               </div>
             </div>
           </div>
-          <?php if ($this->user_actions_questions) { ?>
-          <?php foreach ($this->user_actions_questions AS $key => $val) { ?>
-          <div class="streamItem streamItem--postPreview js-streamItem">
-            <div class="streamItem-card streamItem-card--postPreview streamItem-card--hPadding20 streamItem-card--borderRadius3 cardChromeless">
-              <div class="streamItem-cardInner streamItem-cardInner--postPreview">
-                <article class="postArticle postArticle--short js-postArticle js-trackedPost">
-                  <div class="u-clearfix u-marginBottom10">
-                    <div class="postMetaInline u-floatLeft">
-                      <div class="postMetaInline-avatar"></div>
-                      <div class="postMetaInline-authorLockup"></div>
-                    </div>
-                  </div>
-                  <div class="layoutSingleColumn">
-                    <a href="question/<?php echo $val['question_info']['question_id']; ?>">
-                      <div class="postArticle-content js-postField">
-                        <section class="section--body section--first section--last">
-                          <div class="section-divider layoutSingleColumn"><hr class="section-divider"></div>
-                          <div class="section-content">
-                            <div class="section-inner layoutSingleColumn">
-                              <h3 class="graf--h3 graf--leading graf--title"><?php echo $val['question_info']['question_content']; ?></h3>
-                              <p class="graf--p graf-after--h3"></p>
-                            </div>
-                          </div>
-                        </section>
-                      </div>
-                    </a>
-                  </div>
-                  <div class="postArticle-readMore">
-                    <a class="button button--smaller button--chromeless u-baseColor--buttonNormal" href="question/<?php echo $val['question_info']['question_id']; ?>">阅读更多</a>
-                  </div>
-                  <div class="u-clearfix u-paddingTop10">
-                    <div class="buttonSet buttonSet--withLabels u-floatLeft">
-                      <div class="buttonSet-inner"></div>
-                    </div>
-                  </div>
-                </article>
-              </div>
-            </div>
-          </div>
-          <?php } ?>
-          <?php } else { ?>
-            <p class="padding10 text-center"><?php _e('没有内容'); ?></p>
-          <?php } ?>
         </div>
-        <!-- end 提问 -->
+        <!-- end 详细资料 -->
 
         <!-- 动态 -->
         <div class="js-profileStreamBlock u-maxWidth640 u-marginAuto">
@@ -195,27 +167,18 @@
           </div>
           <div class="streamItem-card streamItem-card--compressedPostList streamItem-card--borderRadius3 cardChromeless">
             <div class="streamItem-cardInner streamItem-cardInner--compressedPostList">
-              <ul>
-                <?php if ($this->user_actions_answers) { ?>
-                <?php foreach ($this->user_actions_answers AS $key => $val) { ?>
-                <li class="compressedPostListItem js-trackedPost  compressedPostListItem--withImage">
-                  <div class="compressedPostListItem-content">
-                    <div class="compressedPostListItem-social"></div>
-                    <div class="compressedPostListItem-title">
-                      <a class="link link--primary u-accentColor--hoverTextNormal" href="question/<?php echo $val['question_info']['question_id']; ?>"><?php echo $val['question_info']['question_content']; ?></a>
-                    </div>
-                    <div class="compressedPostListItem-postMeta">
-                      <span class="compressedPostListItem-author">
-                        <a class="link link--darken u-accentColor--textDarken link--accent u-accentColor--textNormal u-baseColor--link" href="question/<?php echo $val['question_info']['question_id']; ?>"><?php echo date_friendly($val['add_time'], 604800, 'Y-m-d'); ?> <?php echo $val['last_action_str']; ?></a>
-                      </span>
-                    </div>
-                  </div>
-                </li>
-                <?php } ?>
-                <?php } else { ?>
-                  <li class="compressedPostListItem js-trackedPost  compressedPostListItem--withImage"><?php _e('没有内容'); ?></li>
-                <?php } ?>
-              </ul>
+              <div class="aw-mod">
+                <div class="mod-body">
+                    <div id="contents_user_actions"></div>
+                </div>
+                <div class="u-marginBottom25">
+                  <!-- 加载更多内容 -->
+                  <a class="aw-load-more-content" id="bp_user_actions_more">
+                      <span><?php _e('更多'); ?></span>
+                  </a>
+                  <!-- end 加载更多内容 -->
+                </div>
+              </div>
             </div>
           </div>
         </div>
@@ -235,49 +198,24 @@
               </div>
             </div>
           </div>
-          <?php if ($this->user_actions_questions) { ?>
-          <?php foreach ($this->user_actions_questions AS $key => $val) { ?>
           <div class="streamItem streamItem--postPreview js-streamItem">
             <div class="streamItem-card streamItem-card--postPreview streamItem-card--hPadding20 streamItem-card--borderRadius3 cardChromeless">
               <div class="streamItem-cardInner streamItem-cardInner--postPreview">
-                <article class="postArticle postArticle--short js-postArticle js-trackedPost">
-                  <div class="u-clearfix u-marginBottom10">
-                    <div class="postMetaInline u-floatLeft">
-                      <div class="postMetaInline-avatar"></div>
-                      <div class="postMetaInline-authorLockup"></div>
-                    </div>
+                <div class="aw-mod">
+                  <div class="mod-body">
+                    <div class="aw-profile-publish-list" id="contents_user_actions_questions"></div>
                   </div>
-                  <div class="layoutSingleColumn">
-                    <a href="question/<?php echo $val['question_info']['question_id']; ?>">
-                      <div class="postArticle-content js-postField">
-                        <section class="section--body section--first section--last">
-                          <div class="section-divider layoutSingleColumn"><hr class="section-divider"></div>
-                          <div class="section-content">
-                            <div class="section-inner layoutSingleColumn">
-                              <h3 class="graf--h3 graf--leading graf--title"><?php echo $val['question_info']['question_content']; ?></h3>
-                              <p class="graf--p graf-after--h3"></p>
-                            </div>
-                          </div>
-                        </section>
-                      </div>
+                  <div class="mod-footer">
+                    <!-- 加载更多内容 -->
+                    <a class="aw-load-more-content" id="bp_user_actions_questions_more">
+                        <span><?php _e('更多'); ?></span>
                     </a>
+                    <!-- end 加载更多内容 -->
                   </div>
-                  <div class="postArticle-readMore">
-                    <a class="button button--smaller button--chromeless u-baseColor--buttonNormal" href="question/<?php echo $val['question_info']['question_id']; ?>">阅读更多</a>
-                  </div>
-                  <div class="u-clearfix u-paddingTop10">
-                    <div class="buttonSet buttonSet--withLabels u-floatLeft">
-                      <div class="buttonSet-inner"></div>
-                    </div>
-                  </div>
-                </article>
+              </div>
               </div>
             </div>
           </div>
-          <?php } ?>
-          <?php } else { ?>
-            <p class="padding10 text-center"><?php _e('没有内容'); ?></p>
-          <?php } ?>
         </div>
       </div>
       <div class="tab-pane" id="answers">
@@ -293,51 +231,26 @@
               </div>
             </div>
           </div>
-          <?php if ($this->user_actions_answers) { ?>
-          <?php foreach ($this->user_actions_answers AS $key => $val) { ?>
+
           <div class="streamItem streamItem--postPreview js-streamItem">
             <div class="streamItem-card streamItem-card--postPreview streamItem-card--hPadding20 streamItem-card--borderRadius3 cardChromeless">
               <div class="streamItem-cardInner streamItem-cardInner--postPreview">
-                <article class="postArticle postArticle--short js-postArticle js-trackedPost">
-                  <div class="u-clearfix u-marginBottom10">
-                    <div class="postMetaInline u-floatLeft">
-                      <div class="postMetaInline-avatar"></div>
-                      <div class="postMetaInline-authorLockup"></div>
-                    </div>
+                <div class="aw-mod">
+                  <div class="mod-body">
+                    <div class="aw-profile-answer-list" id="contents_user_actions_answers"></div>
                   </div>
-                  <div class="layoutSingleColumn">
-                    <a href="<?php echo $val['link']; ?>">
-                      <div class="postArticle-content js-postField">
-                        <section class="section--body section--first section--last">
-                          <div class="section-divider layoutSingleColumn"><hr class="section-divider"></div>
-                          <div class="section-content">
-                            <div class="section-inner layoutSingleColumn">
-                              <h3 name="2683" id="2683" class="graf--h3 graf--leading graf--title"><?php echo $val['title']; ?></h3>
-                              <p class="graf--p graf-after--h3"><?php echo cjk_substr($val['answer_info']['answer_content'], 0, 130, 'UTF-8', '...'); ?></p>
-                            </div>
-                          </div>
-                        </section>
-                      </div>
+                  <div class="mod-footer">
+                    <!-- 加载更多内容 -->
+                    <a class="aw-load-more-content" id="bp_user_actions_answers_more">
+                        <span><?php _e('更多'); ?></span>
                     </a>
+                    <!-- end 加载更多内容 -->
                   </div>
-                  <div class="postArticle-readMore">
-                    <a class="button button--smaller button--chromeless u-baseColor--buttonNormal" href="<?php echo $val['link']; ?>">阅读更多</a>
-                  </div>
-                  <div class="u-clearfix u-paddingTop10">
-                    <div class="buttonSet buttonSet--withLabels u-floatLeft">
-                      <div class="buttonSet-inner">
-                        <span class="aw-border-radius-5 count pull-left"><i class="icon icon-agree"></i><?php echo $val['answer_info']['agree_count']; ?></span>
-                      </div>
-                    </div>
-                  </div>
-                </article>
+              </div>
               </div>
             </div>
           </div>
-          <?php } ?>
-          <?php } else { ?>
-            <p class="padding10 text-center"><?php _e('没有内容'); ?></p>
-          <?php } ?>
+
         </div>
       </div>
       <div class="tab-pane" id="articles">
@@ -358,9 +271,6 @@
               <div class="streamItem-cardInner streamItem-cardInner--postPreview">
                 <article class="postArticle postArticle--short js-postArticle js-trackedPost">
                   <div class="aw-mod">
-                    <div class="mod-head">
-                        <h3><?php _e('文章'); ?></h3>
-                    </div>
                     <div class="mod-body">
                         <div class="aw-profile-publish-list" id="contents_user_actions_articles"></div>
                     </div>
