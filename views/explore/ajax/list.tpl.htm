@@ -81,7 +81,9 @@
 											<div class="section-content">
 												<div class="section-inner layoutSingleColumn">
 													<h3 class="graf--h3 graf-after--figure graf--last graf--title"><?php echo $val['title']; ?></h3>
-													<p class="graf--p graf-after--h3 graf--last"><?php echo nl2br(trim(strip_tags(FORMAT::parse_attachs(FORMAT::parse_bbcode($val['message']))))); ?></p>
+													<p class="graf--p graf-after--h3 graf--last">
+														<?php echo FORMAT::parse_attachs(nl2br(FORMAT::parse_bbcode($val['message']))); ?>
+													</p>
 												</div>
 											</div>
 										</section>
@@ -91,9 +93,7 @@
 						</div>
 
 						<div class="postArticle-readMore">
-							<?php if (cjk_strlen($val['message']) > 130) { ?>
-							<a class="button button--smaller button--chromeless u-baseColor--buttonNormal" href="article/<?php echo $val['id']; ?>">查看全部</a>
-							<?php } ?>
+
 						</div>
 
 						<div class="u-clearfix u-paddingTop10">
