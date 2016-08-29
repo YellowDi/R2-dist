@@ -235,18 +235,20 @@
           <div class="streamItem streamItem--postPreview js-streamItem">
             <div class="streamItem-card streamItem-card--postPreview streamItem-card--hPadding20 streamItem-card--borderRadius3 cardChromeless">
               <div class="streamItem-cardInner streamItem-cardInner--postPreview">
-                <div class="aw-mod">
-                  <div class="mod-body">
-                    <div class="aw-profile-answer-list" id="contents_user_actions_answers"></div>
+                <article class="postArticle postArticle--short js-postArticle js-trackedPost">
+                  <div class="aw-mod">
+                    <div class="mod-body">
+                      <div class="aw-profile-answer-list" id="contents_user_actions_answers"></div>
+                    </div>
+                    <div class="mod-footer">
+                      <!-- 加载更多内容 -->
+                      <a class="aw-load-more-content" id="bp_user_actions_answers_more">
+                          <span><?php _e('更多'); ?></span>
+                      </a>
+                      <!-- end 加载更多内容 -->
+                    </div>
                   </div>
-                  <div class="mod-footer">
-                    <!-- 加载更多内容 -->
-                    <a class="aw-load-more-content" id="bp_user_actions_answers_more">
-                        <span><?php _e('更多'); ?></span>
-                    </a>
-                    <!-- end 加载更多内容 -->
-                  </div>
-              </div>
+                </article>
               </div>
             </div>
           </div>

@@ -1,17 +1,18 @@
 <?php if (is_array($this->list)) { ?>
-<?php foreach ($this->list AS $key => $val) { ?>	
-<div class="aw-item">
-	<div class="aw-mod">
-		<div class="mod-head">
-			<h4 class="aw-hide-txt">
-				<a href="<?php echo $val['link']; ?>"><?php echo $val['title']; ?></a>
-			</h4>
+	<?php foreach ($this->list AS $key => $val) { ?>
+		<div class="compressedPostListItem js-trackedPost  compressedPostListItem--withImage">
+			<div class="compressedPostListItem-content">
+				<div class="compressedPostListItem-social"></div>
+				<div class="compressedPostListItem-title">
+					<a class="link link--primary u-accentColor--hoverTextNormal" href="<?php echo $val['link']; ?>"><?php echo $val['title']; ?></a>
+				</div>
+				<div class="compressedPostListItem-postMeta">
+					<span class="compressedPostListItem-author">
+						<span class="aw-border-radius-5 count pull-left"><i class="icon icon-reply"></i><?php echo $val['question_info']['answer_count']; ?></span>
+						<p class="text-color-999"><?php _e('%s 次浏览', $val['question_info']['view_count']); ?> • <?php _e('%s 个关注', $val['question_info']['focus_count']); ?> • <?php echo date_friendly($val['add_time']); ?></p>
+					</span>
+				</div>
+			</div>
 		</div>
-		<div class="mod-body">
-			<span class="aw-border-radius-5 count pull-left"><i class="icon icon-reply"></i><?php echo $val['question_info']['answer_count']; ?></span>
-			<p class="text-color-999"><?php _e('%s 次浏览', $val['question_info']['view_count']); ?> • <?php _e('%s 个关注', $val['question_info']['focus_count']); ?> • <?php echo date_friendly($val['add_time']); ?></p>
-		</div>
-	</div>
-</div>
-<?php } ?>
+	<?php } ?>
 <?php } ?>
