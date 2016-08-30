@@ -15833,7 +15833,7 @@ body.os-ios.is-withMagicUnderlines .markup--p-quote .markup--li-anchor, body.os-
 
 .responsesStream-editor {
     margin-top: 5px;
-    padding: 5px 20px 0 20px;
+    padding: 20px;
     box-shadow: 0 1px 4px rgba(0, 0, 0, .03)
 }
 
