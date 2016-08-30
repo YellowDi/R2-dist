@@ -131,6 +131,74 @@
     </div>
     <!-- end 相关内容 -->
 
+    <!-- new 文章评论 -->
+    <div class="responsesWrapper">
+      <div class="container u-maxWidth740">
+        <div class="responsesStreamWrapper u-maxWidth640">
+
+          <div class="container u-maxWidth640 responsesStream-title u-paddingTop15"><div class="row"><div class="col u-size12of12"><div class="heading u-clearfix"><div class="u-clearfix"><div class="heading-content u-floatLeft"><span class="heading-title heading-title--semibold">评论</span></div></div></div></div></div></div>
+
+          <div class="responsesStream aw-feed-list">
+          <?php if ($this->comments) { ?>
+            <?php foreach ($this->comments AS $key => $val) { ?>
+              <div class="streamItem streamItem--postPreview" id="answer_list_<?php echo $val['id']; ?>">
+                <div class="streamItem-card streamItem-card--postPreview streamItem-card--hPadding20 streamItem-card--borderRadius3 cardChromeless">
+                  <div class="streamItem-cardInner streamItem-cardInner--postPreview">
+                    <article class="postArticle postArticle--short">
+                      <!-- 评论信息 -->
+                      <div class="u-clearfix u-marginBottom10">
+                        <div class="postMetaInline u-floatLeft">
+                          <div class="postMetaInline-avatar">
+                            <a class="link avatar u-baseColor--link" href="people/<?php echo $val['user_info']['url_token']; ?>"><img src="<?php echo get_avatar_url($val['uid'], 'mid'); ?>" class="avatar-image u-size36x36 u-xs-size32x32" alt="<?php echo $val['user_info']['user_name']; ?>" /></a>
+                          </div>
+                          <div class="postMetaInline-authorLockup">
+                            <a class="link link link--darken link--accent u-accentColor--textNormal u-accentColor--textDarken u-baseColor--link" href="people/<?php echo $val['user_info']['url_token']; ?>"><?php echo $val['user_info']['user_name']; ?></a>
+                            <?php if ($val['at_user_info']) { ?> <?php _e('回复'); ?>
+                              <a href="people/<?php echo $val['at_user_info']['url_token']; ?>"><?php echo $val['at_user_info']['user_name']; ?></a>
+                            <?php } ?>
+                            <div class="u-fontSizeSmallest js-postMetaInlineSupplemental">
+                              <span class="link link--darken"><?php echo date_friendly($val['add_time']); ?></span>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <!-- end 评论信息 -->
+                      <!-- 评论内容 -->
+                      <div class="layoutSingleColumn">
+                        <div class="postArticle-content">
+                          <section class="section--body section--first section--last">
+                            <div class="section-content"><div class="section-inner layoutSingleColumn"><p class="graf--p graf--leading graf--last"><?php echo nl2br($val['message']); ?></p></div></div>
+                          </section>
+                        </div>
+                      </div>
+                      <!-- end 评论内容 -->
+                    </article>
+                  </div>
+                </div>
+              </div>
+            <?php } ?>
+          <?php } ?>
+          </div>
+
+          <?php if ($_GET['item_id']) { ?>
+          <div class="container u-maxWidth640">
+            <div class="row">
+              <a href="article/<?php echo $this->article_info['id']; ?>" class="button button--primary button--withChrome u-accentColor--buttonNormal responsesStream-showOtherResponses cardChromeless u-sizeFullWidth">
+                <span>查看全部评论</span>
+              </a>
+            </div>
+          </div>
+          <?php } ?>
+
+          <?php if ($this->pagination) { ?>
+            <div class="clearfix"><?php echo $this->pagination; ?></div>
+          <?php } ?>
+
+        </div>
+      </div>
+    </div>
+    <!-- end 文章评论 -->
+
     <!-- 文章评论 -->
     <div class="aw-mod">
       <div class="mod-head common-head">
@@ -146,7 +214,10 @@
                   <img src="<?php echo get_avatar_url($val['uid'], 'mid'); ?>" alt="<?php echo $val['user_info']['user_name']; ?>" />
                 </a>
                 <p>
-                  <a href="people/<?php echo $val['user_info']['url_token']; ?>"><?php echo $val['user_info']['user_name']; ?></a><?php if ($val['at_user_info']) { ?> <?php _e('回复'); ?> <a href="people/<?php echo $val['at_user_info']['url_token']; ?>"><?php echo $val['at_user_info']['user_name']; ?></a><?php } ?>
+                  <a href="people/<?php echo $val['user_info']['url_token']; ?>"><?php echo $val['user_info']['user_name']; ?></a>
+                  <?php if ($val['at_user_info']) { ?> <?php _e('回复'); ?>
+                    <a href="people/<?php echo $val['at_user_info']['url_token']; ?>"><?php echo $val['at_user_info']['user_name']; ?></a>
+                  <?php } ?>
                 </p>
               </div>
               <div class="mod-body">
