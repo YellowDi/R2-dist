@@ -1166,9 +1166,9 @@ a.aw-load-more-content {
 .common-head .badge {
     vertical-align: 3px;
 }
-.aw-feed-list {
+/*.aw-feed-list {
     padding: 0 20px;
-}
+}*/
 .aw-feed-list .aw-load-more-content {
     margin: 20px 0;
 }
