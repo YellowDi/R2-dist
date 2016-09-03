@@ -1,3 +1,66 @@
+#loginPage {
+    height: 100%;
+}
+
+.loginPage-container {
+    bottom: 0;
+    display: block;
+    left: 0;
+    max-height: 750px;
+    min-height: 545px;
+    position: absolute;
+    right: 0;
+    top: 0;
+}
+
+.loginPage-bg {
+    position: fixed;
+    width: 200%;
+    height: 200%;
+    left: -50%;
+    background: #000;
+}
+
+.loginPage-img {
+    margin: auto;
+    min-width: 50%;
+    min-height: 50%;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}
+
+.loginPage-card {
+    position: absolute;
+    width: 838px;
+    height: 410px;
+    margin: -154px 0 0 -418px;
+    margin-top: -228px;
+    top: 50%;
+    left: 50%;
+}
+
+.loginPage-welcome {
+    width: 520px;
+    height: 410px;
+}
+
+.loginPage-welcome-text {
+    bottom: 0;
+    color: #ccd6dd;
+    font-size: 20px;
+    font-weight: 300;
+    left: 0;
+    line-height: 22px;
+    padding: 20px;
+    position: absolute;
+    text-align: left;
+    text-shadow: #000 0 1px 2px;
+    width: 470px;
+}
+
+
 /* 登陆页面 */
 
 .loginPage {
@@ -13,6 +76,7 @@
     background-repeat: no-repeat;
     background-size: cover;
 }
+
 .loginPage-title {
     margin-bottom: 0;
     background-color: #F01D48;
@@ -20,6 +84,7 @@
     font-size: 18px;
     color: rgba(0, 0, 0, .8);
 }
+
 .loginPage-logo {
     width: 300px;
 }
