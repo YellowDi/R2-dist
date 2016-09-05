@@ -3,38 +3,38 @@
 <div class="overlay--jump overlay--dark"></div>
 
 <div class="container--jump">
-    <div class="form-signin">
-        <h2 class="form-signin-heading"><img src="http://7xp0k6.com1.z0.glb.clouddn.com/login-logo.png" alt="login-logo"></h2>
-        <div class="form-signin-content">Let's talk about game.</div>
-        <form id="login_form" method="post" onsubmit="return false" action="http://r2vg.com/account/ajax/login_process/" class="u-paddingBottom10">
-            <input type="hidden" name="return_url" value="http://r2vg.com/">
-            <div class="form-signin-content">
-                <div class="u-paddingTop10">邮箱 / 用户名</div>
-                <div class="inputGroup u-marginBottom0">
-                    <input type="text" id="aw-login-user-name" name="user_name" class="textInput textInput--large u-marginBottom0 textInput--underlined textInput--signin js-email" placeholder="yourname@example.com" value="" data-com.agilebits.onepassword.user-edited="yes">
-                </div>
-                <div class="u-paddingTop10">密码</div>
-                <div class="inputGroup u-marginBottom0">
-                    <input type="password" id="aw-login-user-password" name="password" class="textInput textInput--large u-marginBottom0 textInput--underlined textInput--signin js-email" placeholder="********" data-com.agilebits.onepassword.user-edited="yes">
-                </div>
-            </div>
-            <div class="form-signin-content collapse error_message"></div>
-            <div class="form-signin-content">
-                <div class="u-clearfix u-paddingTop10">
-                    <div class="buttonSet buttonSet--withLabels u-floatLeft">
-                        <div class="buttonSet-inner">
-                            <a href="javascript:;" onclick="AWS.ajax_post($('#login_form'), AWS.ajax_processer, 'error_message');" id="login_submit" class="button button--primary u-noUserSelect button--withChrome u-accentColor--buttonNormal button--follow">登录</a>
-                        </div>
-                    </div>
-                    <div class="buttonSet u-floatRight">
-                        <div class="buttonSet-inner">
-                            <a class="button button--chromeless" href="http://r2vg.com">还没有账号？</a>
-                        </div>
-                    </div>
+  <div class="form-signin">
+    <h2 class="form-signin-heading"><img src="http://7xp0k6.com1.z0.glb.clouddn.com/login-logo.png" alt="login-logo"></h2>
+    <div class="form-signin-content">Let's talk about game.</div>
+    <form id="login_form" method="post" onsubmit="return false" action="http://r2vg.com/account/ajax/login_process/" class="u-paddingBottom10">
+      <input type="hidden" name="return_url" value="http://r2vg.com/">
+      <div class="form-signin-content">
+        <div class="u-paddingTop10">邮箱 / 用户名</div>
+        <div class="inputGroup u-marginBottom0">
+            <input type="text" id="aw-login-user-name" name="user_name" class="textInput textInput--large u-marginBottom0 textInput--underlined textInput--signin js-email" placeholder="yourname@example.com" value="" data-com.agilebits.onepassword.user-edited="yes">
+        </div>
+        <div class="u-paddingTop10">密码</div>
+        <div class="inputGroup u-marginBottom0">
+            <input type="password" id="aw-login-user-password" name="password" class="textInput textInput--large u-marginBottom0 textInput--underlined textInput--signin js-email" placeholder="********" data-com.agilebits.onepassword.user-edited="yes">
+        </div>
+      </div>
+      <div class="form-signin-content collapse error_message"></div>
+      <div class="form-signin-content">
+        <div class="u-clearfix u-paddingTop10">
+            <div class="buttonSet buttonSet--withLabels u-floatLeft">
+                <div class="buttonSet-inner">
+                    <a href="javascript:;" onclick="AWS.ajax_post($('#login_form'), AWS.ajax_processer, 'error_message');" id="login_submit" class="button button--primary u-noUserSelect button--withChrome u-accentColor--buttonNormal button--follow">登录</a>
                 </div>
             </div>
-        </form>
-    </div>
+            <div class="buttonSet u-floatRight">
+                <div class="buttonSet-inner">
+                    <a class="button button--chromeless" href="account/register/">还没有账号？</a>
+                </div>
+            </div>
+        </div>
+      </div>
+    </form>
+  </div>
 </div>
 
 <script type="text/javascript" src="<?php echo G_STATIC_URL; ?>/js/app/login.js"></script>
