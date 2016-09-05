@@ -1,27 +1,102 @@
 /* 登陆页面 */
 
-.loginPage {
+html,body {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+body {
+    padding-top: 40px;
+    background-image: url("http://7xp0k6.com1.z0.glb.clouddn.com/login_bg_2.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+@media (max-width: 414px) {
+    body {
+      padding-top: 0;
+    }
+}
+
+.lg-overlay {
     position: absolute;
     top: 0;
     right: 0;
     bottom: 0;
     left: 0;
     width: 100%;
-    height: 100%;
-    background-image: url("http://7xp0k6.com1.z0.glb.clouddn.com/login_bg_2.jpg");
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
+    height: 100vh;
+    z-index: -1;
 }
 
-.loginPage-title {
+.lg-container {
+    width: 100%;
+    height: 100vh;
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+@media (max-width: 414px) {
+    .lg-container {
+      width: 100%;
+      padding: 0;
+      margin: 0;
+    }
+}
+
+@media (min-width: 768px) {
+    .lg-container {
+        width: 750px;
+    }
+}
+@media (min-width: 992px) {
+    .lg-container {
+        width: 970px;
+    }
+}
+@media (min-width: 1200px) {
+    .lg-container {
+        width: 1170px;
+    }
+}
+
+.form-signin {
+    padding: 15px;
+    margin: 0 auto;
+    background-color: #fff;
+    border-radius: 3px;
+    box-shadow: 0 2px 6px 0 rgba(0, 0, 0, .44);
+    padding: 0;
+    max-width: 300px;
+}
+
+@media (max-width: 414px) {
+    .form-signin {
+      width: 100%;
+      max-width: 100%;
+      height: 100vh;
+      border-radius: 0;
+    }
+
+}
+
+.form-signin-heading {
     margin-bottom: 0;
     background-color: #F01D48;
     padding: 0;
-    font-size: 18px;
-    color: rgba(0, 0, 0, .8);
 }
 
-.loginPage-logo {
-    width: 300px;
+.form-signin-heading img {
+    width: 100%;
+}
+
+.form-signin-content {
+    padding: 0 32px;
+    margin: 24px 0;
+    font-size: 16px;
+    text-align: left;
+    color: rgba(0, 0, 0, .6);
 }
