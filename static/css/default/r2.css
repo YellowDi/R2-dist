@@ -257,7 +257,7 @@ a, button, input {
 
 html {
     overflow-y: scroll;
-    -webkit-overflow-scrolling:touch;
+    -webkit-overflow-scrolling: touch;
 }
 
 body, html {
@@ -2371,6 +2371,41 @@ main {
     padding-left: 20px;
     margin-right: auto;
     margin-left: auto
+}
+
+.container--jump {
+    width: 100%;
+    height: 100vh;
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+@media (max-width: 414px) {
+    .container--jump {
+        width: 100%;
+        padding: 0;
+        margin: 0;
+    }
+}
+
+@media (min-width: 768px) {
+    .container--jump {
+        width: 750px;
+    }
+}
+
+@media (min-width: 992px) {
+    .container--jump {
+        width: 970px;
+    }
+}
+
+@media (min-width: 1200px) {
+    .container--jump {
+        width: 1170px;
+    }
 }
 
 .container .layoutSingleColumn {
@@ -7004,6 +7039,17 @@ section.is-darkBackgrounded {
 
 .overlay--dark {
     background-color: rgba(0, 0, 0, .6)
+}
+
+.overlay--jump {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    z-index: -1;
 }
 
 .overlay:before {
