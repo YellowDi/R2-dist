@@ -7036,6 +7036,10 @@ section.is-darkBackgrounded {
     border: 0
 }
 
+.overlay--promo {
+    background-color: rgba(0, 0, 0, .1)
+}
+
 .overlay--dark {
     background-color: rgba(0, 0, 0, .6)
 }
