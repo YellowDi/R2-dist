@@ -40,14 +40,22 @@ body {
 }
 
 .form-signin-heading {
+    width: 400px;
+    height: 200px;
     margin-bottom: 0;
-    background-color: #F01D48;
+    background-image: url('http://r2vg.com/static/css/default/img/login_logo.png');
+    background-size: cover;
+    background-repeat: no-repeat;
     padding: 0;
 }
 
-.form-signin-heading img {
-    width: 100%;
+@media all and (-webkit-min-device-pixel-ratio: 1.5) {
+    .form-signin-heading {
+        background-image: url('http://r2vg.com/static/css/default/img/login_logo@2x.png');
+        background-size: 400px 200px;
+    }
 }
+
 
 .form-signin-content {
     padding: 0 32px;

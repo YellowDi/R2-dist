@@ -9286,11 +9286,21 @@ body.is-diagnosticsVisible .site-main {
 .siteNav-logo {
     position: relative;
     display: inline-block;
-    padding-top: 10px;
+    margin-top: 10px;
     padding-left: 12px;
     padding-right: 14px;
     z-index: 700;
-    border: 0
+    border: 0;
+    width: 45px;
+    height: 45px;
+    background-image: url('http://r2vg.com/static/css/default/img/logo.png');
+}
+
+@media all and (-webkit-min-device-pixel-ratio: 1.5) {
+    .siteNav-logo {
+        background-image: url('http://r2vg.com/static/css/default/img/logo@2x.png');
+        background-size: 45px;
+    }
 }
 
 .siteNav-logo .svgIcon--logo, .siteNav-logo .svgIcon--logoWordmark {
@@ -9427,7 +9437,7 @@ body.is-diagnosticsVisible .site-main {
 
 @media screen and (max-width:767px) {
     .siteNav-logo {
-        padding-top: 5px;
+        margin-top: 5px;
         padding-left: 12px
     }
 }
@@ -17466,8 +17476,10 @@ section.is-mediaFocused>.section-background[data-is-featured] {
     position: relative;
     background-repeat: no-repeat;
     display: block;
-    color: #fff!important;
-    overflow: hidden
+    overflow: hidden;
+    background-image: url('http://r2vg.com/static/css/default/img/promo.png');
+    border: 1px solid rgba(0, 0, 0, .09);
+    box-shadow: 0 1px 4px rgba(0, 0, 0, .04);
 }
 
 .promo.is-dismissed {
