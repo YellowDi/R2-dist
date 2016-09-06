@@ -17835,3 +17835,7 @@ body.is-diagnosticsVisible .diagnostics {
         display: none
     }
 }
+
+.img-polaroid {
+  width: 100%;
+}
