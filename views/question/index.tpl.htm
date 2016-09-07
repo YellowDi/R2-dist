@@ -62,6 +62,7 @@
 		<div class="responsesWrapper">
       <div class="container u-maxWidth740">
         <div class="responsesStreamWrapper u-maxWidth640">
+
 					<?php if ($_GET['column'] == 'log') { ?>
 						1
 					<?php } else { ?>
@@ -162,7 +163,99 @@
 							<?php } ?>
 						<?php } ?>
 					</div>
+
+					<?php if ($_GET['single']) { ?>
+	          <div class="container u-maxWidth640">
+	            <div class="row">
+	              <a href="question/<?php echo $this->question_info['question_id']; ?>" class="button button--primary button--withChrome u-accentColor--buttonNormal responsesStream-showOtherResponses cardChromeless u-sizeFullWidth">
+	                <span>查看全部评论</span>
+	              </a>
+	            </div>
+	          </div>
+					<?php } else { ?>
+						<div class="aw-load-more-content collapse" id="load_uninterested_answers">
+							<span class="text-color-999 aw-alert-box text-color-999" href="javascript:;" tabindex="-1" onclick="AWS.alert('<?php _e('被折叠的回复是被你或者被大多数用户认为没有帮助的回复'); ?>');"><?php _e('为什么被折叠?'); ?></span>
+							<a href="javascript:;" class="aw-load-more-content"><?php _e('%s 个回复被折叠', '<span class="hide_answers_count">0</span>'); ?></a>
+						</div>
+						<div class="collapse aw-feed-list" id="uninterested_answers_list"></div>
+          <?php } ?>
+
+					<?php if ($this->pagination) { ?>
+						<div class="clearfix"><?php echo $this->pagination; ?></div>
 					<?php } ?>
+
+					<?php } ?>
+
+					<!-- 回复编辑器 -->
+					<?php if ($_GET['column'] != 'log') { ?>
+						<a name="answer_form"></a>
+						<?php if ($this->question_info['lock']) { ?>
+							<div class="container u-maxWidth640">
+								<div class="row">
+									<span class="button button--primary button--withChrome u-accentColor--buttonNormal responsesStream-showOtherResponses cardChromeless u-sizeFullWidth">该问题目前已经被锁定, 无法添加新回复</span>
+								</div>
+							</div>
+						<?php } else if (!$this->user_id) { ?>
+							<div class="container u-maxWidth640">
+								<div class="row">
+									<span class="button button--primary button--withChrome u-accentColor--buttonNormal responsesStream-showOtherResponses cardChromeless u-sizeFullWidth">要回复问题请先<a href="account/login/">登录</a>或<a href="account/register/">注册</a></span>
+								</div>
+							</div>
+						<?php } else if ($this->user_answered) { ?>
+							<div class="container u-maxWidth640">
+								<div class="row">
+									<span class="button button--primary button--withChrome u-accentColor--buttonNormal responsesStream-showOtherResponses cardChromeless u-sizeFullWidth">一个问题只能回复一次，<?php if (get_setting('answer_edit_time')) { ?>, <?php _e('你可以在发言后 %s 分钟内编辑回复过的内容', get_setting('answer_edit_time')); ?><?php } ?></span>
+								</div>
+							</div>
+						<?php } else if ((get_setting('answer_self_question') == 'N') && ($this->user_id == $this->question_info['published_uid'])) { ?>
+							<div class="container u-maxWidth640">
+								<div class="row">
+									<span class="button button--primary button--withChrome u-accentColor--buttonNormal responsesStream-showOtherResponses cardChromeless u-sizeFullWidth">不能回复自己发布的问题, 你可以修改问题内容</span>
+								</div>
+							</div>
+						<?php } else { ?>
+							<div class="container u-maxWidth640 u-marginBottom30 responsesStream-editor cardChromeless">
+	              <div class="row">
+	                <div class="col u-size12of12">
+	                  <div class="inlineNewPostControl js-inlineNewPostControl blockGroup blockGroup-list">
+											<form action="question/ajax/save_answer/" onsubmit="return false;" method="post" id="answer_form" class="question_answer_form">
+												<input type="hidden" name="post_hash" value="<?php echo new_post_hash(); ?>" />
+							        	<input type="hidden" name="question_id" value="<?php echo $this->question_info['question_id']; ?>" />
+							        	<input type="hidden" name="attach_access_key" value="<?php echo $this->attach_access_key; ?>" />
+												<div class="block">
+													<div class="inlineEditor-header">
+	                          <div class="inlineEditor-avatar u-paddingRight10">
+	                            <div class="avatar avatar--inline">
+	                              <img class="avatar-image u-size36x36 u-xs-size32x32" alt="<?php echo $this->user_info['user_name']; ?>" src="<?php echo get_avatar_url($this->user_info['uid'], 'max'); ?>" />
+	                            </div>
+	                          </div>
+	                          <div class="inlineEditor-headerContent">
+	                            <div class="inlineEditor-author u-accentColor--textNormal"><?php echo $this->user_info['user_name']; ?></div>
+	                          </div>
+	                        </div>
+													<div class="block-streamText">
+	                          <div class="block-content">
+	                            <article class="postArticle postArticle--short">
+	                              <div class="u-maxWidth600">
+	                                <textarea class="wmd-input form-control autosize editor" id="wmd-input" rows="15" name="answer_content"><?php echo htmlspecialchars($this->draft_content['message']); ?></textarea>
+	                              </div>
+	                            </article>
+	                          </div>
+	                        </div>
+													<div class="inlineEditor-actions">
+	                          <div class="u-floatLeft">
+															<a href="javascript:;" onclick="AWS.ajax_post($('#answer_form'), AWS.ajax_processer, 'reply_question');" class="button button--primary button--withChrome u-accentColor--buttonNormal btn-submit btn-reply">回答</a>
+	                          </div>
+	                        </div>
+												</div>
+											</form>
+										</div>
+									</div>
+								</div>
+						<?php } ?>
+					<?php } ?>
+					<!-- end 回复编辑器 -->
+
 				</div>
 			</div>
 		</div>
