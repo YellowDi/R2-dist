@@ -82,7 +82,7 @@
 												<div class="section-inner layoutSingleColumn">
 													<h3 class="graf--h3 graf-after--figure graf--last graf--title"><?php echo $val['title']; ?></h3>
 													<p class="graf--p graf-after--h3 graf--last">
-														<?php echo FORMAT::parse_attachs(nl2br(FORMAT::parse_bbcode($val['message']))); ?>
+														<?php echo FORMAT::parse_attachs(nl2br(FORMAT::parse_markdown(cjk_substr($val['message'], 0, 130, 'UTF-8', '...')))); ?>
 													</p>
 												</div>
 											</div>
