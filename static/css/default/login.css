@@ -8,7 +8,7 @@ html, body {
 
 body {
     padding-top: 40px;
-    background-image: url("http://r2vg.com/static/css/default/img/promo.png");
+    background-image: url("http://ock4lsprv.bkt.clouddn.com/promo.png");
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -43,7 +43,7 @@ body {
     width: 400px;
     height: 200px;
     margin-bottom: 0;
-    background-image: url('http://r2vg.com/static/css/default/img/login_logo.png');
+    background-image: url('http://ock4lsprv.bkt.clouddn.com/login_logo.png');
     background-size: cover;
     background-repeat: no-repeat;
     padding: 0;
@@ -51,7 +51,7 @@ body {
 
 @media all and (-webkit-min-device-pixel-ratio: 1.5) {
     .form-signin-heading {
-        background-image: url('http://r2vg.com/static/css/default/img/login_logo@2x.png');
+        background-image: url('http://ock4lsprv.bkt.clouddn.com/login_logo@2x.png');
         background-size: 400px 200px;
     }
 }

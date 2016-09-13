@@ -9297,12 +9297,12 @@ body.is-diagnosticsVisible .site-main {
     border: 0;
     width: 45px;
     height: 45px;
-    background-image: url('http://r2vg.com/static/css/default/img/logo.png');
+    background-image: url('http://ock4lsprv.bkt.clouddn.com/logo.png');
 }
 
 @media all and (-webkit-min-device-pixel-ratio: 1.5) {
     .siteNav-logo {
-        background-image: url('http://r2vg.com/static/css/default/img/logo@2x.png');
+        background-image: url('http://ock4lsprv.bkt.clouddn.com/logo@2x.png');
         background-size: 45px;
     }
 }
@@ -17481,7 +17481,7 @@ section.is-mediaFocused>.section-background[data-is-featured] {
     background-repeat: no-repeat;
     display: block;
     overflow: hidden;
-    background-image: url('http://r2vg.com/static/css/default/img/promo.png');
+    background-image: url('http://ock4lsprv.bkt.clouddn.com/promo.png');
     border: 1px solid rgba(0, 0, 0, .09);
     box-shadow: 0 1px 4px rgba(0, 0, 0, .04);
 }
@@ -17838,4 +17838,23 @@ body.is-diagnosticsVisible .diagnostics {
 
 .img-polaroid {
   width: 100%;
+}
+
+.sidebarad {
+    position: relative;
+    width: 100%;
+    max-width: 272px;
+    margin: 0 30px 20px 20px;
+}
+
+.sidebarad--link {
+    display: block;
+    width: inherit;
+    border-radius: 6px;
+}
+
+.sidebarad img {
+    display: block;
+    width: inherit;
+    border-radius: 6px;
 }
