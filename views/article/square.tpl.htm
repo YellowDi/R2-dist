@@ -1,98 +1,87 @@
 <?php TPL::output('global/header.tpl.htm'); ?>
 
-<div class="aw-container-wrap">
-	<?php TPL::output('block/content_nav_menu.tpl.htm'); ?>
+<div class="homeContainer js-homepage u-backgroundGrayLightest u-clearfix">
+	<div class="u-foreground homeContainer-content u-maxWidth1000 u-marginAuto u-clearfix u-sizeViewHeightMin100">
+		<div class="u-clearfix u-positionRelative">
 
-	<div class="container">
-		<div class="row">
-			<div class="aw-content-wrap clearfix">
-				<div class="col-sm-12 col-md-9 aw-main-content">
-					<div class="aw-mod aw-article-list">
-						<?php if ($this->article_list) { ?>
+			<div class="homeContainer-stream">
+				<div class="js-homeStream">
+					<?php if ($this->article_list) { ?>
 						<?php foreach ($this->article_list AS $key => $val) { ?>
-						<div class="aw-item">
-							<a class="aw-user-name hidden-xs" href="people/<?php echo $val['user_info']['url_token']; ?>">
-								<img alt="" src="<?php echo get_avatar_url($val['uid'], 'mid'); ?>" />
-							</a>
-							<div class="aw-content">
-								<div class="mod-body">
-									<h2><a href="article/<?php echo $val['id']; ?>"><?php echo $val['title']; ?></a></h2>
-									<div class="aw-topic-bar">
-										<div class="tag-bar clearfix">
-											<?php foreach($this->article_topics[$val['id']] as $topic_key => $topic_val) { ?>
-											<span class="topic-tag">
-												<a href="topic/<?php echo $topic_val['url_token']; ?>" class="text" data-id="<?php echo $topic_val['topic_id']; ?>"><?php echo $topic_val['topic_title']; ?></a>
-											</span>
-											<?php } ?>
-										</div>
-									</div>
-									<div class="content-wrap">
-										<div class="content" id="detail_<?php echo $val['id']; ?>">
-											<div class="hide-content markitup-box">
-												<?php echo FORMAT::parse_attachs(nl2br(FORMAT::parse_bbcode($val['message']))); ?>
+							<div class="streamItem streamItem--postPreview js-streamItem">
 
+								<div class="streamItem-card streamItem-card--postPreview streamItem-card--hPadding20 streamItem-card--borderRadius3 cardChromeless">
+									<div class="streamItem-cardInner streamItem-cardInner--postPreview">
+										<article class="postArticle js-postArticle js-trackedPost postArticle--short">
+
+											<div class="u-clearfix">
+												<div class="postMetaInline u-floatLeft">
+													<div class="postMetaInline-avatar">
+														<a class="link avatar u-baseColor--link" href="people/<?php echo $val['user_info']['url_token']; ?>">
+															<img src="<?php echo get_avatar_url($val['uid'], 'mid'); ?>" alt="" class="avatar-image u-size36x36 u-xs-size32x32" />
+														</a>
+													</div>
+													<div class="postMetaInline-authorLockup">
+														<a class="link link--darken link--accent" href="people/<?php echo $val['user_info']['url_token']; ?>"><?php echo $val['user_info']['user_name']; ?></a>
+														<?php _e('发表了文章'); ?>
+														<div class="fontSizeSmallest">
+															<a class="link link--darken" href="article/<?php echo $val['id']; ?>"><?php echo date_friendly($val['add_time']); ?></a>
+															<span class="middotDivider"></span>
+															<span class="readingTime"><?php _e('%s 次浏览', $val['views']); ?></span>
+														</div>
+													</div>
+												</div>
 											</div>
 
-											<?php if (cjk_strlen($val['message']) > 130) { ?>
-								        	<a class="more" href="#" onclick="AWS.content_switcher($('#detail_<?php echo $val['id']; ?>'), $('#detail_more_<?php echo $val['id']; ?>')); return false;"><?php _e('继续阅读'); ?> »</a>
-								        	<?php } ?>
-										</div>
+											<div class="layoutSingleColumn">
+												<a href="article/<?php echo $val['id']; ?>">
+													<div class="postArticle-content js-postField">
+														<section class="section--body section--first section--last">
+															<div class="section-divider layoutSingleColumn"><hr class="section-divider"></div>
+															<div class="section-content">
+																<div class="section-inner layoutSingleColumn">
+																	<h3 class="graf--h3 graf-after--figure graf--last graf--title"><?php echo $val['title']; ?></h3>
+																	<p class="graf--p graf-after--h3 graf--last">
+																		<?php echo FORMAT::parse_attachs(nl2br(FORMAT::parse_markdown(cjk_substr($val['message'], 0, 130, 'UTF-8', '...')))); ?>
+																	</p>
+																</div>
+															</div>
+														</section>
+													</div>
+												</a>
+											</div>
 
-										<div class="content markitup-box collapse" id="detail_more_<?php echo $val['id']; ?>">
-											<?php echo FORMAT::parse_attachs(nl2br(FORMAT::parse_bbcode($val['message']))); ?>
-											<?php if (cjk_strlen($val['message']) > 130) { ?>
-								        	<a class="more" href="#" onclick="AWS.content_switcher($('#detail_more_<?php echo $val['id']; ?>'), $('#detail_<?php echo $val['id']; ?>')); return false;"><?php _e('收起阅读'); ?> »</a>
-								        	<?php } ?>
-										</div>
+											<div class="u-clearfix u-paddingTop10">
+												<div class="buttonSet u-floatRight">
+													<div class="buttonSet-inner">
+														<a class="button button--chromeless" href="article/<?php echo $val['id']; ?>"><?php _e('%s 个评论', $val['comments']); ?></a>
+													</div>
+												</div>
+											</div>
+
+										</article>
 									</div>
 								</div>
-								<div class="mod-footer clearfix">
-									<span class="pull-right more-operate text-color-999">
-										<?php echo $val['user_info']['user_name']; ?> 发表于 : <?php echo date_friendly($val['add_time']); ?>
 
-										<a class="text-color-999" href="article/<?php echo $val['id']; ?>"><i class="icon icon-comment"></i> <?php _e('评论'); ?> (<?php echo $val['comments']; ?>)</a>
-										<a class="text-color-999 dropdown-toggle" data-toggle="dropdown">
-											<i class="icon icon-share"></i> <?php _e('分享'); ?>
-										</a>
-										<div aria-labelledby="dropdownMenu" role="menu" class="aw-dropdown shareout pull-right">
-											<ul class="aw-dropdown-list">
-												<li><a onclick="AWS.User.share_out({webid: 'tsina', content: $(this).parents('.aw-item').find('.markitup-box')});"><i class="icon icon-weibo"></i> <?php _e('微博'); ?></a></li>
-											<li><a onclick="AWS.User.share_out({webid: 'qzone', content: $(this).parents('.aw-item')});"><i class="icon icon-qzone"></i> <?php _e('QZONE'); ?></a></li>
-											<li><a onclick="AWS.User.share_out({webid: 'weixin', content: $(this).parents('.aw-item')});"><i class="icon icon-wechat"></i> <?php _e('微信'); ?></a></li>
-											</ul>
-										</div>
-									</span>
-								</div>
 							</div>
-						</div>
 						<?php } ?>
-
-						<?php echo $this->pagination; ?>
-
-						<?php } ?>
-					</div>
-					<!-- end 文章列表 -->
+					<?php } ?>
 				</div>
-				<!-- 侧边栏 -->
-				<div class="col-sm-3 col-md-3 aw-side-bar hidden-xs hidden-sm">
-					<!-- 热门文章 -->
-					<div class="aw-mod aw-text-align-justify">
-						<div class="mod-head">
-							<h3><?php _e('热门文章'); ?></h3>
-						</div>
-						<div class="mod-body">
-							<ul>
-								<?php foreach($this->hot_articles AS $key => $val) { ?>
-								<li><a href="article/<?php echo $val['id']; ?>"><?php echo $val['title']; ?></a></li>
-								<?php } ?>
-							</ul>
-						</div>
-					</div>
-					<!-- end 热门文章 -->
-					<?php TPL::output('block/sidebar_hot_topics.tpl.htm'); ?>
-				</div>
-				<!-- end 侧边栏 -->
 			</div>
+
+			<div class="js-sidebar2 sidebar sidebar--width340">
+				<div class="sidebar-contentWrapper sidebar-contentWrapper2">
+					<div class="js-sidebar2-contentWrapper">
+						<div class="sidebarad">
+							<a class="sidebarad--link" href="http://www.battlenet.com.cn/wow/zh/blog/17433416/"><img src="http://7xp0k6.com1.z0.glb.clouddn.com/X9KFQ5WBY2JW1470392046508.jpg" alt="“萨格拉斯之墓”广播剧"></a>
+						</div>
+						<?php TPL::output('block/sidebar_feature.tpl.htm'); ?>
+						<?php TPL::output('block/sidebar_hot_topics.tpl.htm'); ?>
+						<?php TPL::output('block/sidebar_hot_users.tpl.htm'); ?>
+					</div>
+				</div>
+			</div>
+
 		</div>
 	</div>
 </div>
