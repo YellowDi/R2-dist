@@ -27,7 +27,7 @@
                         <a class="link u-textColorDarker u-fontSizeSmall u-fontWeightBold u-baseColor--link" href="topic/<?php echo $val['url_token']; ?>" data-id="<?php echo $val['topic_id']; ?>"><?php echo $val['topic_title']; ?></a>
                         <a class="link link--darken u-accentColor--textDarken u-block u-fontSizeSmaller u-baseColor--link" href="topic/<?php echo $val['url_token']; ?>" data-id="<?php echo $val['topic_id']; ?>"><?php _e('%s 个关注', $val['focus_count']); ?></a>
                       </div>
-                      <a class="button button--primary u-noUserSelect button--withChrome u-accentColor--buttonNormal u-floatRight" href="topic/<?php echo $val['url_token']; ?>" data-id="<?php echo $val['topic_id']; ?>"><span class="button-label  button-defaultState js-buttonLabel">关注</span></a>
+                      <a class="button button--primary u-noUserSelect button--withChrome u-accentColor--buttonNormal u-floatRight" href="topic/<?php echo $val['url_token']; ?>" data-id="<?php echo $val['topic_id']; ?>"><span class="button-label  button-defaultState"><?php _e('%s 个讨论', $val['discuss_count']); ?></span></a>
                     </div>
                   </li>
                 <?php } ?>
