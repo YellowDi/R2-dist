@@ -42,7 +42,18 @@
 
     </div>
 
-    <aside class="col u-size4of12 u-xs-hide u-paddingBottom20"></aside>
+    <aside class="col u-size4of12 u-xs-hide u-paddingBottom20">
+      <div class="u-marginTop40">
+        <div class="heading u-clearfix heading--borderedTop">
+          <div class="u-clearfix"><div class="heading-content u-floatLeft"><span class="heading-title">新增标签</span></div></div>
+          <div class="tags tags--postTags tags--light">
+            <?php foreach ($this->new_topics AS $key => $val) { ?>
+              <a class="link u-baseColor--link" href="topic/<?php echo $val['url_token']; ?>" data-id="<?php echo $val['topic_id']; ?>"><?php echo $val['topic_title']; ?></a>
+            <?php } ?>
+          </div>
+        </div>
+      </div>
+    </aside>
 
   </div>
 </div>
