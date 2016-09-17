@@ -251,11 +251,11 @@ table td {
     padding: 0 0 20px;
     border-right: 1px solid #e6e6e6;
 }
-.aw-side-bar {
+/*.aw-side-bar {
     margin-left: -1px;
     padding: 20px;
     border-left: 1px solid #e6e6e6;
-}
+}*/
 .aw-mod .mod-head h4, .aw-mod .mod-head h4 a {
     font-size: 14px;
 }
@@ -1425,7 +1425,7 @@ a.aw-load-more-content {
 
 /* 导航条 */
 
-.aw-mod.side-nav ul li a {
+/*.aw-mod.side-nav ul li a {
     display: block;
     padding-left: 10px;
     line-height: 30px;
@@ -1454,7 +1454,7 @@ a.aw-load-more-content {
     color: #999;
     font-size: 16px;
     vertical-align: -1px;
-}
+}*/
 
 /* 用户列表 */
 

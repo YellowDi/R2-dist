@@ -1,55 +1,60 @@
 <?php TPL::output('global/header.tpl.htm'); ?>
+<div class="u-backgroundGrayLightest" style="height: 100vh;">
 
-<div class="aw-container-wrap">
-	<div class="container">
+	<div class="container u-maxWidth1000">
 		<div class="row">
-			<div class="aw-content-wrap clearfix">
-				<div class="col-sm-12 col-md-9 aw-main-content">
-					<!-- 新消息通知 -->
-					<div class="aw-mod aw-notification-box collapse" id="index_notification">
-						<div class="mod-head common-head">
-							<h2>
-								<span class="pull-right"><a href="account/setting/privacy/#notifications" class="text-color-999"><i class="icon icon-setting"></i> <?php _e('通知设置'); ?></a></span>
-								<i class="icon icon-bell"></i><?php _e('新通知'); ?><em class="badge badge-important" name="notification_unread_num"><?php echo $this->user_info['notification_unread']; ?></em>
-							</h2>
-						</div>
-						<div class="mod-body">
-							<ul id="notification_list"></ul>
-						</div>
-						<div class="mod-footer clearfix">
-							<a href="javascript:;" onclick="AWS.Message.read_notification(false, 0, false);" class="pull-left btn btn-mini btn-default"><?php _e('我知道了'); ?></a>
-							<a href="notifications/" class="pull-right btn btn-mini btn-success"><?php _e('查看所有'); ?></a>
-						</div>
-					</div>
-					<!-- end 新消息通知 -->
+			<div class="col u-size8of12 u-sm-size12of12">
 
-					<a name="c_contents"></a>
-					<div class="aw-mod clearfix">
-						<div class="mod-head common-head">
-							<h2 id="main_title"><?php _e('最新动态'); ?></h2>
-						</div>
+				<div class="blockGroup blockGroup--posts js-blockGroupPosts blockGroup--inset blockGroup--list">
+					<div class="blockGroup-list layoutSingleColumn">
+						<a name="c_contents"></a>
+						<div class="aw-mod clearfix">
 
-						<div class="mod-body aw-feed-list clearfix" id="main_contents"></div>
+							<div class="hero hero--standalone hero--alignLeft u-paddingTop40 u-paddingBottom20">
+								<h1 class="hero-title" id="main_title"><?php _e('最新动态'); ?></h1>
+							</div>
+							<!-- 动态页导航 -->
+							<div class="heading u-clearfix u-marginBottom25">
+								<div class="u-clearfix">
+									<div class="aw-mod heading-content u-floatLeft side-nav">
+										<ul class="heading-tabs">
+											<li class="heading-tabsItem u-inlineBlock">
+												<span class="heading-title u-inlineBlock"><a class="button button--unstyled" href="home/#all" rel="all">最新动态</a></span>
+											</li>
+											<li class="heading-tabsItem u-inlineBlock">
+												<span class="heading-title u-inlineBlock"><a class="button button--unstyled" href="home/#draft_list__draft" rel="draft_list__draft">草稿</a></span>
+											</li>
+											<li class="heading-tabsItem u-inlineBlock">
+												<span class="heading-title u-inlineBlock"><a class="button button--unstyled" href="home/#all__focus" rel="all__focus">我关注的问题</a></span>
+											</li>
+											<li class="heading-tabsItem u-inlineBlock">
+												<span class="heading-title u-inlineBlock"><a class="button button--unstyled" href="home/#focus_topic__focus" rel="all__focus">我关注的问题</a></span>
+											</li>
+											<li class="heading-tabsItem u-inlineBlock">
+												<span class="heading-title u-inlineBlock"><a class="button button--unstyled" href="home/#focus_topic__focus" rel="focus_topic__focus">我关注的话题</a></span>
+											</li>
+										</ul>
+									</div>
+								</div>
+							</div>
+							<!-- end 动态页标题 -->
+							<div class="mod-body aw-feed-list clearfix" id="main_contents"></div>
 
-						<div class="mod-footer">
-							<!-- 加载更多内容 -->
-							<a id="bp_more" class="aw-load-more-content" data-page="0">
-								<span><?php _e('更多'); ?></span>
-							</a>
-							<!-- end 加载更多内容 -->
+							<div class="mod-footer">
+								<!-- 加载更多内容 -->
+								<a id="bp_more" class="aw-load-more-content" data-page="0">
+									<span><?php _e('更多'); ?></span>
+								</a>
+								<!-- end 加载更多内容 -->
+							</div>
 						</div>
 					</div>
 				</div>
-				<!-- 侧边栏 -->
-				<div class="col-sm-12 col-md-3 aw-side-bar hidden-xs hidden-sm">
-					<?php TPL::output('block/sidebar_announce.tpl.htm'); ?>
-
-					<?php TPL::output('block/sidebar_menu.tpl.htm'); ?>
-
-					<!-- 可能感兴趣的人/或话题 -->
+			</div>
+			<div class="col u-size4of12 u-sm-hide aw-side-bar">
+				<div class="u-marginTop40">
 					<?php TPL::output('block/sidebar_recommend_users_topics.tpl.htm'); ?>
 				</div>
-				<!-- end 侧边栏 -->
 			</div>
 		</div>
 	</div>

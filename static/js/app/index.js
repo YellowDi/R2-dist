@@ -10,9 +10,9 @@ $(function()
 
 		if ($('#main_title').attr('id') != null && $(this).attr('rel'))
 		{
-			$('.aw-mod.side-nav a').removeClass('active');
+			$('.aw-mod.side-nav a').removeClass('link--darker');
 
-			$(this).addClass('active');
+			$(this).addClass('link--darker');
 
 			window.location.hash = $(this).attr('rel');
 
@@ -184,7 +184,7 @@ function welcome_step(step)
 }
 
 function reload_list()
-{	
+{
 	$('#main_contents').html('<p style="padding: 15px 0" align="center"><img src="' + G_STATIC_URL + '/common/loading_b.gif" alt="" /></p>');
 
 	$('#bp_more').attr('data-page', 0).click();
