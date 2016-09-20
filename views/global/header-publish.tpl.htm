@@ -1,0 +1,42 @@
+<?php TPL::output('global/header_meta.tpl.htm'); ?>
+
+<body>
+
+	<div class="site-main surface-container" id="container">
+		<div class="surface">
+			<div class="screenContent surface-content">
+				<div class="u-clearfix u-sizeViewHeightMin100 u-backgroundGrayLightest">
+
+					<div class="metabar u-clearfix js-metabar metabar--postArticle">
+						<div class="metabar-inner u-marginAuto u-maxWidth1000 u-paddingLeft20 u-paddingRight20 js-metabarMiddle">
+							<div class="metabar-block metabar-block--left u-floatLeft u-height65 u-xs-height56">
+								<a href="/" class="siteNav-logo"></a>
+								<div class="metabar-text">
+									<a class="metabar-message js-metabarMessage is-active" href="http://r2vg.com/home/#draft_list__draft">草稿</a>
+								</div>
+							</div>
+							<div class="metabar-block metabar-block--right u-floatRight u-height65 u-xs-height56">
+								<div class="buttonSet buttonSet--wide"></div>
+								<div class="buttonSet">
+									<?php if ($this->user_id) { ?>
+										<a href="publish/" class="button button--primary button--chromeless u-accentColor--buttonNormal is-inSiteNavBar u-sm-hide u-marginRight15 u-lineHeight30 u-height32">提问</a>
+										<label class="inputGroup u-sm-hide metabar-predictiveSearch u-baseColor--placeholderNormal u-lineHeight30 u-height32 u-verticalAlignMiddle" title="Search Medium">
+											<form class="navbar-search" action="search/" id="global_search_form" method="post">
+												<span class="svgIcon svgIcon--search svgIcon--25px u-baseColor--iconNormal"><svg class="svgIcon-use" width="25" height="25" viewBox="0 0 25 25"><path d="M20.067 18.933l-4.157-4.157a6 6 0 1 0-.884.884l4.157 4.157a.624.624 0 1 0 .884-.884zM6.5 11c0-2.62 2.13-4.75 4.75-4.75S16 8.38 16 11s-2.13 4.75-4.75 4.75S6.5 13.62 6.5 11z"></path></svg></span>
+												<input class="js-predictiveSearchInput textInput textInput--rounded textInput--darkText u-baseColor--textNormal textInput--transparent u-lineHeight30 u-height32 u-verticalAlignMiddle" type="text" placeholder="<?php _e('搜索问题、话题或人'); ?>" autocomplete="off" name="q" id="aw-search-query">
+											</form>
+										</label>
+										<a class="button button--small button--chromeless u-sm-show is-inSiteNavBar u-baseColor--buttonNormal button--withIcon button--withSvgIcon" href="http://r2vg.com/search" title="Search" aria-label="Search"></a>
+										<a href="people/<?php echo $this->user_info['url_token']; ?>" class="button button--chromeless u-baseColor--buttonNormal is-inSiteNavBar js-userActions">
+											<div class="avatar">
+												<img src="<?php echo get_avatar_url($this->user_info['uid'], 'max'); ?>" class="avatar-image avatar-image--icon" alt="<?php echo $this->user_info['user_name']; ?>">
+											</div>
+										</a>
+									<?php } else { ?>
+										<a class="button button--chromeless u-baseColor--buttonNormal is-inSiteNavBar u-sm-hide u-marginRight15 u-lineHeight30 u-height32" href="account/login/">提问</a>
+										<a class="button button--primary button--chromeless u-accentColor--buttonNormal is-inSiteNavBar u-marginRight15 u-lineHeight30 u-height32" href="account/login/">登录 / 注册</a>
+									<?php } ?>
+								</div>
+							</div>
+						</div>
+					</div>
