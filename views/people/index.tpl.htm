@@ -41,7 +41,7 @@
       </div>
       <nav class="u-maxWidth640 container">
         <ul class="browsableStreamTabs u-borderTopLightest">
-          <li class="browsableStreamTabs-item"><a class="link link--darker link--darken u-accentColor--textDarken u-baseColor--link" href="#overview" id="page_overview" data-toggle="tab">概括</a></li>
+          <li class="browsableStreamTabs-item"><a class="link link--darken u-accentColor--textDarken u-baseColor--link" href="#overview" id="page_overview" data-toggle="tab">概括</a></li>
           <li class="browsableStreamTabs-item"><a class="link link--darken u-accentColor--textDarken u-baseColor--link" href="#answers" id="page_answers" data-toggle="tab">回答</a></li>
           <li class="browsableStreamTabs-item"><a class="link link--darken u-accentColor--textDarken u-baseColor--link" href="#questions" id="page_questions" data-toggle="tab">提问</a></li>
           <li class="browsableStreamTabs-item"><a class="link link--darken u-accentColor--textDarken u-baseColor--link" href="#articles" id="page_articles" data-toggle="tab">文章</a></li>
@@ -72,7 +72,8 @@
             <div class="streamItem-card streamItem-card--postPreview streamItem-card--hPadding20 streamItem-card--borderRadius3 cardChromeless">
               <div class="streamItem-cardInner streamItem-cardInner--postPreview">
                 <div class="aw-mod">
-                  <div class="mod-body aw-user-center-details">
+                  <div class="mod-body">
+                    <!-- aw-user-center-details -->
                     <?php if (get_setting('sina_weibo_enabled') == 'Y' AND $this->sina_weibo_url) { ?>
                       <dl>
                         <dt><span><?php _e('绑定认证'); ?>:</span></dt>
