@@ -2,11 +2,13 @@
 <html>
 <head>
 	<meta charset="utf-8" />
-	<title><?php _e('文件未找到'); ?></title>
-	<link rel="stylesheet" type="text/css" href="<?php echo G_STATIC_URL; ?>/css/bootstrap.css" />
-	<link rel="stylesheet" type="text/css" href="<?php echo G_STATIC_URL; ?>/css/icon.css" />
-	<link rel="stylesheet" type="text/css" href="<?php echo G_STATIC_URL; ?>/css/default/common.css" />
-	<link rel="stylesheet" type="text/css" href="<?php echo G_STATIC_URL; ?>/css/default/404.css" />
+	<title>404 Error - R2VG</title>
+	<?php if (is_array($this->_import_css_files)) { ?>
+		<?php foreach ($this->_import_css_files AS $import_css) { ?>
+			<link href="<?php echo $import_css; ?>?v=<?php echo G_VERSION_BUILD; ?>" rel="stylesheet" type="text/css" />
+		<?php } ?>
+	<?php } ?>
+	<link href="<?php echo G_STATIC_URL; ?>/css/<?php echo $this->template_name; ?>/r2.css" rel="stylesheet" type="text/css" />
 	<script type="text/javascript">
 	var _<?php echo $post_hash_var_name; ?>="<?php echo new_post_hash(); ?>";
 	var G_POST_HASH=_<?php echo $post_hash_var_name; ?>;
@@ -31,20 +33,50 @@
 	<script type="text/javascript" src="<?php echo G_STATIC_URL; ?>/js/respond.js"></script>
 	<![endif]-->
 </head>
-<body class="aw-404">
-	<div class="aw-404-wrap container">
-		<div class="row">
-			<img src="<?php echo G_STATIC_URL; ?>/common/404.jpg" alt="404">
-			<p><?php _e('你访问的页面不存在'); ?>，<?php _e('请'); ?><a href="javascript:history.go(-1)"><?php _e('返回'); ?></a><?php _e('或搜索相关内容'); ?></p>
-			<div class="aw-search-box  hidden-sm">
-				<form class="navbar-search" action="search/" id="global_search_form" method="post">
-					<div class="input-group">
-						<input class="form-control search-query" type="text" placeholder="<?php _e('搜索问题、话题或人'); ?>" autocomplete="off" name="q" id="aw-search-query" />
-						<span class="input-group-addon" title="<?php _e('搜索'); ?>" id="global_search_btns" onClick="$('#global_search_form').submit();"><i class="icon icon-search"></i></span>
+<body class="error-page error-404">
+	<div class="site-main surface-container" id="container">
+		<div class="surface">
+			<div class="screenContent surface-content">
 
-					</div>
-				</form>
+	<div class="metabar u-clearfix js-metabar metabar--postArticle is-maximized">
+		<div class="metabar-inner u-marginAuto u-maxWidth1000 u-paddingLeft20 u-paddingRight20 js-metabarMiddle">
+			<div class="metabar-block metabar-block--left u-floatLeft u-height65 u-xs-height56">
+				<a href="/" class="siteNav-logo"></a>
+			</div>
+			<div class="metabar-block metabar-block--right u-floatRight u-height65 u-xs-height56">
+				<div class="buttonSet buttonSet--wide"></div>
+				<div class="buttonSet">
+					<?php if ($this->user_id) { ?>
+						<a href="publish/" class="button button--primary button--chromeless u-accentColor--buttonNormal is-inSiteNavBar u-sm-hide u-marginRight15 u-lineHeight30 u-height32">提问</a>
+						<label class="inputGroup u-sm-hide metabar-predictiveSearch u-baseColor--placeholderNormal u-lineHeight30 u-height32 u-verticalAlignMiddle" title="Search Medium">
+							<form class="navbar-search" action="search/" id="global_search_form" method="post">
+								<span class="svgIcon svgIcon--search svgIcon--25px u-baseColor--iconNormal"><svg class="svgIcon-use" width="25" height="25" viewBox="0 0 25 25"><path d="M20.067 18.933l-4.157-4.157a6 6 0 1 0-.884.884l4.157 4.157a.624.624 0 1 0 .884-.884zM6.5 11c0-2.62 2.13-4.75 4.75-4.75S16 8.38 16 11s-2.13 4.75-4.75 4.75S6.5 13.62 6.5 11z"></path></svg></span>
+								<input class="js-predictiveSearchInput textInput textInput--rounded textInput--darkText u-baseColor--textNormal textInput--transparent u-lineHeight30 u-height32 u-verticalAlignMiddle" type="text" placeholder="<?php _e('搜索问题、话题或人'); ?>" autocomplete="off" name="q" id="aw-search-query">
+							</form>
+						</label>
+						<a class="button button--small button--chromeless u-sm-show is-inSiteNavBar u-baseColor--buttonNormal button--withIcon button--withSvgIcon" href="http://r2vg.com/search" title="Search" aria-label="Search"></a>
+						<a href="people/<?php echo $this->user_info['url_token']; ?>" class="button button--chromeless u-baseColor--buttonNormal is-inSiteNavBar js-userActions">
+							<div class="avatar">
+								<img src="<?php echo get_avatar_url($this->user_info['uid'], 'max'); ?>" class="avatar-image avatar-image--icon" alt="<?php echo $this->user_info['user_name']; ?>">
+							</div>
+						</a>
+					<?php } else { ?>
+						<a class="button button--chromeless u-baseColor--buttonNormal is-inSiteNavBar u-sm-hide u-marginRight15 u-lineHeight30 u-height32" href="account/login/">提问</a>
+						<a class="button button--primary button--chromeless u-accentColor--buttonNormal is-inSiteNavBar u-marginRight15 u-lineHeight30 u-height32" href="account/login/">登录 / 注册</a>
+					<?php } ?>
+				</div>
 			</div>
 		</div>
 	</div>
-	<?php TPL::output('global/footer.tpl.htm'); ?>
+	<div class="metabar metabar--spacer js-metabarSpacer u-height65 u-xs-height56"></div>
+	<div class="container u-maxWidth920 u-marginTop180 u-xs-marginTop50 u-clearfix">
+		<div class="u-floatLeft"><span class="svgIcon svgIcon--error404 svgIcon--120px u-fillTransparentBlackLighter"><svg class="svgIcon-use" width="120" height="120" viewBox="0 0 120 120"><path d="M0 120V0h120v120H0zm54.28-51.36V63.6h-3.84V46.48H43L32.28 63.92v4.72h12.16V74h6v-5.36h3.84zM38.04 63.6l6.4-10.48V63.6h-6.4zm40.28-3.44c0-7.08-2-14.2-11-14.2S56.16 53 56.16 60.32c0 7.08 2 14.2 11 14.2s11.16-7.04 11.16-14.36zm-7 .08c0 6.88-1.16 9.48-4.08 9.48s-4.08-2.6-4.08-9.48c0-6.88 1.16-9.48 4.08-9.48s4.08 2.6 4.08 9.48zm30.84 8.4V63.6h-3.84V46.48h-7.44L80.16 63.92v4.72h12.16V74h6v-5.36h3.84zM85.92 63.6l6.4-10.48V63.6h-6.4z" fill-rule="evenodd"></path></svg></span></div>
+		<div class="u-floatLeft u-alignMiddle u-height120 u-paddingLeft20 u-xs-paddingLeft0 js-errorMessage">
+			<div class="u-alignBlock u-textColorDarker">
+				<h2 class="u-uiTextBold u-fontSizeLarger u-xs-fontSizeBase">抱歉，你访问的页面不存在。</h2>
+				<div class="u-uiTextRegular u-fontSizeBase u-textColorNormal"><a class="link--underline" href="javascript:history.go(-1)">点此</a>返回上一页。</div>
+			</div>
+		</div>
+	</div>
+
+<?php TPL::output('global/footer.tpl.htm'); ?>

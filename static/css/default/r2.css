@@ -9292,7 +9292,7 @@ body.is-diagnosticsVisible .site-main {
     display: inline-block;
     margin-top: 10px;
     padding-left: 12px;
-    padding-right: 14px;
+    /*padding-right: 14px;*/
     z-index: 700;
     border: 0;
     width: 45px;
