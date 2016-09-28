@@ -38,7 +38,7 @@
 				<section class="list-item list-item--padded">
 					<div class="list-itemInfo">
 						<h2 class="list-itemTitle">介绍</h2>
-						<input class="list-itemInput" name="signature" maxlength="128" type="text" value="<?php echo $this->user_info['signature']; ?>"<?php if ($this->user_info['verified']) { ?> disabled="disabled"<?php } ?> />
+						<input class="list-itemInput" name="signature" maxlength="128" type="text" value="<?php echo $this->user_info['signature']; ?>" style="width: 500px;" <?php if ($this->user_info['verified']) { ?> disabled="disabled"<?php } ?> />
 					</div>
 				</section>
 				<!-- end 介绍 -->
@@ -49,7 +49,7 @@
 						<p class="list-itemDescription">R2VG 禁止使用任何低俗或者敏感图片作为头像，<strong>如果你是男的，请不要用女人的照片作为头像，这样可能会对其他会员产生误导。</strong></p>
 					</div>
 					<div class="list-itemActions">
-						<img class="list-itemImage" src="<?php echo get_avatar_url($this->user_id, 'max'); ?>?rand=<?php echo rand(1, 999); ?>" alt="" id="avatar_src" />
+						<img class="list-itemImage" src="<?php echo get_avatar_url($this->user_id, 'max'); ?>?rand=<?php echo rand(1, 999); ?>" alt="" id="avatar_src" style="width: 50px;" />
 						<span class="list-itemActionGroup">
 							<a class="list-itemName" id="avatar_uploader" href="javascript:;">上传头像</a> <span id="avatar_uploading_status" class="collapse"><i class="aw-loading"></i> 文件上传中</span>
 							<span class="button button--chromeless u-baseColor--buttonNormal button--disconnect button--dangerHover">支持 jpg、gif、png 等格式的图片</span>
@@ -87,25 +87,6 @@
 
 <script type="text/javascript">
 $(document).ready(function () {
-	$('.select_area').LocationSelect({
-        labels: ["<?php _e('请选择省份或直辖市'); ?>", "<?php _e('请选择城市'); ?>"],
-        elements: document.getElementsByTagName("select"),
-        detector: function () {
-            this.select(["<?php echo $this->user_info['province']; ?>", "<?php echo $this->user_info['city']; ?>"]);
-        },
-		dataUrl: G_BASE_URL.replace('/?', '') + '/static/js/areas.js'
-    });
-
     var fileUpload = new FileUpload('avatar', $('#avatar_uploader'), $('#avatar_src'), G_BASE_URL + '/account/ajax/avatar_upload/', {'loading_status' : '#avatar_uploading_status'});
 });
-
-<?php if ($this->education_experience_list) { ?>
-var education_experience_list = <?php echo json_encode($this->education_experience_list); ?>
-<?php } ?>
-
-<?php if ($this->work_experience_list) { ?>
-var work_experience_list = <?php echo json_encode($this->work_experience_list); ?>
-<?php } ?>
 </script>
-
-<script type="text/javascript" src="<?php echo G_STATIC_URL; ?>/js/app/setting.js"></script>
