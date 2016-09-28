@@ -1,45 +1,65 @@
-<?php TPL::output('global/header.tpl.htm'); ?>
 <?php TPL::output('account/setting/setting_header.tpl.htm'); ?>
-
+<div class="hero hero--standalone hero--alignLeft">
+	<h1 class="hero-title">安全设置</h1>
+</div>
 <div class="aw-mod">
 	<div class="mod-body">
-		<div class="aw-mod aw-user-setting-bind">
-			<div class="mod-head">
-				<h3><?php _e('修改密码'); ?></h3>
-			</div>
-			<form class="form-horizontal" action="account/ajax/modify_password/" method="post" id="setting_form">
-				<div class="mod-body">
-					<div class="form-group">
-						<label class="control-label" for="input-password-old"><?php _e('当前密码'); ?></label>
-						<div class="row">
-							<div class="col-lg-4">
-								<input type="password" class="form-control" id="input-password-old" name="old_password" />
-							</div>
+		<div class="aw-mod mod-base">
+			<!-- 安全设置 -->
+			<form id="setting_form" method="post" action="account/ajax/modify_password/">
+				<!-- 修改密码 -->
+				<div class="heading u-clearfix heading--borderedBottom">
+					<div class="u-clearfix">
+						<div class="heading-content u-floatLeft">
+							<span class="heading-title">修改密码</span>
 						</div>
 					</div>
-					<div class="form-group">
-						<label class="control-label" for="input-password-new"><?php _e('新的密码'); ?></label>
-						<div class="row">
-							<div class="col-lg-4">
-							    <input type="password" class="form-control" id="input-password-new" name="password" />
-							</div>
-						</div>
-					</div> 
-					<div class="form-group">
-						<label class="control-label" for="input-password-re-new"><?php _e('确认密码'); ?></label>
-						<div class="row">
-							<div class="col-lg-4">
-							    <input type="password" class="form-control" id="input-password-re-new" name="re_password" />
-							</div>
-						</div>
-					</div>      
 				</div>
+				<div class="list u-marginBottom50">
+					<!-- 当前密码 -->
+					<section class="list-item list-item--padded">
+						<div class="list-itemInfo">
+							<h2 class="list-itemTitle">当前密码</h2>
+							<p class="list-itemDescription"></p>
+						</div>
+						<div class="list-itemActions">
+							<input type="password" class="form-control" id="input-password-old" name="old_password" placeholder="********"/>
+						</div>
+					</section>
+					<!-- end 当前密码 -->
+					<!-- 新的密码 -->
+					<section class="list-item list-item--padded">
+						<div class="list-itemInfo">
+							<h2 class="list-itemTitle">新的密码</h2>
+							<p class="list-itemDescription"></p>
+						</div>
+						<div class="list-itemActions">
+							<input type="password" class="form-control" id="input-password-new" name="password" placeholder="********"/>
+						</div>
+					</section>
+					<!-- end 新的密码 -->
+					<!-- 确认密码 -->
+					<section class="list-item list-item--padded">
+						<div class="list-itemInfo">
+							<h2 class="list-itemTitle">确认密码</h2>
+							<p class="list-itemDescription"></p>
+						</div>
+						<div class="list-itemActions">
+							<input type="password" class="form-control" id="input-password-re-new" name="re_password" placeholder="********" />
+						</div>
+					</section>
+					<!-- end 确认密码 -->
+				</div>
+				<!-- end 修改密码 -->
 			</form>
+			<!-- end 安全设置 -->
 		</div>
 	</div>
+
 	<div class="mod-footer clearfix">
-		<a href="javascript:;" class="btn btn-large btn-success pull-right" onclick="AWS.ajax_post($('#setting_form'));"><?php _e('保存'); ?></a>
+		<a href="javascript:;" class="button button--primary" onclick="AWS.ajax_post($('#setting_form'));"><?php _e('保存'); ?></a>
 	</div>
+	<div class="u-paddingBottom30"></div>
 </div>
 
 

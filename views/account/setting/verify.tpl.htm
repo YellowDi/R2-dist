@@ -1,6 +1,7 @@
-<?php TPL::output('global/header.tpl.htm'); ?>
 <?php TPL::output('account/setting/setting_header.tpl.htm'); ?>
-
+<div class="hero hero--standalone hero--alignLeft">
+	<h1 class="hero-title">申请认证</h1>
+</div>
 <div class="aw-mod">
 	<div class="mod-body">
 		<div class="aw-mod">
@@ -38,7 +39,7 @@
 						    <input class="form-control" name="name" type="text" value="<?php echo $this->verify_apply['name']; ?>" />
 						</div>
 					</div>
-					
+
 					<div class="form-group">
 						<label class="col-lg-2 control-label verify-code">
 							<span><?php _e('身份证号码'); ?></span>:</label>
@@ -46,19 +47,19 @@
 						    <input class="form-control" name="id_code" type="text" value="<?php echo $this->verify_apply['data']['id_code']; ?>" />
 						</div>
 					</div>
-					
+
 					<div class="form-group">
 						<label class="col-lg-2 control-label"><?php _e('联系方式'); ?>:</label>
 						<div class="col-lg-8">
 						    <input class="form-control" name="contact" type="text" value="<?php echo $this->verify_apply['data']['contact']; ?>" />
 						</div>
-					</div>   
+					</div>
 					<div class="form-group">
 						<label class="col-lg-2 control-label"><?php _e('认证说明'); ?>:</label>
 						<div class="col-lg-8">
 						    <input class="form-control" name="reason" type="text" value="<?php echo $this->verify_apply['reason']; ?>" />
 						</div>
-					</div> 
+					</div>
 					<div class="form-group" id="upload-attach">
 						<label class="col-lg-2 control-label"><?php _e('附件'); ?>:</label>
 						<div class="col-lg-8">
@@ -67,7 +68,7 @@
 							<p class="text-color-999"><?php _e('请提交对应的身份证或者组织机构代码证件扫描'); ?></p>
 							<input name="attach" type="file" class="upload-attach form-control collapse" onchange="$('.upload-url').html($(this).val());"/>
 						</div>
-					</div>  
+					</div>
 				</div>
 			</form>
 			<div class="mod-footer clearfix">
@@ -87,15 +88,15 @@
 			$('.verify-name span').html(_t('真实姓名'));
 			$('.verify-code span').html(_t('身份证号码'));
 		});
-		
+
 		$('#type_enterprise').click(function()
 		{
 			$('.verify-name span').html(_t('企业名称'));
 			$('.verify-code span').html(_t('组织机构代码'));
 		});
-		
+
 		$('input.apply-type:checked').click();
-		
+
 		<?php if ((isset($this->verify_apply['status']) AND ($this->verify_apply['status'] == 1 OR $this->verify_apply['status'] == 0)) OR $this->user_info['verified']) { ?>
 		$('#verify_form input').attr('disabled', true);
 		$('#upload-attach, #submit-form').hide();

@@ -1,17 +1,13 @@
 <?php TPL::output('account/setting/setting_header.tpl.htm'); ?>
+<div class="hero hero--standalone hero--alignLeft">
+	<h1 class="hero-title">基本资料</h1>
+</div>
 <div class="aw-mod">
 	<div class="mod-body">
 		<div class="aw-mod mod-base">
 			<!-- 设置表单 -->
 			<form id="setting_form" method="post" action="account/ajax/profile_setting/">
 				<!-- 基本信息 -->
-				<div class="heading u-clearfix heading--borderedBottom">
-					<div class="u-clearfix">
-						<div class="heading-content u-floatLeft">
-							<span class="heading-title">基本信息</span>
-						</div>
-					</div>
-				</div>
 
 				<div class="list u-marginBottom50">
 					<!-- 账号 -->
@@ -39,8 +35,8 @@
 					<section class="list-item list-item--padded">
 						<div class="list-itemInfo">
 							<h2 class="list-itemTitle">介绍</h2>
-							<input class="list-itemInput" name="signature" maxlength="128" type="text" value="<?php echo $this->user_info['signature']; ?>" style="width: 500px;" <?php if ($this->user_info['verified']) { ?> disabled="disabled"<?php } ?> />
-							<span class="list-itemStatus js-usernameSettingsItem">如何向他人介绍自己？</span>
+							<input class="list-itemInput" name="signature" maxlength="128" type="text" placeholder="如何向他人介绍自己？" value="<?php echo $this->user_info['signature']; ?>" style="width: 500px;" <?php if ($this->user_info['verified']) { ?> disabled="disabled"<?php } ?> />
+							<span class="list-itemStatus js-usernameSettingsItem"></span>
 						</div>
 					</section>
 					<!-- end 介绍 -->
@@ -124,6 +120,7 @@
 	<div class="mod-footer clearfix">
 		<a href="javascript:;" class="button button--primary" onclick="AWS.ajax_post($('#setting_form'));"><?php _e('保存'); ?></a>
 	</div>
+	<div class="u-paddingBottom30"></div>
 </div>
 
 <script type="text/javascript">
