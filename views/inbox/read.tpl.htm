@@ -1,59 +1,99 @@
-<?php TPL::output('global/header.tpl.htm'); ?>
+<?php TPL::output('global/header_less.tpl.htm'); ?>
 
-<div class="aw-container-wrap">
-	<div class="container">
-		<div class="row">
-			<div class="aw-content-wrap clearfix">
-				<div class="col-sm-12 col-md-9 aw-main-content">
-					<div class="aw-mod aw-inbox-read">
-						<div class="mod-head common-head">
-							<h2>
-								<a href="inbox/" class="pull-right"><?php _e('返回私信列表'); ?> »</a>
-								<?php _e('私信对话'); ?>：<?php echo $this->recipient_user['user_name']; ?>
-							</h2>
-						</div>
-						<div class="mod-body">
-							<!-- 私信内容输入框　-->
+<div class="u-backgroundWhite">
+	<div class="container u-maxWidth1040">
+		<header class="hero hero--standalone hero--compact hero--alignLeft u-clearfix u-maxWidth1040">
+			<h1 class="hero-title">@<?php echo $this->recipient_user['user_name']; ?></h1>
+			<div class="buttonSet u-floatRight">
+				<a class="button button--withChrome u-baseColor--buttonNormal" href="inbox/">返回私信列表</a>
+			</div>
+		</header>
+	</div>
+</div>
+
+<div class="u-backgroundGrayLightest">
+	<div class="responsesWrapper">
+		<div class="container u-maxWidth740">
+			<div class="responsesStreamWrapper u-maxWidth640">
+				<div class="container u-maxWidth640 responsesStream-title u-paddingTop15">
+					<div class="row"><div class="col u-size12of12"><div class="heading u-clearfix"><div class="u-clearfix"><div class="heading-content u-floatLeft"><span class="heading-title heading-title--semibold">回复</span></div></div></div></div></div>
+				</div>
+				<div class="container u-maxWidth640 u-marginBottom30 responsesStream-editor cardChromeless">
+					<div class="row">
+						<div class="col u-size12of12">
 							<form action="inbox/ajax/send/" method="post" id="recipient_form">
-				        		<input type="hidden" name="post_hash" value="<?php echo new_post_hash(); ?>" />
-				        		<input type="hidden" name="recipient" value="<?php echo $this->recipient_user['user_name']; ?>" />
-								<a href="people/<?php echo $this->user_info['url_token']; ?>" data-id="<?php echo $this->user_info['uid']; ?>" class="aw-user-img aw-border-radius-5"><img src="<?php echo get_avatar_url($this->user_info['uid'], 'mid'); ?>" alt="" /></a>
-								<textarea rows="3" class="form-control message" placeholder="<?php _e('想要对ta说点什么'); ?>?" type="text" name="message" /></textarea>
-								<p>
-									<a class="btn btn-mini btn-success" href="javascript:;" onclick="AWS.ajax_post($('#recipient_form'));"><?php _e('发送'); ?></a>
-								</p>
-							</form>
-							<!-- end 私信内容输入框 -->
-						</div>
-						<div class="mod-footer">
-							<!-- 私信内容列表 -->
-							<a name="contents"></a>
-							<ul>
-								<?php if ($this->list) { ?>
-								<?php foreach($this->list AS $key => $val) { ?>
-								<li<?php if ($val['uid'] == $this->user_id) { ?> class="active"<?php } ?>>
-									<a href="people/<?php if ($val['uid'] == $this->user_id) { ?><?php echo $this->user_info['url_token']; ?><?php } else { ?><?php echo $val['url_token']; ?><?php } ?>" data-id="<?php echo $val['uid']; ?>" class="aw-user-img aw-border-radius-5"><img src="<?php echo get_avatar_url($val['uid'], 'mid'); ?>" alt="" /></a>
-									<div class="aw-item">
-										<p><a href="people/<?php if ($val['uid'] == $this->user_id) { ?><?php echo $this->user_info['url_token']; ?><?php } else { ?><?php echo $val['url_token']; ?><?php } ?>"><?php if ($val['uid'] == $this->user_id) { ?><?php _e('我'); ?><?php } else { ?><?php echo $val['user_name']; ?><?php } ?></a>: <?php echo nl2br($val['message']); ?></p>
-										<p class="text-color-999">
-											<?php if ($val['uid'] != $this->user_id) { ?><span class="pull-right aw-replay"><a href="javascript:;" onclick="$.scrollTo(($('#recipient_form').offset()['top']) - 20, 600, {queue:true});$('.message').focus();"><?php _e('回复'); ?></a></span><?php } ?>
-											<?php echo date_friendly($val['add_time']); ?><?php if ($val['receipt'] AND $val['uid'] == $this->user_id) { ?> (<?php _e('对方于 %s 已读', date_friendly($val['receipt'])); ?>)<?php } ?>
-										</p>
-										<i class="i-private-replay-triangle"></i>
+								<input type="hidden" name="post_hash" value="<?php echo new_post_hash(); ?>" />
+	        			<input type="hidden" name="recipient" value="<?php echo $this->recipient_user['user_name']; ?>" />
+								<div class="block">
+									<div class="inlineEditor-header">
+										<div class="inlineEditor-avatar u-paddingRight10">
+                      <div class="avatar avatar--inline">
+                        <img class="avatar-image u-size36x36 u-xs-size32x32" src="<?php echo get_avatar_url($this->user_info['uid'], 'max'); ?>">
+                      </div>
+											<div class="inlineEditor-headerContent">
+                        <div class="inlineEditor-author u-accentColor--textNormal"><?php echo $this->user_info['user_name']; ?></div>
+                      </div>
+                    </div>
 									</div>
-								</li>
-								<?php } ?>
-								<?php } ?>
-							</ul>
-							<!-- end 私信内容列表 -->
+									<div class="block-streamText">
+										<div class="block-content">
+											<article class="postArticle postArticle--short">
+												<div class="u-maxWidth600">
+													<textarea rows="3" name="message" id="comment_editor" class="form-control autosize" placeholder="想要对ta说点什么..." style="overflow: hidden; word-wrap: break-word; resize: none; height: 74px;"></textarea>
+												</div>
+											</article>
+										</div>
+									</div>
+									<div class="inlineEditor-actions">
+										<div class="u-floatLeft">
+											<a href="javascript:;" onclick="AWS.ajax_post($('#recipient_form'));" class="button button--primary button--withChrome u-accentColor--buttonNormal btn-submit btn-reply">发送</a>
+										</div>
+									</div>
+								</div>
+							</form>
 						</div>
 					</div>
 				</div>
-				<!-- 侧边栏 -->
-				<div class="col-sm-12 col-md-3 aw-side-bar hidden-xs hidden-sm">
-					<?php TPL::output('block/sidebar_menu.tpl.htm'); ?>
+				<!-- 聊天记录 -->
+
+				<div class="streamItemConversation container u-maxWidth660">
+					<div class="streamItemConversation-divider"></div>
+					<div class="heading u-clearfix heading--light heading--simple">
+						<div class="u-clearfix">
+							<div class="heading-content u-floatLeft">
+								<span class="heading-title">聊天记录</span>
+							</div>
+						</div>
+					</div>
+					<!-- 聊天气泡 -->
+					<a name="contents"></a>
+					<ul>
+						<?php if ($this->list) { ?>
+						<?php foreach($this->list AS $key => $val) { ?>
+						<li class="row streamItemConversation-inner cardChromeless streamItemConversationItem">
+							<div class="u-clearfix u-marginBottom10">
+								<div class="postMetaInline u-floatLeft">
+			            <div class="postMetaInline-avatar">
+			              <a href="people/<?php if ($val['uid'] == $this->user_id) { ?><?php echo $this->user_info['url_token']; ?><?php } else { ?><?php echo $val['url_token']; ?><?php } ?>" data-id="<?php echo $val['uid']; ?>" class="aw-user-img link avatar u-baseColor--link"><img src="<?php echo get_avatar_url($val['uid'], 'max'); ?>" alt="" class="avatar-image u-size36x36 u-xs-size32x32" /></a>
+			            </div>
+			            <div class="postMetaInline-authorLockup">
+										<a class="link link link--darken link--accent u-accentColor--textNormal u-accentColor--textDarken u-baseColor--link" href="people/<?php if ($val['uid'] == $this->user_id) { ?><?php echo $this->user_info['url_token']; ?><?php } else { ?><?php echo $val['url_token']; ?><?php } ?>"><?php if ($val['uid'] == $this->user_id) { ?><?php _e('我'); ?><?php } else { ?><?php echo $val['user_name']; ?><?php } ?></a>
+			              <div class="u-fontSizeSmallest u-baseColor--textNormal u-textColorNormal js-postMetaInlineSupplemental">
+			                <?php echo date_friendly($val['add_time']); ?><?php if ($val['receipt'] AND $val['uid'] == $this->user_id) { ?> (<?php _e('对方于 %s 已读', date_friendly($val['receipt'])); ?>)<?php } ?>
+			              </div>
+			            </div>
+			          </div>
+							</div>
+							<div class="layoutSingleColumn">
+								<?php echo nl2br($val['message']); ?>
+							</div>
+						</li>
+						<?php } ?>
+						<?php } ?>
+					</ul>
+					<!-- end 聊天气泡 -->
 				</div>
-				<!-- end 侧边栏 -->
+				<!-- end 聊天记录 -->
 			</div>
 		</div>
 	</div>
