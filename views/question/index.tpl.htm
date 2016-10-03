@@ -36,7 +36,6 @@
 
 	<footer class="u-paddingTop10">
 		<div class="container u-maxWidth740">
-			<div class="row"><div class="col u-size12of12"></div></div>
 			<!-- 问题标签 -->
       <div class="row">
         <div class="col u-size12of12 js-postTags">
@@ -50,7 +49,52 @@
         </div>
       </div>
       <!-- end 问题标签 -->
+      <!-- 问答操作 -->
+      <div class="row js-postActionsFooter">
+        <div class="postActions col u-size12of12">
+          <!-- 问答关注 -->
+          <?php if ($this->user_id) { ?>
+            <div class="u-floatLeft buttonSet buttonSet--withLabels">
+              <a href="javascript:;" onclick="AWS.User.follow($(this), 'question', <?php echo $this->question_info['question_id']; ?>);" class="follow btn btn-normal btn-success pull-left <?php if ($this->question_focus) { ?> active<?php } ?>"><span><?php if ($this->question_focus) { ?><?php _e('取消关注'); ?><?php } else { ?><?php _e('关注'); ?><?php } ?></span> <em>|</em> <b><?php echo $this->question_info['focus_count']?></b></a>
+            </div>
+          <?php } ?>
+          <!-- end 问答关注 -->
+          <div class="u-floatRight buttonSet buttonSet--narrow">
+            <?php if ($this->user_id) { ?>
+              <?php if ((!$this->question_info['lock'] AND ($this->question_info['published_uid'] == $this->user_id OR $this->user_info['permission']['edit_question'])) OR $this->user_info['permission']['is_administortar'] OR $this->user_info['permission']['is_moderator']) { ?>
+                <a class="text-color-999" href="publish/<?php echo $this->question_info['question_id']; ?>"><i class="icon icon-edit"></i><?php _e('编辑'); ?></a>
+              <?php } ?>
+              <?php if ($_GET['column'] == 'log') { ?>
+                <a class="text-color-999" href="question/<?php echo $this->question_info['question_id']; ?>"><?php _e('问题讨论'); ?></a>
+              <?php } else { ?>
+                <a class="text-color-999" href="question/<?php echo $this->question_info['question_id']; ?>?column=log&rf=false" rel="nofollow"><?php _e('修改记录'); ?></a>
+              <?php } ?>
+              <?php if ($this->user_info['permission']['is_administortar'] OR $this->user_info['permission']['is_moderator']) { ?>
+                <a class="text-color-999" href="javascript:;" onclick="AWS.ajax_request(G_BASE_URL + '/question/ajax/lock/', 'question_id=<?php echo $this->question_info['question_id']; ?>');"><?php if ($this->question_info['lock']) { ?><?php _e('解除锁定'); ?><?php } else { ?><?php _e('锁定问题'); ?><?php } ?></a>
+                <a class="text-color-999" href="javascript:;" onclick="AWS.dialog('confirm', {'message' : '<?php _e('确认删除?'); ?>'}, function(){AWS.ajax_request(G_BASE_URL + '/question/ajax/remove_question/', 'question_id=<?php echo $this->question_info['question_id']; ?>');});"><?php _e('删除问题'); ?></a>
+              <?php } ?>
+              <?php if (($this->user_info['permission']['is_administortar'] OR $this->user_info['permission']['is_moderator'] OR (!$this->question_info['lock'] AND $this->user_info['permission']['redirect_question'])) AND $this->user_id) { ?>
+                <?php if ($this->question_info['redirect']) { ?>
+                  <a class="text-color-999" href="javascript:;" onclick="AWS.ajax_request(G_BASE_URL + '/question/ajax/redirect/', 'item_id=<?php echo $this->question_info['question_id']; ?>');"><?php _e('撤消重定向'); ?></a>
+                <?php } else { ?>
+                  <a class="text-color-999" href="javascript:;" onclick="AWS.dialog('redirect', <?php echo $this->question_info['question_id']; ?>);"><?php _e('问题重定向'); ?></a>
+                <?php } ?>
+              <?php } ?>
+              <?php if (($this->user_info['permission']['is_administortar'] OR $this->user_info['permission']['is_moderator']) AND $this->question_info['ip']) { ?>
+                <a class="text-color-999" href="javascript:;" title="<?php echo long2ip($this->question_info['ip']); ?>" onclick="AWS.alert('<?php _e('系统记录的 IP 地址为'); ?>: <?php echo long2ip($this->question_info['ip']); ?>');"><?php _e('IP 地址'); ?></a>
+              <?php } ?>
+              <?php if ($this->user_info['permission']['is_administortar'] OR $this->user_info['permission']['is_moderator']) { ?>
+                <a class="text-color-999" href="javascript:;" onclick="AWS.ajax_request(G_BASE_URL + '/question/ajax/set_recommend/', 'action=<?php if ($this->question_info['is_recommend']) { ?>un<?php } ?>set&question_id=<?php echo $this->question_info['question_id']; ?>');"><?php if ($this->question_info['is_recommend']) { ?><?php _e('取消推荐'); ?><?php } else { ?><?php _e('推荐问题'); ?><?php } ?></a>
+                <a class="text-color-999" href="javascript:;" onclick="AWS.dialog('recommend', {'type': 'question', 'item_id': <?php echo $this->question_info['question_id']?>, 'focus_id': <?php if ($this->question_info['chapter_id']) { echo $this->question_info['chapter_id']; } else { ?>''<?php } ?>});"><?php _e('添加到帮助中心'); ?></a>
+              <?php } ?>
+            <?php } ?>
+          </div>
+        </div>
+      </div>
+      <!-- end 问答操作 -->
 		</div>
+
+
 
 		<!-- 回答筛选 -->
 
@@ -115,13 +159,9 @@
 											</div>
 											<!-- end 回答信息 -->
 											<!-- 回答内容 -->
-											<div class="layoutSingleColumn">
-                        <div class="postArticle-content">
-                          <section class="section--body section--first section--last">
-                            <div class="section-content"><div class="section-inner layoutSingleColumn"><p class="graf--p graf--leading graf--last"><?php echo $val['answer_content']; ?></p></div></div>
-                          </section>
-                        </div>
-                      </div>
+                      <div class="markitup-box">
+  											<?php echo $val['answer_content']; ?>
+  										</div>
 											<!-- end 回答内容 -->
 											<!-- 回答操作 -->
 											<div class="u-clearfix u-paddingTop10">
