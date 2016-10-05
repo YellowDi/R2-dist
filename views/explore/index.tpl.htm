@@ -5,7 +5,7 @@
 	<?php if ($this->user_id) { ?>
 		<?php TPL::output('block/content_nav_menu.tpl.htm'); ?>
 	<?php } else { ?>
-		<div class="promo promo--hero u-maxWidth1000 u-marginAuto promo--catalogHomeHero">
+		<div class="promo promo--hero u-xs-backgroundImageNone u-maxWidth1000 u-marginAuto promo--catalogHomeHero js-promo">
 			<div class="promo-content u-maxWidth1000 u-marginAuto">
 				<h1 class="promo-title">玩游戏的人都是我的朋友</h1>
 				<h2 class="promo-subtitle">希望 R2VG 这个网站能够陪伴大家度过大量美好的马桶和游戏的时光！</h2>
@@ -19,7 +19,7 @@
 	<?php } ?>
 
 	<div class="u-foreground homeContainer-content u-maxWidth1000 u-marginAuto u-clearfix u-sizeViewHeightMin100">
-		<div class="u-clearfix u-positionRelative">
+		<div class="u-clearfix u-relative">
 
 			<div class="homeContainer-stream">
 				<div class="js-homeStream">
@@ -27,16 +27,21 @@
 				</div>
 			</div>
 
-			<div class="js-sidebar2 sidebar sidebar--width340">
+			<div class="sidebar">
 				<div class="sidebar-contentWrapper sidebar-contentWrapper2">
-					<div class="js-sidebar2-contentWrapper">
-						<!-- <div class="sidebarad">
-					    <a class="sidebarad--link" href="http://www.battlenet.com.cn/wow/zh/blog/17433416/"><img src="http://7xp0k6.com1.z0.glb.clouddn.com/X9KFQ5WBY2JW1470392046508.jpg" alt="“萨格拉斯之墓”广播剧"></a>
-					  </div> -->
+					<div class="sidebar-contentWrapper">
 						<?php TPL::output('block/sidebar_feature.tpl.htm'); ?>
 						<?php TPL::output('block/sidebar_hot_topics.tpl.htm'); ?>
 						<?php TPL::output('block/sidebar_hot_users.tpl.htm'); ?>
 					</div>
+					<footer class="container u-maxWidth740 u-marginTop30 u-borderTopLightest80">
+						<div class="u-paddingTop10 u-paddingBottom25 ">
+							<a class="link u-textColorNormal u-fontSizeMicro u-marginRight10 u-baseColor--link" href="#">帮助中心</a>
+							<a class="link u-textColorNormal u-fontSizeMicro u-marginRight10 u-baseColor--link" href="#">博客</a>
+							<a class="link u-textColorNormal u-fontSizeMicro u-marginRight10 u-baseColor--link" href="#">隐私</a>
+							<a class="link u-textColorNormal u-fontSizeMicro u-baseColor--link" href="#">关于</a>
+						</div>
+					</footer>
 				</div>
 			</div>
 
