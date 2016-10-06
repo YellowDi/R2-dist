@@ -256,7 +256,8 @@ a, button, input {
 }
 
 html {
-    overflow-y: scroll
+    overflow-y: scroll;
+    -webkit-overflow-scrolling: touch
 }
 
 body, html {

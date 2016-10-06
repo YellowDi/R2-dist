@@ -1,16 +1,3 @@
-<div class="aw-footer-wrap">
-	<div class="aw-footer">
-
-		<?php if (is_mobile(true)) { ?>
-			<div class="container">
-				<div class="row">
-					<p align="center"><?php _e('版本切换'); ?>: <b><?php _e('PC 版'); ?></b> | <a href="m/ignore_ua_check-FALSE"><?php _e('手机版'); ?></a></p>
-				</div>
-			</div>
-		<?php } ?>
-	</div>
-</div>
-
 <a class="aw-back-top hidden-xs" href="javascript:;" onclick="$.scrollTo(1, 600, {queue:true});"><i class="icon icon-up"></i></a>
 
 <?php echo get_setting('statistic_code'); ?>
@@ -22,6 +9,14 @@
 	<script type="text/javascript">
 		$(document).ready(function () {
 			$('#__crond').html(unescape('%3Cimg%20src%3D%22' + G_BASE_URL + '/crond/run/<?php echo TIMESTAMP; ?>%22%20width%3D%221%22%20height%3D%221%22%20/%3E'));
+			$(window).on('scroll', function () {
+			        var t = $(window).scrollTop();
+			        if (t > 10) {
+			            $(".metabar").addClass("metabar--affixed");
+			        } else {
+			            $(".metabar").removeClass("metabar--affixed");
+			        }
+			    });
 		});
 	</script>
 </div>
