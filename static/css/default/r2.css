@@ -2342,7 +2342,7 @@ main {
 }
 
 .u-textColorYellow {
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+    font-family: NotoSansHans-Regular, AvenirNext-Regular, arial, Hiragino Sans GB, "Microsoft Yahei", "Hiragino Sans GB", "WenQuanYi Micro Hei", sans-serif;
     letter-spacing: 0;
     font-weight: 700;
     font-style: normal;
@@ -3150,7 +3150,7 @@ body.is-swBoot {
     user-select: none;
     box-sizing: border-box;
     border-radius: 999em;
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+    font-family: NotoSansHans-Regular, AvenirNext-Regular, arial, Hiragino Sans GB, "Microsoft Yahei", "Hiragino Sans GB", "WenQuanYi Micro Hei", sans-serif;
     letter-spacing: 0;
     font-weight: 400;
     font-style: normal;
@@ -4134,7 +4134,7 @@ body.is-swBoot {
     width: auto;
     margin-right: auto;
     margin-left: auto;
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+    font-family: NotoSansHans-Regular, AvenirNext-Regular, arial, Hiragino Sans GB, "Microsoft Yahei", "Hiragino Sans GB", "WenQuanYi Micro Hei", sans-serif;
     letter-spacing: 0;
     font-weight: 500;
     font-style: normal
@@ -4167,7 +4167,7 @@ body.is-swBoot {
 }
 
 .button--collection2upload {
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+    font-family: NotoSansHans-Regular, AvenirNext-Regular, arial, Hiragino Sans GB, "Microsoft Yahei", "Hiragino Sans GB", "WenQuanYi Micro Hei", sans-serif;
     letter-spacing: 0;
     font-weight: 400;
     font-style: normal;
@@ -4210,7 +4210,7 @@ body.is-swBoot {
 
 .button--close {
     font-size: 32px;
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+    font-family: NotoSansHans-Regular, AvenirNext-Regular, arial, Hiragino Sans GB, "Microsoft Yahei", "Hiragino Sans GB", "WenQuanYi Micro Hei", sans-serif;
     letter-spacing: 0;
     font-weight: 300;
     font-style: normal;
@@ -4697,7 +4697,7 @@ body.is-swBoot {
     font-size: 16px;
     border: none;
     padding: 0;
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+    font-family: NotoSansHans-Regular, AvenirNext-Regular, arial, Hiragino Sans GB, "Microsoft Yahei", "Hiragino Sans GB", "WenQuanYi Micro Hei", sans-serif;
     letter-spacing: 0;
     font-weight: 400;
     font-style: normal
@@ -4771,7 +4771,7 @@ body.is-swBoot {
     color: rgba(0, 0, 0, .6);
     text-align: right;
     display: block;
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+    font-family: NotoSansHans-Regular, AvenirNext-Regular, arial, Hiragino Sans GB, "Microsoft Yahei", "Hiragino Sans GB", "WenQuanYi Micro Hei", sans-serif;
     letter-spacing: 0;
     font-weight: 700;
     font-style: normal
@@ -4802,7 +4802,7 @@ body.is-swBoot {
     margin-right: 0;
     color: rgba(0, 0, 0, .8);
     font-size: 16px;
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+    font-family: NotoSansHans-Regular, AvenirNext-Regular, arial, Hiragino Sans GB, "Microsoft Yahei", "Hiragino Sans GB", "WenQuanYi Micro Hei", sans-serif;
     letter-spacing: 0;
     font-weight: 700;
     font-style: normal
@@ -4813,7 +4813,7 @@ body.is-swBoot {
     margin-bottom: 0;
     color: rgba(0, 0, 0, .6);
     font-size: 14px;
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+    font-family: NotoSansHans-Regular, AvenirNext-Regular, arial, Hiragino Sans GB, "Microsoft Yahei", "Hiragino Sans GB", "WenQuanYi Micro Hei", sans-serif;
     letter-spacing: 0;
     font-weight: 400;
     font-style: normal
@@ -4852,7 +4852,7 @@ body.is-swBoot {
 .list--recommendations .list-itemText {
     margin: 10px 0;
     font-size: 16px;
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+    font-family: NotoSansHans-Regular, AvenirNext-Regular, arial, Hiragino Sans GB, "Microsoft Yahei", "Hiragino Sans GB", "WenQuanYi Micro Hei", sans-serif;
     letter-spacing: 0;
     font-weight: 400;
     font-style: normal;
@@ -4936,7 +4936,7 @@ body.is-swBoot {
     appearance: none;
     box-sizing: border-box;
     border-radius: 4px;
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+    font-family: NotoSansHans-Regular, AvenirNext-Regular, arial, Hiragino Sans GB, "Microsoft Yahei", "Hiragino Sans GB", "WenQuanYi Micro Hei", sans-serif;
     letter-spacing: 0;
     font-weight: 400;
     font-style: normal
@@ -4948,7 +4948,7 @@ body.is-swBoot {
     height: 35px;
     font-size: 14px;
     box-sizing: border-box;
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+    font-family: NotoSansHans-Regular, AvenirNext-Regular, arial, Hiragino Sans GB, "Microsoft Yahei", "Hiragino Sans GB", "WenQuanYi Micro Hei", sans-serif;
     letter-spacing: 0;
     font-weight: 700;
     font-style: normal
@@ -5008,7 +5008,7 @@ body.is-swBoot {
     padding: 7px;
     width: 500px;
     white-space: nowrap;
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+    font-family: NotoSansHans-Regular, AvenirNext-Regular, arial, Hiragino Sans GB, "Microsoft Yahei", "Hiragino Sans GB", "WenQuanYi Micro Hei", sans-serif;
     letter-spacing: 0;
     font-weight: 300;
     font-style: normal
@@ -5019,7 +5019,7 @@ body.is-swBoot {
 }
 
 .textInput--jumbo {
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+    font-family: NotoSansHans-Regular, AvenirNext-Regular, arial, Hiragino Sans GB, "Microsoft Yahei", "Hiragino Sans GB", "WenQuanYi Micro Hei", sans-serif;
     letter-spacing: 0;
     font-weight: 300;
     font-style: normal;
@@ -5089,7 +5089,7 @@ body.is-swBoot {
     font-size: 16px;
     outline: 0;
     resize: none;
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+    font-family: NotoSansHans-Regular, AvenirNext-Regular, arial, Hiragino Sans GB, "Microsoft Yahei", "Hiragino Sans GB", "WenQuanYi Micro Hei", sans-serif;
     letter-spacing: 0;
     font-weight: 400;
     font-style: normal
@@ -5270,7 +5270,7 @@ body.is-swBoot {
     border-bottom: 1px solid rgba(0, 0, 0, .15);
     border-radius: 0;
     padding-right: 20px;
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+    font-family: NotoSansHans-Regular, AvenirNext-Regular, arial, Hiragino Sans GB, "Microsoft Yahei", "Hiragino Sans GB", "WenQuanYi Micro Hei", sans-serif;
     letter-spacing: 0;
     font-weight: 400;
     font-style: normal
@@ -5317,7 +5317,7 @@ body.is-swBoot {
 }
 
 .form-heading {
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+    font-family: NotoSansHans-Regular, AvenirNext-Regular, arial, Hiragino Sans GB, "Microsoft Yahei", "Hiragino Sans GB", "WenQuanYi Micro Hei", sans-serif;
     letter-spacing: 0;
     font-weight: 600;
     font-style: normal
@@ -5342,7 +5342,7 @@ body.is-swBoot {
 }
 
 .form-asterisk {
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+    font-family: NotoSansHans-Regular, AvenirNext-Regular, arial, Hiragino Sans GB, "Microsoft Yahei", "Hiragino Sans GB", "WenQuanYi Micro Hei", sans-serif;
     letter-spacing: 0;
     font-weight: 300;
     font-style: normal
@@ -5396,7 +5396,7 @@ body.is-swBoot {
     text-overflow: ellipsis;
     white-space: nowrap;
     width: 100%;
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+    font-family: NotoSansHans-Regular, AvenirNext-Regular, arial, Hiragino Sans GB, "Microsoft Yahei", "Hiragino Sans GB", "WenQuanYi Micro Hei", sans-serif;
     letter-spacing: 0;
     font-weight: 700;
     font-style: normal
@@ -5409,7 +5409,7 @@ body.is-swBoot {
     text-overflow: ellipsis;
     white-space: nowrap;
     width: 100%;
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+    font-family: NotoSansHans-Regular, AvenirNext-Regular, arial, Hiragino Sans GB, "Microsoft Yahei", "Hiragino Sans GB", "WenQuanYi Micro Hei", sans-serif;
     letter-spacing: 0;
     font-weight: 300;
     font-style: normal
@@ -5587,7 +5587,7 @@ body.is-swBoot {
 }
 
 .heading--page .heading-title {
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+    font-family: NotoSansHans-Regular, AvenirNext-Regular, arial, Hiragino Sans GB, "Microsoft Yahei", "Hiragino Sans GB", "WenQuanYi Micro Hei", sans-serif;
     letter-spacing: 0;
     font-weight: 300;
     font-style: normal;
@@ -5601,7 +5601,7 @@ body.is-swBoot {
 }
 
 .heading--simple .heading-content, .heading--simple .heading-title {
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+    font-family: NotoSansHans-Regular, AvenirNext-Regular, arial, Hiragino Sans GB, "Microsoft Yahei", "Hiragino Sans GB", "WenQuanYi Micro Hei", sans-serif;
     letter-spacing: 0;
     font-weight: 400;
     font-style: normal;
@@ -5643,7 +5643,7 @@ body.is-swBoot {
 }
 
 .heading--section .heading-title {
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+    font-family: NotoSansHans-Regular, AvenirNext-Regular, arial, Hiragino Sans GB, "Microsoft Yahei", "Hiragino Sans GB", "WenQuanYi Micro Hei", sans-serif;
     letter-spacing: 0;
     font-weight: 700;
     font-style: normal;
@@ -5690,7 +5690,7 @@ body.is-swBoot {
 
 .heading-count {
     margin-left: 8px;
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+    font-family: NotoSansHans-Regular, AvenirNext-Regular, arial, Hiragino Sans GB, "Microsoft Yahei", "Hiragino Sans GB", "WenQuanYi Micro Hei", sans-serif;
     letter-spacing: 0;
     font-weight: 400;
     font-style: normal;
@@ -6009,7 +6009,7 @@ body.is-zoomableActive .postActionsBar.is-visible .postActionsBar-content {
 }
 
 .hero-title {
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+    font-family: NotoSansHans-Regular, AvenirNext-Regular, arial, Hiragino Sans GB, "Microsoft Yahei", "Hiragino Sans GB", "WenQuanYi Micro Hei", sans-serif;
     font-weight: 700;
     font-style: normal;
     font-size: 44px;
@@ -6024,7 +6024,7 @@ body.is-zoomableActive .postActionsBar.is-visible .postActionsBar-content {
 }
 
 .hero-title--sans300 {
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+    font-family: NotoSansHans-Regular, AvenirNext-Regular, arial, Hiragino Sans GB, "Microsoft Yahei", "Hiragino Sans GB", "WenQuanYi Micro Hei", sans-serif;
     letter-spacing: 0;
     font-weight: 300;
     font-style: normal
@@ -6267,7 +6267,7 @@ body.is-zoomableActive .postActionsBar.is-visible .postActionsBar-content {
     display: block;
     font-size: 24px;
     margin-bottom: 20px;
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+    font-family: NotoSansHans-Regular, AvenirNext-Regular, arial, Hiragino Sans GB, "Microsoft Yahei", "Hiragino Sans GB", "WenQuanYi Micro Hei", sans-serif;
     letter-spacing: 0;
     font-weight: 300;
     font-style: normal
@@ -6402,7 +6402,7 @@ body.is-zoomableActive .postActionsBar.is-visible .postActionsBar-content {
 }
 
 .postMetaInline {
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+    font-family: NotoSansHans-Regular, AvenirNext-Regular, arial, Hiragino Sans GB, "Microsoft Yahei", "Hiragino Sans GB", "WenQuanYi Micro Hei", sans-serif;
     letter-spacing: 0;
     font-weight: 400;
     font-style: normal;
@@ -6474,7 +6474,7 @@ body.is-zoomableActive .postActionsBar.is-visible .postActionsBar-content {
 }
 
 .catalog-title {
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+    font-family: NotoSansHans-Regular, AvenirNext-Regular, arial, Hiragino Sans GB, "Microsoft Yahei", "Hiragino Sans GB", "WenQuanYi Micro Hei", sans-serif;
     letter-spacing: 0;
     font-weight: 600;
     font-style: normal;
@@ -6482,7 +6482,7 @@ body.is-zoomableActive .postActionsBar.is-visible .postActionsBar-content {
 }
 
 .catalog-description {
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+    font-family: NotoSansHans-Regular, AvenirNext-Regular, arial, Hiragino Sans GB, "Microsoft Yahei", "Hiragino Sans GB", "WenQuanYi Micro Hei", sans-serif;
     letter-spacing: 0;
     font-weight: 300;
     font-style: normal
@@ -6751,7 +6751,7 @@ body.is-zoomableActive .postActionsBar.is-visible .postActionsBar-content {
     padding-right: 1px;
     font-size: 24px;
     color: rgba(0, 0, 0, .8);
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+    font-family: NotoSansHans-Regular, AvenirNext-Regular, arial, Hiragino Sans GB, "Microsoft Yahei", "Hiragino Sans GB", "WenQuanYi Micro Hei", sans-serif;
     letter-spacing: 0;
     font-weight: 700;
     font-style: normal
@@ -6824,7 +6824,7 @@ body.is-zoomableActive .postActionsBar.is-visible .postActionsBar-content {
     font-size: 36px;
     line-height: 1.2;
     color: rgba(0, 0, 0, .8);
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+    font-family: NotoSansHans-Regular, AvenirNext-Regular, arial, Hiragino Sans GB, "Microsoft Yahei", "Hiragino Sans GB", "WenQuanYi Micro Hei", sans-serif;
     letter-spacing: 0;
     font-weight: 700;
     font-style: normal
@@ -6834,7 +6834,7 @@ body.is-zoomableActive .postActionsBar.is-visible .postActionsBar-content {
     padding-bottom: 5px;
     font-size: 20px;
     color: rgba(0, 0, 0, .44);
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+    font-family: NotoSansHans-Regular, AvenirNext-Regular, arial, Hiragino Sans GB, "Microsoft Yahei", "Hiragino Sans GB", "WenQuanYi Micro Hei", sans-serif;
     letter-spacing: 0;
     font-weight: 400;
     font-style: normal
@@ -6993,7 +6993,7 @@ body.is-zoomableActive .postActionsBar.is-visible .postActionsBar-content {
     font-size: 44px;
     line-height: 1.1;
     color: rgba(0, 0, 0, .8);
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+    font-family: NotoSansHans-Regular, AvenirNext-Regular, arial, Hiragino Sans GB, "Microsoft Yahei", "Hiragino Sans GB", "WenQuanYi Micro Hei", sans-serif;
     letter-spacing: 0;
     font-weight: 700;
     font-style: normal
@@ -7003,7 +7003,7 @@ body.is-zoomableActive .postActionsBar.is-visible .postActionsBar-content {
     padding-bottom: 10px;
     font-size: 24px;
     color: rgba(0, 0, 0, .44);
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+    font-family: NotoSansHans-Regular, AvenirNext-Regular, arial, Hiragino Sans GB, "Microsoft Yahei", "Hiragino Sans GB", "WenQuanYi Micro Hei", sans-serif;
     letter-spacing: 0;
     font-weight: 400;
     font-style: normal
@@ -7091,7 +7091,7 @@ body.is-zoomableActive .postActionsBar.is-visible .postActionsBar-content {
     max-height: 154px;
     word-break: break-word;
     word-wrap: break-word;
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+    font-family: NotoSansHans-Regular, AvenirNext-Regular, arial, Hiragino Sans GB, "Microsoft Yahei", "Hiragino Sans GB", "WenQuanYi Micro Hei", sans-serif;
     letter-spacing: 0;
     font-weight: 700;
     font-style: normal
@@ -7241,7 +7241,7 @@ section.is-darkBackgrounded {
     font-size: 24px;
     line-height: 1em;
     vertical-align: bottom;
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+    font-family: NotoSansHans-Regular, AvenirNext-Regular, arial, Hiragino Sans GB, "Microsoft Yahei", "Hiragino Sans GB", "WenQuanYi Micro Hei", sans-serif;
     letter-spacing: 0;
     font-weight: 300;
     font-style: normal
@@ -7249,7 +7249,7 @@ section.is-darkBackgrounded {
 
 .homeContainer-nextUp {
     color: rgba(0, 0, 0, .8);
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+    font-family: NotoSansHans-Regular, AvenirNext-Regular, arial, Hiragino Sans GB, "Microsoft Yahei", "Hiragino Sans GB", "WenQuanYi Micro Hei", sans-serif;
     letter-spacing: 0;
     font-weight: 300;
     font-style: normal
@@ -7259,7 +7259,7 @@ section.is-darkBackgrounded {
     font-size: 14px;
     float: right;
     color: rgba(0, 0, 0, .6);
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+    font-family: NotoSansHans-Regular, AvenirNext-Regular, arial, Hiragino Sans GB, "Microsoft Yahei", "Hiragino Sans GB", "WenQuanYi Micro Hei", sans-serif;
     letter-spacing: 0;
     font-weight: 400;
     font-style: normal
@@ -7430,7 +7430,7 @@ section.is-darkBackgrounded {
 }
 
 .overlay-title--thin {
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+    font-family: NotoSansHans-Regular, AvenirNext-Regular, arial, Hiragino Sans GB, "Microsoft Yahei", "Hiragino Sans GB", "WenQuanYi Micro Hei", sans-serif;
     letter-spacing: 0;
     font-weight: 300;
     font-style: normal
@@ -7439,7 +7439,7 @@ section.is-darkBackgrounded {
 .overlay-subtitle {
     margin-bottom: 30px;
     font-size: 18px;
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+    font-family: NotoSansHans-Regular, AvenirNext-Regular, arial, Hiragino Sans GB, "Microsoft Yahei", "Hiragino Sans GB", "WenQuanYi Micro Hei", sans-serif;
     letter-spacing: 0;
     font-weight: 300;
     font-style: normal
@@ -7467,7 +7467,7 @@ section.is-darkBackgrounded {
 .overlay-label {
     font-size: 18px;
     margin-top: 20px;
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+    font-family: NotoSansHans-Regular, AvenirNext-Regular, arial, Hiragino Sans GB, "Microsoft Yahei", "Hiragino Sans GB", "WenQuanYi Micro Hei", sans-serif;
     letter-spacing: 0;
     font-weight: 700;
     font-style: normal
@@ -7612,7 +7612,7 @@ section.is-darkBackgrounded {
 
 .overlay--import>.overlay-title {
     font-size: 44px;
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+    font-family: NotoSansHans-Regular, AvenirNext-Regular, arial, Hiragino Sans GB, "Microsoft Yahei", "Hiragino Sans GB", "WenQuanYi Micro Hei", sans-serif;
     letter-spacing: 0;
     font-weight: 700;
     font-style: normal
@@ -7620,7 +7620,7 @@ section.is-darkBackgrounded {
 
 .overlay--import>.overlay-content {
     margin: 30px -100px;
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+    font-family: NotoSansHans-Regular, AvenirNext-Regular, arial, Hiragino Sans GB, "Microsoft Yahei", "Hiragino Sans GB", "WenQuanYi Micro Hei", sans-serif;
     letter-spacing: 0;
     font-weight: 300;
     font-style: normal
@@ -7875,7 +7875,7 @@ section.is-darkBackgrounded {
     font-size: 14px;
     background: #fff;
     color: rgba(0, 0, 0, .44);
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+    font-family: NotoSansHans-Regular, AvenirNext-Regular, arial, Hiragino Sans GB, "Microsoft Yahei", "Hiragino Sans GB", "WenQuanYi Micro Hei", sans-serif;
     letter-spacing: 0;
     font-weight: 400;
     font-style: normal;
@@ -8100,7 +8100,7 @@ h3.metabar-logo {
     color: rgba(0, 0, 0, .6);
     margin: 10px 0;
     padding: 5px 10px 5px 0;
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+    font-family: NotoSansHans-Regular, AvenirNext-Regular, arial, Hiragino Sans GB, "Microsoft Yahei", "Hiragino Sans GB", "WenQuanYi Micro Hei", sans-serif;
     letter-spacing: 0;
     font-weight: 400;
     font-style: normal
@@ -8319,7 +8319,7 @@ h3.metabar-logo--noControls {
 
 .listChoice-itemTitle>small {
     display: block;
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+    font-family: NotoSansHans-Regular, AvenirNext-Regular, arial, Hiragino Sans GB, "Microsoft Yahei", "Hiragino Sans GB", "WenQuanYi Micro Hei", sans-serif;
     letter-spacing: 0;
     font-weight: 400;
     font-style: normal;
@@ -8534,7 +8534,7 @@ h3.metabar-logo--noControls {
     color: rgba(0, 0, 0, .44);
     font-size: 14px;
     line-height: 1.3;
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+    font-family: NotoSansHans-Regular, AvenirNext-Regular, arial, Hiragino Sans GB, "Microsoft Yahei", "Hiragino Sans GB", "WenQuanYi Micro Hei", sans-serif;
     letter-spacing: 0;
     font-weight: 400;
     font-style: normal
@@ -8545,7 +8545,7 @@ h3.metabar-logo--noControls {
     line-height: 1.3;
     margin: 10px 0 10px 28px;
     font-size: 12px;
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+    font-family: NotoSansHans-Regular, AvenirNext-Regular, arial, Hiragino Sans GB, "Microsoft Yahei", "Hiragino Sans GB", "WenQuanYi Micro Hei", sans-serif;
     letter-spacing: 0;
     font-weight: 400;
     font-style: normal
@@ -8608,7 +8608,7 @@ h3.metabar-logo--noControls {
     margin: 0 15px 5px 15px;
     padding: 5px 0 10px 0;
     box-sizing: border-box;
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+    font-family: NotoSansHans-Regular, AvenirNext-Regular, arial, Hiragino Sans GB, "Microsoft Yahei", "Hiragino Sans GB", "WenQuanYi Micro Hei", sans-serif;
     letter-spacing: 0;
     font-weight: 700;
     font-style: normal
@@ -8650,7 +8650,7 @@ h3.metabar-logo--noControls {
 
 .popover-cite {
     display: block;
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+    font-family: NotoSansHans-Regular, AvenirNext-Regular, arial, Hiragino Sans GB, "Microsoft Yahei", "Hiragino Sans GB", "WenQuanYi Micro Hei", sans-serif;
     letter-spacing: 0;
     font-weight: 700;
     font-style: normal
@@ -8959,7 +8959,7 @@ h3.metabar-logo--noControls {
     border-left: 1px solid rgba(0, 0, 0, .15);
     font-size: 18px;
     transition: color .2s;
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+    font-family: NotoSansHans-Regular, AvenirNext-Regular, arial, Hiragino Sans GB, "Microsoft Yahei", "Hiragino Sans GB", "WenQuanYi Micro Hei", sans-serif;
     letter-spacing: 0;
     font-weight: 700;
     font-style: normal
@@ -9021,7 +9021,7 @@ line.bargraph-averageLine {
 
 .bargraph-xAxis .bargraph-yAxis, text {
     fill: rgba(0, 0, 0, .44);
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+    font-family: NotoSansHans-Regular, AvenirNext-Regular, arial, Hiragino Sans GB, "Microsoft Yahei", "Hiragino Sans GB", "WenQuanYi Micro Hei", sans-serif;
     letter-spacing: 0;
     font-weight: 400;
     font-style: normal;
@@ -9209,7 +9209,7 @@ line.bargraph-averageLine {
 }
 
 .sortableTable-tip {
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+    font-family: NotoSansHans-Regular, AvenirNext-Regular, arial, Hiragino Sans GB, "Microsoft Yahei", "Hiragino Sans GB", "WenQuanYi Micro Hei", sans-serif;
     letter-spacing: 0;
     font-weight: 300;
     font-style: normal;
@@ -9220,7 +9220,7 @@ line.bargraph-averageLine {
 }
 
 .sortableTable-number {
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+    font-family: NotoSansHans-Regular, AvenirNext-Regular, arial, Hiragino Sans GB, "Microsoft Yahei", "Hiragino Sans GB", "WenQuanYi Micro Hei", sans-serif;
     letter-spacing: 0;
     font-weight: 700;
     font-style: normal;
@@ -9263,7 +9263,7 @@ tbody.is-muted .is-active {
     margin-bottom: -2px;
     white-space: nowrap;
     text-align: inherit;
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+    font-family: NotoSansHans-Regular, AvenirNext-Regular, arial, Hiragino Sans GB, "Microsoft Yahei", "Hiragino Sans GB", "WenQuanYi Micro Hei", sans-serif;
     letter-spacing: 0;
     font-weight: 700;
     font-style: normal
@@ -9391,7 +9391,7 @@ tbody.is-muted .is-active {
 }
 
 .table-thead {
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+    font-family: NotoSansHans-Regular, AvenirNext-Regular, arial, Hiragino Sans GB, "Microsoft Yahei", "Hiragino Sans GB", "WenQuanYi Micro Hei", sans-serif;
     letter-spacing: 0;
     font-weight: 700;
     font-style: normal;
@@ -9425,7 +9425,7 @@ tbody.is-muted .is-active {
 }
 
 .table-cell {
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+    font-family: NotoSansHans-Regular, AvenirNext-Regular, arial, Hiragino Sans GB, "Microsoft Yahei", "Hiragino Sans GB", "WenQuanYi Micro Hei", sans-serif;
     letter-spacing: 0;
     font-weight: 300;
     font-style: normal;
@@ -9440,7 +9440,7 @@ tbody.is-muted .is-active {
 }
 
 .table-cell--value {
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+    font-family: NotoSansHans-Regular, AvenirNext-Regular, arial, Hiragino Sans GB, "Microsoft Yahei", "Hiragino Sans GB", "WenQuanYi Micro Hei", sans-serif;
     letter-spacing: 0;
     font-weight: 700;
     font-style: normal;
@@ -9732,7 +9732,7 @@ body.is-diagnosticsVisible .site-main {
 }
 
 .typeahead .typeahead-post {
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+    font-family: NotoSansHans-Regular, AvenirNext-Regular, arial, Hiragino Sans GB, "Microsoft Yahei", "Hiragino Sans GB", "WenQuanYi Micro Hei", sans-serif;
     letter-spacing: 0;
     font-weight: 700;
     font-style: normal;
@@ -9803,7 +9803,7 @@ body.is-diagnosticsVisible .site-main {
     color: rgba(0, 0, 0, .6);
     padding: 18px 0;
     text-align: left;
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+    font-family: NotoSansHans-Regular, AvenirNext-Regular, arial, Hiragino Sans GB, "Microsoft Yahei", "Hiragino Sans GB", "WenQuanYi Micro Hei", sans-serif;
     letter-spacing: 0;
     font-weight: 400;
     font-style: normal
@@ -9955,7 +9955,7 @@ body.is-diagnosticsVisible .site-main {
 .infoCard {
     font-size: 14px;
     color: rgba(0, 0, 0, .8);
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+    font-family: NotoSansHans-Regular, AvenirNext-Regular, arial, Hiragino Sans GB, "Microsoft Yahei", "Hiragino Sans GB", "WenQuanYi Micro Hei", sans-serif;
     letter-spacing: 0;
     font-weight: 400;
     font-style: normal
@@ -10227,7 +10227,7 @@ body.is-diagnosticsVisible .site-main {
 
 .tags {
     font-size: 12px;
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+    font-family: NotoSansHans-Regular, AvenirNext-Regular, arial, Hiragino Sans GB, "Microsoft Yahei", "Hiragino Sans GB", "WenQuanYi Micro Hei", sans-serif;
     letter-spacing: 0;
     font-weight: 400;
     font-style: normal
@@ -10314,7 +10314,7 @@ body.is-diagnosticsVisible .site-main {
 }
 
 .tags--postTags .tag-button, .tags--postTags>.button, .tags--postTags>a {
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+    font-family: NotoSansHans-Regular, AvenirNext-Regular, arial, Hiragino Sans GB, "Microsoft Yahei", "Hiragino Sans GB", "WenQuanYi Micro Hei", sans-serif;
     font-weight: 400;
     font-style: normal;
     color: rgba(0, 0, 0, .44);
@@ -10455,7 +10455,7 @@ body.is-withMagicUnderlines .tags a.markup--anchor {
 }
 
 .tags-token>.tags-button {
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+    font-family: NotoSansHans-Regular, AvenirNext-Regular, arial, Hiragino Sans GB, "Microsoft Yahei", "Hiragino Sans GB", "WenQuanYi Micro Hei", sans-serif;
     font-weight: 700;
     font-style: normal;
     color: rgba(255, 255, 255, .97);
@@ -10670,7 +10670,7 @@ body.is-withMagicUnderlines .tags a.markup--anchor {
     line-height: 40px;
     border-radius: 999em;
     border: 1px solid rgba(0, 0, 0, .15);
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+    font-family: NotoSansHans-Regular, AvenirNext-Regular, arial, Hiragino Sans GB, "Microsoft Yahei", "Hiragino Sans GB", "WenQuanYi Micro Hei", sans-serif;
     letter-spacing: 0;
     font-weight: 700;
     font-style: normal
@@ -11817,7 +11817,7 @@ body.is-withMagicUnderlines .tags a.markup--anchor {
 }
 
 .letters-statsPercentage {
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+    font-family: NotoSansHans-Regular, AvenirNext-Regular, arial, Hiragino Sans GB, "Microsoft Yahei", "Hiragino Sans GB", "WenQuanYi Micro Hei", sans-serif;
     letter-spacing: 0;
     font-weight: 400;
     font-style: normal;
@@ -12529,7 +12529,7 @@ body.is-swBoot .svgIcon--logoNew path:nth-child(4) {
 .userAnnotation-text {
     display: table-cell;
     vertical-align: middle;
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+    font-family: NotoSansHans-Regular, AvenirNext-Regular, arial, Hiragino Sans GB, "Microsoft Yahei", "Hiragino Sans GB", "WenQuanYi Micro Hei", sans-serif;
     letter-spacing: 0;
     font-weight: 300;
     font-style: normal;
@@ -12558,7 +12558,7 @@ body.is-swBoot .svgIcon--logoNew path:nth-child(4) {
 .catalogPreview-name {
     font-size: 14px;
     line-height: 1.2;
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+    font-family: NotoSansHans-Regular, AvenirNext-Regular, arial, Hiragino Sans GB, "Microsoft Yahei", "Hiragino Sans GB", "WenQuanYi Micro Hei", sans-serif;
     letter-spacing: 0;
     font-weight: 500;
     font-style: normal
@@ -12569,7 +12569,7 @@ body.is-swBoot .svgIcon--logoNew path:nth-child(4) {
 }
 
 .catalogPreview-footer {
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+    font-family: NotoSansHans-Regular, AvenirNext-Regular, arial, Hiragino Sans GB, "Microsoft Yahei", "Hiragino Sans GB", "WenQuanYi Micro Hei", sans-serif;
     letter-spacing: 0;
     font-weight: 500;
     font-style: normal
@@ -12650,7 +12650,7 @@ body.is-swBoot .svgIcon--logoNew path:nth-child(4) {
     display: table-cell;
     padding: 13px 20px 15px 0;
     font-size: 16px;
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+    font-family: NotoSansHans-Regular, AvenirNext-Regular, arial, Hiragino Sans GB, "Microsoft Yahei", "Hiragino Sans GB", "WenQuanYi Micro Hei", sans-serif;
     letter-spacing: 0;
     font-weight: 400;
     font-style: normal;
@@ -12671,7 +12671,7 @@ body.is-swBoot .svgIcon--logoNew path:nth-child(4) {
 }
 
 .graf--mixtapeEmbed {
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+    font-family: NotoSansHans-Regular, AvenirNext-Regular, arial, Hiragino Sans GB, "Microsoft Yahei", "Hiragino Sans GB", "WenQuanYi Micro Hei", sans-serif;
     letter-spacing: 0;
     font-weight: 400;
     font-style: normal;
@@ -12704,7 +12704,7 @@ body.is-withMagicUnderlines .markup--anchor.markup--mixtapeEmbed-anchor {
 }
 
 .markup--mixtapeEmbed-strong {
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+    font-family: NotoSansHans-Regular, AvenirNext-Regular, arial, Hiragino Sans GB, "Microsoft Yahei", "Hiragino Sans GB", "WenQuanYi Micro Hei", sans-serif;
     letter-spacing: 0;
     font-weight: 400;
     font-style: normal;
@@ -12799,7 +12799,7 @@ body.is-withMagicUnderlines .markup--anchor.markup--mixtapeEmbed-anchor {
 }
 
 .creditCardForm {
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+    font-family: NotoSansHans-Regular, AvenirNext-Regular, arial, Hiragino Sans GB, "Microsoft Yahei", "Hiragino Sans GB", "WenQuanYi Micro Hei", sans-serif;
     letter-spacing: 0;
     font-weight: 300;
     font-style: normal;
@@ -12808,7 +12808,7 @@ body.is-withMagicUnderlines .markup--anchor.markup--mixtapeEmbed-anchor {
 }
 
 .creditCardForm-heading {
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+    font-family: NotoSansHans-Regular, AvenirNext-Regular, arial, Hiragino Sans GB, "Microsoft Yahei", "Hiragino Sans GB", "WenQuanYi Micro Hei", sans-serif;
     letter-spacing: 0;
     font-weight: 400;
     font-style: normal;
@@ -12825,7 +12825,7 @@ body.is-withMagicUnderlines .markup--anchor.markup--mixtapeEmbed-anchor {
 }
 
 .creditCardForm--error {
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+    font-family: NotoSansHans-Regular, AvenirNext-Regular, arial, Hiragino Sans GB, "Microsoft Yahei", "Hiragino Sans GB", "WenQuanYi Micro Hei", sans-serif;
     letter-spacing: 0;
     font-weight: 400;
     font-style: normal;
@@ -13090,7 +13090,7 @@ body.is-withMagicUnderlines .markup--anchor.markup--mixtapeEmbed-anchor {
     color: rgba(0, 0, 0, .44);
     font-size: 14px;
     min-height: 25px;
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+    font-family: NotoSansHans-Regular, AvenirNext-Regular, arial, Hiragino Sans GB, "Microsoft Yahei", "Hiragino Sans GB", "WenQuanYi Micro Hei", sans-serif;
     letter-spacing: 0;
     font-weight: 400;
     font-style: normal
@@ -13193,7 +13193,7 @@ body.is-withMagicUnderlines .markup--anchor.markup--mixtapeEmbed-anchor {
 }
 
 .onboardingTopBar-greeting {
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+    font-family: NotoSansHans-Regular, AvenirNext-Regular, arial, Hiragino Sans GB, "Microsoft Yahei", "Hiragino Sans GB", "WenQuanYi Micro Hei", sans-serif;
     letter-spacing: 0;
     font-weight: 400;
     font-style: normal;
@@ -13207,7 +13207,7 @@ body.is-withMagicUnderlines .markup--anchor.markup--mixtapeEmbed-anchor {
 }
 
 .onboardingTopBar-progress {
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+    font-family: NotoSansHans-Regular, AvenirNext-Regular, arial, Hiragino Sans GB, "Microsoft Yahei", "Hiragino Sans GB", "WenQuanYi Micro Hei", sans-serif;
     letter-spacing: 0;
     font-weight: 400;
     font-style: normal;
@@ -13257,7 +13257,7 @@ body.is-withMagicUnderlines .markup--anchor.markup--mixtapeEmbed-anchor {
 }
 
 .onboardingContent-subtitle {
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+    font-family: NotoSansHans-Regular, AvenirNext-Regular, arial, Hiragino Sans GB, "Microsoft Yahei", "Hiragino Sans GB", "WenQuanYi Micro Hei", sans-serif;
     letter-spacing: 0;
     font-weight: 300;
     font-style: normal;
@@ -13266,7 +13266,7 @@ body.is-withMagicUnderlines .markup--anchor.markup--mixtapeEmbed-anchor {
 }
 
 .onboardingContent-waiting {
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+    font-family: NotoSansHans-Regular, AvenirNext-Regular, arial, Hiragino Sans GB, "Microsoft Yahei", "Hiragino Sans GB", "WenQuanYi Micro Hei", sans-serif;
     letter-spacing: 0;
     font-weight: 300;
     font-style: normal;
@@ -13306,7 +13306,7 @@ body.is-withMagicUnderlines .markup--anchor.markup--mixtapeEmbed-anchor {
 
 .stats-titleHeading {
     color: rgba(0, 0, 0, .6);
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+    font-family: NotoSansHans-Regular, AvenirNext-Regular, arial, Hiragino Sans GB, "Microsoft Yahei", "Hiragino Sans GB", "WenQuanYi Micro Hei", sans-serif;
     letter-spacing: 0;
     font-weight: 400;
     font-style: normal
@@ -13339,7 +13339,7 @@ body.is-withMagicUnderlines .markup--anchor.markup--mixtapeEmbed-anchor {
 }
 
 .stats-totalNumber {
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+    font-family: NotoSansHans-Regular, AvenirNext-Regular, arial, Hiragino Sans GB, "Microsoft Yahei", "Hiragino Sans GB", "WenQuanYi Micro Hei", sans-serif;
     font-weight: 700;
     font-style: normal;
     font-size: 50px;
@@ -14136,7 +14136,7 @@ section.is-imageBackgrounded .imageCaption, section[data-background-color]:not([
 
 .graf--li.graf--containsTK:after, .graf.graf--containsTK:not(.graf--li):before {
     content: 'TK';
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+    font-family: NotoSansHans-Regular, AvenirNext-Regular, arial, Hiragino Sans GB, "Microsoft Yahei", "Hiragino Sans GB", "WenQuanYi Micro Hei", sans-serif;
     letter-spacing: 0;
     font-weight: 700;
     font-style: normal;
@@ -14289,7 +14289,7 @@ section.is-imageBackgrounded .imageCaption, section[data-background-color]:not([
 }
 
 .postResponse-title {
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+    font-family: NotoSansHans-Regular, AvenirNext-Regular, arial, Hiragino Sans GB, "Microsoft Yahei", "Hiragino Sans GB", "WenQuanYi Micro Hei", sans-serif;
     letter-spacing: 0;
     font-weight: 300;
     font-style: normal;
@@ -15874,7 +15874,7 @@ body.os-ios.is-withMagicUnderlines .markup--p-quote .markup--li-anchor, body.os-
 }
 
 .responsesDisabled-message {
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+    font-family: NotoSansHans-Regular, AvenirNext-Regular, arial, Hiragino Sans GB, "Microsoft Yahei", "Hiragino Sans GB", "WenQuanYi Micro Hei", sans-serif;
     letter-spacing: 0;
     font-weight: 400;
     font-style: normal;
@@ -15982,7 +15982,7 @@ body.os-ios.is-withMagicUnderlines .markup--p-quote .markup--li-anchor, body.os-
 }
 
 .quoteResponses .inlineEditor-header .avatar-text, .quoteResponses .inlineEditor-placeholder, .quoteResponses-newNote .avatar-text {
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+    font-family: NotoSansHans-Regular, AvenirNext-Regular, arial, Hiragino Sans GB, "Microsoft Yahei", "Hiragino Sans GB", "WenQuanYi Micro Hei", sans-serif;
     letter-spacing: 0;
     font-weight: 300;
     font-style: normal;
@@ -16046,7 +16046,7 @@ body.os-ios.is-withMagicUnderlines .markup--p-quote .markup--li-anchor, body.os-
 }
 
 .privateNotes {
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+    font-family: NotoSansHans-Regular, AvenirNext-Regular, arial, Hiragino Sans GB, "Microsoft Yahei", "Hiragino Sans GB", "WenQuanYi Micro Hei", sans-serif;
     letter-spacing: 0;
     font-weight: 400;
     font-style: normal
@@ -16135,7 +16135,7 @@ body.os-ios.is-withMagicUnderlines .markup--p-quote .markup--li-anchor, body.os-
 }
 
 .privateNotes-authorLockup {
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+    font-family: NotoSansHans-Regular, AvenirNext-Regular, arial, Hiragino Sans GB, "Microsoft Yahei", "Hiragino Sans GB", "WenQuanYi Micro Hei", sans-serif;
     letter-spacing: 0;
     font-weight: 400;
     font-style: normal;
@@ -16161,7 +16161,7 @@ body.os-ios.is-withMagicUnderlines .markup--p-quote .markup--li-anchor, body.os-
 }
 
 .quoteResponses-section--tips, .quoteResponses-section--tips:last-child {
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+    font-family: NotoSansHans-Regular, AvenirNext-Regular, arial, Hiragino Sans GB, "Microsoft Yahei", "Hiragino Sans GB", "WenQuanYi Micro Hei", sans-serif;
     letter-spacing: 0;
     font-weight: 300;
     font-style: normal;
@@ -16197,7 +16197,7 @@ body.os-ios.is-withMagicUnderlines .markup--p-quote .markup--li-anchor, body.os-
 
 .notesPositionContainer {
     position: relative;
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+    font-family: NotoSansHans-Regular, AvenirNext-Regular, arial, Hiragino Sans GB, "Microsoft Yahei", "Hiragino Sans GB", "WenQuanYi Micro Hei", sans-serif;
     letter-spacing: 0;
     font-weight: 400;
     font-style: normal
@@ -16300,7 +16300,7 @@ section.is-darkBackgrounded .markup--highlight {
 
 .quoteItem-attribution {
     color: rgba(0, 0, 0, .44);
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+    font-family: NotoSansHans-Regular, AvenirNext-Regular, arial, Hiragino Sans GB, "Microsoft Yahei", "Hiragino Sans GB", "WenQuanYi Micro Hei", sans-serif;
     letter-spacing: 0;
     font-weight: 400;
     font-style: normal;
@@ -16590,7 +16590,7 @@ section.is-darkBackgrounded .markup--highlight {
 
 .customTitleControl-field {
     font-size: 14px;
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+    font-family: NotoSansHans-Regular, AvenirNext-Regular, arial, Hiragino Sans GB, "Microsoft Yahei", "Hiragino Sans GB", "WenQuanYi Micro Hei", sans-serif;
     letter-spacing: 0;
     font-weight: 300;
     font-style: normal;
@@ -16613,7 +16613,7 @@ section.is-darkBackgrounded .markup--highlight {
 }
 
 .defaultValue--prompt {
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+    font-family: NotoSansHans-Regular, AvenirNext-Regular, arial, Hiragino Sans GB, "Microsoft Yahei", "Hiragino Sans GB", "WenQuanYi Micro Hei", sans-serif;
     letter-spacing: 0;
     font-weight: 400;
     font-style: normal;
@@ -16727,7 +16727,7 @@ section.is-mediaFocused>.section-background[data-is-featured] {
     bottom: 0;
     padding: 2px 5px;
     background: #f0f0f0;
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+    font-family: NotoSansHans-Regular, AvenirNext-Regular, arial, Hiragino Sans GB, "Microsoft Yahei", "Hiragino Sans GB", "WenQuanYi Micro Hei", sans-serif;
     letter-spacing: 0;
     font-weight: 400;
     font-style: normal;
@@ -16919,14 +16919,14 @@ section.is-mediaFocused>.section-background[data-is-featured] {
     letter-spacing: -.04em;
     padding: 10px 50px;
     width: 800px;
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+    font-family: NotoSansHans-Regular, AvenirNext-Regular, arial, Hiragino Sans GB, "Microsoft Yahei", "Hiragino Sans GB", "WenQuanYi Micro Hei", sans-serif;
     letter-spacing: 0;
     font-weight: 300;
     font-style: normal
 }
 
 .drawer-list {
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+    font-family: NotoSansHans-Regular, AvenirNext-Regular, arial, Hiragino Sans GB, "Microsoft Yahei", "Hiragino Sans GB", "WenQuanYi Micro Hei", sans-serif;
     letter-spacing: 0;
     font-weight: 400;
     font-style: normal;
@@ -17179,7 +17179,7 @@ section.is-mediaFocused>.section-background[data-is-featured] {
     -webkit-appearance: none;
     -moz-appearance: none;
     appearance: none;
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+    font-family: NotoSansHans-Regular, AvenirNext-Regular, arial, Hiragino Sans GB, "Microsoft Yahei", "Hiragino Sans GB", "WenQuanYi Micro Hei", sans-serif;
     letter-spacing: 0;
     font-weight: 400;
     font-style: normal;
@@ -17296,7 +17296,7 @@ section.is-mediaFocused>.section-background[data-is-featured] {
 }
 
 .hero--mobileApp .hero-description {
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+    font-family: NotoSansHans-Regular, AvenirNext-Regular, arial, Hiragino Sans GB, "Microsoft Yahei", "Hiragino Sans GB", "WenQuanYi Micro Hei", sans-serif;
     letter-spacing: 0;
     font-weight: 300;
     font-style: normal;
@@ -17456,14 +17456,14 @@ section.is-mediaFocused>.section-background[data-is-featured] {
 
 .promo-title {
     line-height: 1.2;
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+    font-family: NotoSansHans-Regular, AvenirNext-Regular, arial, Hiragino Sans GB, "Microsoft Yahei", "Hiragino Sans GB", "WenQuanYi Micro Hei", sans-serif;
     letter-spacing: 0;
     font-weight: 700;
     font-style: normal
 }
 
 .promo-subtitle, .promo-text {
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+    font-family: NotoSansHans-Regular, AvenirNext-Regular, arial, Hiragino Sans GB, "Microsoft Yahei", "Hiragino Sans GB", "WenQuanYi Micro Hei", sans-serif;
     letter-spacing: 0;
     font-weight: 300;
     font-style: normal
@@ -17477,7 +17477,7 @@ section.is-mediaFocused>.section-background[data-is-featured] {
 .promo--postHeader .promo-text {
     color: rgba(0, 0, 0, .9);
     font-size: 12px;
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+    font-family: NotoSansHans-Regular, AvenirNext-Regular, arial, Hiragino Sans GB, "Microsoft Yahei", "Hiragino Sans GB", "WenQuanYi Micro Hei", sans-serif;
     letter-spacing: 0;
     font-weight: 400;
     font-style: normal
@@ -17578,7 +17578,7 @@ section.is-mediaFocused>.section-background[data-is-featured] {
     padding: 0 50px;
     color: rgba(255, 255, 255, .65);
     font-size: 18px;
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+    font-family: NotoSansHans-Regular, AvenirNext-Regular, arial, Hiragino Sans GB, "Microsoft Yahei", "Hiragino Sans GB", "WenQuanYi Micro Hei", sans-serif;
     letter-spacing: 0;
     font-weight: 300;
     font-style: normal
@@ -17630,7 +17630,7 @@ section.is-mediaFocused>.section-background[data-is-featured] {
 
 .promo--stream .promo-title {
     font-size: 32px;
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+    font-family: NotoSansHans-Regular, AvenirNext-Regular, arial, Hiragino Sans GB, "Microsoft Yahei", "Hiragino Sans GB", "WenQuanYi Micro Hei", sans-serif;
     letter-spacing: 0;
     font-weight: 300;
     font-style: normal
@@ -17714,7 +17714,7 @@ section.is-mediaFocused>.section-background[data-is-featured] {
 }
 
 .diagnostics {
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+    font-family: NotoSansHans-Regular, AvenirNext-Regular, arial, Hiragino Sans GB, "Microsoft Yahei", "Hiragino Sans GB", "WenQuanYi Micro Hei", sans-serif;
     letter-spacing: 0;
     font-weight: 400;
     font-style: normal;
@@ -17777,7 +17777,7 @@ body.is-diagnosticsVisible .diagnostics {
 }
 
 .variants {
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+    font-family: NotoSansHans-Regular, AvenirNext-Regular, arial, Hiragino Sans GB, "Microsoft Yahei", "Hiragino Sans GB", "WenQuanYi Micro Hei", sans-serif;
     letter-spacing: 0;
     font-weight: 400;
     font-style: normal
