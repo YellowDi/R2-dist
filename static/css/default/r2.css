@@ -7877,6 +7877,15 @@ section.is-darkBackgrounded {
     top: 0
 }
 
+@media screen and (max-width: 767px) {
+    .metabar {
+        position: relative;
+    }
+    .metabar--spacer {
+        display: none;
+    }
+}
+
 .metabar-inner {
     position: relative
 }
@@ -9478,7 +9487,6 @@ body.is-diagnosticsVisible .site-main {
         background-size: 45px
     }
 }
-
 
 .siteNav-logo .svgIcon--logo, .siteNav-logo .svgIcon--logoWordmark {
     fill: rgba(0, 0, 0, .8)
