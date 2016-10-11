@@ -1,35 +1,26 @@
-<a class="aw-back-top hidden-xs" href="javascript:;" onclick="$.scrollTo(1, 600, {queue:true});"><i class="icon icon-up"></i></a>
+	<a class="aw-back-top hidden-xs" href="javascript:;" onclick="$.scrollTo(1, 600, {queue:true});"><i class="icon icon-up"></i></a>
 
-<?php echo get_setting('statistic_code'); ?>
+	<?php echo get_setting('statistic_code'); ?>
 
-<!-- DO NOT REMOVE -->
-<div id="aw-ajax-box" class="aw-ajax-box"></div>
+	<!-- DO NOT REMOVE -->
+	<div id="aw-ajax-box" class="aw-ajax-box"></div>
 
-<div style="display:none;" id="__crond">
-	<script type="text/javascript">
-		$(document).ready(function () {
-			$('#__crond').html(unescape('%3Cimg%20src%3D%22' + G_BASE_URL + '/crond/run/<?php echo TIMESTAMP; ?>%22%20width%3D%221%22%20height%3D%221%22%20/%3E'));
-			$(window).on('scroll', function () {
-			        var t = $(window).scrollTop();
-			        if (t > 10) {
-			            $(".metabar").addClass("metabar--affixed");
-			        } else {
-			            $(".metabar").removeClass("metabar--affixed");
-			        }
-			    });
-		});
-	</script>
-</div>
+	<div style="display:none;" id="__crond">
+		<script type="text/javascript">
+			$(document).ready(function () {
+				$('#__crond').html(unescape('%3Cimg%20src%3D%22' + G_BASE_URL + '/crond/run/<?php echo TIMESTAMP; ?>%22%20width%3D%221%22%20height%3D%221%22%20/%3E'));
+			});
+		</script>
+	</div>
 
-<?php TPL::output('global/debuger.tpl.htm'); ?>
-<!-- / DO NOT REMOVE -->
+	<?php TPL::output('global/debuger.tpl.htm'); ?>
+	<!-- / DO NOT REMOVE -->
 
-<!-- site-main surface-container satert -->
-		</div>
+	<!-- site-main surface-container satert -->
+			</div>
 		</div>
 	</div>
-</div>
-<!-- site-main surface-container end -->
+	<!-- site-main surface-container end -->
 
-</body>
+	</body>
 </html>
