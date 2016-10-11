@@ -215,12 +215,6 @@ td, th {
     vertical-align: subscript
 }
 
-@font-face {
-    font-family: Cambria;
-    src: local('Arial'), local('Helvetica');
-    unicode-range: U+2500-259F
-}
-
 @-ms-viewport {
     width: device-width
 }
@@ -2479,7 +2473,7 @@ main {
 }
 
 .u-contentSlabItalic {
-    font-family: medium-content-slab-serif-font, Georgia, Cambria, "Times New Roman", Times, serif!important;
+    font-family: NotoSansHans-Regular, AvenirNext-Regular, arial, Hiragino Sans GB, "Microsoft Yahei", "Hiragino Sans GB", "WenQuanYi Micro Hei", sans-serif!important;
     font-weight: 400!important;
     font-style: italic!important
 }
@@ -13045,7 +13039,7 @@ body.is-withMagicUnderlines .markup--anchor.markup--mixtapeEmbed-anchor {
 }
 
 .membershipPrompt-solicitation--withMessage .membershipPrompt-solicitationMessage, .membershipPrompt-thanksMessage {
-    font-family: medium-content-slab-serif-font, Georgia, Cambria, "Times New Roman", Times, serif;
+    font-family: NotoSansHans-Regular, AvenirNext-Regular, arial, Hiragino Sans GB, "Microsoft Yahei", "Hiragino Sans GB", "WenQuanYi Micro Hei", sans-serif;
     font-weight: 400;
     font-style: italic;
     font-size: 20px;
@@ -14641,7 +14635,7 @@ section.is-imageBackgrounded .imageCaption, section[data-background-color]:not([
 }
 
 .graf--pullquote {
-    font-family: medium-content-slab-serif-font, Georgia, Cambria, "Times New Roman", Times, serif;
+    font-family: NotoSansHans-Regular, AvenirNext-Regular, arial, Hiragino Sans GB, "Microsoft Yahei", "Hiragino Sans GB", "WenQuanYi Micro Hei", sans-serif;
     font-weight: 400;
     font-style: italic;
     font-size: 28px;
@@ -14651,7 +14645,7 @@ section.is-imageBackgrounded .imageCaption, section[data-background-color]:not([
 }
 
 .markup--pullquote-em, .markup--pullquote-strong {
-    font-family: medium-content-slab-serif-font, Georgia, Cambria, "Times New Roman", Times, serif;
+    font-family: NotoSansHans-Regular, AvenirNext-Regular, arial, Hiragino Sans GB, "Microsoft Yahei", "Hiragino Sans GB", "WenQuanYi Micro Hei", sans-serif;
     font-weight: 400;
     font-style: italic
 }
@@ -14684,7 +14678,7 @@ ul.postList>li:before {
 }
 
 hr.section-divider:before {
-    font-family: medium-content-slab-serif-font, Georgia, Cambria, "Times New Roman", Times, serif;
+    font-family: NotoSansHans-Regular, AvenirNext-Regular, arial, Hiragino Sans GB, "Microsoft Yahei", "Hiragino Sans GB", "WenQuanYi Micro Hei", sans-serif;
     font-weight: 400;
     font-style: italic;
     font-size: 28px;
