@@ -9478,12 +9478,12 @@ body.is-diagnosticsVisible .site-main {
     border: none;
     width: 45px;
     height: 45px;
-    background-image: url('https://ooo.0o0.ooo/2016/10/02/57f08e0b64c0f.png')
+    background-image: url('https://r2vg.com/static/images/logo.png')
 }
 
 @media all and (-webkit-min-device-pixel-ratio:1.5) {
     .siteNav-logo {
-        background-image: url('https://ooo.0o0.ooo/2016/10/02/57f08e4c93800.png');
+        background-image: url('https://r2vg.com/static/images/logo@2x.png');
         background-size: 45px
     }
 }
@@ -17449,7 +17449,7 @@ section.is-mediaFocused>.section-background[data-is-featured] {
     background-repeat: no-repeat;
     display: block;
     overflow: hidden;
-    background-image: url('https://ooo.0o0.ooo/2016/10/02/57f08e7f8703a.png');
+    background-image: url('https://r2vg.com/static/images/promo.png');
 }
 
 .promo.is-dismissed {
@@ -17578,7 +17578,7 @@ section.is-mediaFocused>.section-background[data-is-featured] {
 
 .promo--hero .promo-text {
     padding: 0 50px;
-    color: rgba(255, 255, 255, .65);
+    color: rgba(4, 0, 0, 0.65);
     font-size: 18px;
     font-family: NotoSansHans-Regular, AvenirNext-Regular, arial, Hiragino Sans GB, "Microsoft Yahei", "Hiragino Sans GB", "WenQuanYi Micro Hei", sans-serif;
     letter-spacing: 0;
