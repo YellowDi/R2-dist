@@ -128,7 +128,7 @@ $(document).ready(function ()
         }
         else if (data_type == 'favorite')
         {
-            $.post(data_url, 
+            $.post(data_url,
             {
                 'item_type': data_type,
                 'topic_id': topic_id,
@@ -140,7 +140,7 @@ $(document).ready(function ()
         }
         else
         {
-            $.post(data_url, 
+            $.post(data_url,
             {
                 'type': data_type,
                 'topic_id': topic_id,
