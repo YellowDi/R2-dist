@@ -17,7 +17,7 @@
 		</div>
 	<?php } ?>
 
-	<div class="u-foreground homeContainer-content u-maxWidth1000 u-marginAuto u-clearfix u-sizeViewHeightMin100">
+	<div class="homeContainer-content u-maxWidth1000 u-marginAuto u-clearfix u-sizeViewHeightMin100">
 		<div class="u-clearfix u-relative">
 
 			<div class="homeContainer-stream">
@@ -41,18 +41,5 @@
 	</div>
 
 </div>
-<script type="text/javascript">
-$(document).ready(function() {
-	$(window).on('scroll', function() {
-		var t = $(window).scrollTop();
-		if (t > 10) {
-			$(".metabar").addClass("metabar--affixed");
-		} else {
-			$(".metabar").removeClass("metabar--affixed");
-		}
-	})
-});
-</script>
-
 
 <?php TPL::output('global/footer.tpl.htm'); ?>

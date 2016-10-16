@@ -1,5 +1,18 @@
 	<a class="aw-back-top hidden-xs" href="javascript:;" onclick="$.scrollTo(1, 600, {queue:true});"><i class="icon icon-up"></i></a>
 
+	<script type="text/javascript">
+		$('.metabar').stickUp({
+			scrollHide: !0,
+			zIndex: 100
+		});
+		$(".sidebar-contentWrapper").stickUp({
+			keepInWrapper: !0,
+			topMargin: 20,
+			lazyHeight: $(".metabar").outerHeight(),
+			wrapperSelector: ".sidebar"
+		});
+	</script>
+
 	<?php echo get_setting('statistic_code'); ?>
 
 	<!-- DO NOT REMOVE -->

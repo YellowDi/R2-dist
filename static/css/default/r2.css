@@ -254,10 +254,6 @@ html {
     -webkit-overflow-scrolling: touch
 }
 
-body, html {
-    overflow-x: hidden
-}
-
 blockquote, dd, dl, figure, form, h1, h2, h3, h4, h5, h6, menu, ol, p, pre, ul {
     margin: 0
 }
@@ -7862,7 +7858,7 @@ section.is-darkBackgrounded {
 }
 
 .metabar {
-    position: absolute;
+    position: relative;
     display: block;
     z-index: 500;
     width: 100%;
