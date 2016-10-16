@@ -14,6 +14,15 @@
 									<div class="streamItem-cardInner streamItem-cardInner--postPreview">
 										<article class="postArticle js-postArticle js-trackedPost postArticle--short">
 
+											<div class="u-marginBottom10">
+												<div class="postMetaInline">
+													<span class="svgIcon svgIcon--tagFilled svgIcon--21px"><svg class="svgIcon-use" width="21" height="21" viewBox="0 0 21 21"><path d="M4.662 8.72l-1.23 1.23a1.753 1.753 0 0 0 .004 2.477l5.135 5.135c.7.693 1.8.688 2.48.005l1.23-1.23 5.35-5.346c.31-.31.54-.92.51-1.36l-.32-4.29c-.09-1.09-1.05-2.06-2.15-2.14l-4.3-.33c-.43-.03-1.05.2-1.36.51l-.79.8-2.27 2.28-2.28 2.27zm9.826-.98a1.25 1.25 0 1 0 0-2.5 1.25 1.25 0 0 0 0 2.5z" fill-rule="evenodd"></path></svg></span>
+													<?php foreach($this->article_topics[$val['id']] as $topic_key => $topic_val) { ?>
+														<a class="link u-baseColor--link" href="topic/<?php echo $topic_val['url_token']; ?>" data-id="<?php echo $topic_val['topic_id']; ?>"><?php echo $topic_val['topic_title']; ?></a>
+													<?php } ?>
+												</div>
+											</div>
+
 											<div class="u-clearfix">
 												<div class="postMetaInline u-floatLeft">
 													<div class="postMetaInline-avatar">
