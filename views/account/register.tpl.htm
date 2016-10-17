@@ -1,7 +1,5 @@
 <?php TPL::output('global/header_meta.tpl.htm'); ?>
 
-<div class="overlay--jump overlay--promo"></div>
-
 <div class="container--jump">
   <div class="form-register">
     <div class="form-register-heading"></div>
@@ -46,6 +44,65 @@
       </div>
     </form>
   </div>
+</div>
+
+<div class="page-view">
+    <div class="game-slider" style="touch-action: pan-y; user-select: none; -webkit-user-drag: none; -webkit-tap-highlight-color: rgba(0, 0, 0, 0);">
+        <div class="relative">
+            <div class="project"></div>
+            <div class="project"></div>
+            <div class="project"></div>
+            <div class="project"></div>
+            <div class="project"></div>
+            <div class="project"></div>
+        </div>
+        <div class="bullets">
+            <div class="arrow previous">
+                <svg version="1.1" id="Calque_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="208.3 352 4.2 6.4" style="enable-background:new 208.3 352 4.2 6.4;" xml:space="preserve"><polygon class="st0" points="212.1,357.3 211.5,358 208.7,355.1 211.5,352.3 212.1,353 209.9,355.1"></polygon></svg>
+            </div>
+            <div class="bullet" data-text="战地1">
+                <span class="relative">
+				          <span class="knob"></span>
+                </span>
+            </div>
+            <div class="bullet" data-text="古墓丽影：崛起">
+                <span class="relative">
+					        <span class="knob"></span>
+                </span>
+            </div>
+            <div class="bullet" data-text="最后生还者">
+                <span class="relative">
+					        <span class="knob"></span>
+                </span>
+            </div>
+            <div class="bullet" data-text="地平线：黎明时分">
+                <span class="relative">
+					        <span class="knob"></span>
+                </span>
+            </div>
+            <div class="bullet" data-text="侠盗猎车手V">
+                <span class="relative">
+					        <span class="knob"></span>
+                </span>
+            </div>
+            <div class="bullet" data-text="生化奇兵：无限">
+                <span class="relative">
+					        <span class="knob"></span>
+                </span>
+            </div>
+            <div class="arrow next">
+                <svg version="1.1" id="Calque_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="-355.4 434.9 3.5 5.8" style="enable-background:new -355.4 434.9 3.5 5.8;" xml:space="preserve"><polygon points="-355.3,435.7 -354.7,435 -351.9,437.9 -354.7,440.7 -355.3,440 -353.1,437.9 "></polygon></svg>
+            </div>
+        </div>
+        <div class="infos">
+            <ul id="infosKey">
+                <li>《战地1》</li>
+                <li>PS4|Xbox|PC</li>
+                <li>第一人称射击</li>
+            </ul>
+            <a id="link" href="https://r2vg.com" target="_blank">查看更多内容</a>
+        </div>
+    </div>
 </div>
 
 <script type="text/javascript">
@@ -180,5 +237,7 @@ $(document).ready(function ()
     });
 });
 </script>
+<script src="<?php echo G_STATIC_URL; ?>/js/lib-portfolio.desktop.js"></script>
+<script src="<?php echo G_STATIC_URL; ?>/js/app-portfolio.desktop.js"></script>
 
 <?php TPL::output('global/footer.tpl.htm'); ?>
