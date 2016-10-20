@@ -21,6 +21,24 @@
 		<div class="u-clearfix u-relative">
 
 			<div class="homeContainer-stream">
+				<div class="homeContainer-header">
+					<div class="homeContainer-headerDescription">
+						发现
+						<span class="homeContainer-topStoriesNav">
+							<a class="button button--chromeless u-baseColor--buttonNormal <?php if ((!$_GET['sort_type'] OR $_GET['sort_type'] == 'new') AND !$_GET['is_recommend']) { ?>link--darker<?php } ?>" href="https://r2vg.com/">
+								<span class="button-label">最新</span>
+							</a>
+							<span class="middotDivider"></span>
+							<a class="button button--chromeless u-baseColor--buttonNormal <?php if ($_GET['sort_type'] == 'hot') { ?>link--darker<?php } ?>" href="https://r2vg.com/sort_type-hot____day-30">
+								<span class="button-label">热门</span>
+							</a>
+							<span class="middotDivider"></span>
+							<a class="button button--chromeless u-baseColor--buttonNormal <?php if ($_GET['sort_type'] == 'unresponsive') { ?>link--darker<?php } ?>" href="https://r2vg.com/sort_type-unresponsive">
+								<span class="button-label">等待回复</span>
+							</a>
+						</span>
+					</div>
+				</div>
 				<div class="js-homeStream">
 					<?php echo $this->posts_list_bit; ?>
 				</div>

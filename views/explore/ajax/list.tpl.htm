@@ -1,11 +1,11 @@
 <?php if ($this->posts_list) { ?>
 	<?php foreach($this->posts_list as $key => $val) { ?>
-		<div class="streamItem streamItem--postPreview js-streamItem <?php if ($val['question_id']) { ?><?php if ($val['answer_count'] == 0) { ?>active<?php } ?><?php } else {?>article<?php } ?>" data-topic-id="<?php foreach ($val['topics'] AS $k => $v) { ?><?php echo $v['topic_id']; ?>,<?php } ?>">
-			<div class="streamItem-card streamItem-card--postPreview streamItem-card--hPadding20 streamItem-card--borderRadius3 cardChromeless">
+		<div class="streamItem streamItem--postPreview <?php if ($val['question_id']) { ?><?php if ($val['answer_count'] == 0) { ?>active<?php } ?><?php } else {?>article<?php } ?>" data-topic-id="<?php foreach ($val['topics'] AS $k => $v) { ?><?php echo $v['topic_id']; ?>,<?php } ?>">
+			<div class="streamItem-card streamItem-card--bmPostPreview streamItem-card--hPadding20 cardChromeless">
 				<div class="streamItem-cardInner streamItem-cardInner--postPreview">
-					<article class="postArticle js-postArticle js-trackedPost postArticle--short">
+					<article class="postArticle postArticle--short">
 
-						<div class="u-marginBottom10">
+						<div class="u-clearfix u-marginBottom10">
 							<div class="postMetaInline">
 								<span class="svgIcon svgIcon--tagFilled svgIcon--21px"><svg class="svgIcon-use" width="21" height="21" viewBox="0 0 21 21"><path d="M4.662 8.72l-1.23 1.23a1.753 1.753 0 0 0 .004 2.477l5.135 5.135c.7.693 1.8.688 2.48.005l1.23-1.23 5.35-5.346c.31-.31.54-.92.51-1.36l-.32-4.29c-.09-1.09-1.05-2.06-2.15-2.14l-4.3-.33c-.43-.03-1.05.2-1.36.51l-.79.8-2.27 2.28-2.28 2.27zm9.826-.98a1.25 1.25 0 1 0 0-2.5 1.25 1.25 0 0 0 0 2.5z" fill-rule="evenodd"></path></svg></span>
 								<?php if ($val['topics']) { ?>
@@ -16,7 +16,7 @@
 							</div>
 						</div>
 
-						<div class="u-clearfix">
+						<div class="u-clearfix u-marginBottom10">
 							<div class="postMetaInline u-floatLeft">
 								<div class="postMetaInline-avatar">
 									<?php if ($val['anonymous'] == 0) { ?>
@@ -69,36 +69,16 @@
 							</div>
 						</div>
 
-						<div class="layoutSingleColumn">
+						<div class="postArticle-content">
 							<?php if ($val['question_id']) { ?>
 								<a href="question/<?php echo $val['question_id']; ?>">
-									<div class="postArticle-content js-postField">
-										<section class="section--body section--first section--last">
-											<div class="section-divider layoutSingleColumn"><hr class="section-divider"></div>
-											<div class="section-content">
-												<div class="section-inner layoutSingleColumn">
-													<h3 class="graf--h3 graf-after--figure graf--last graf--title"><?php echo $val['question_content']; ?></h3>
-													<p class="graf--p graf-after--h3 graf--last"><?php echo nl2br(trim(strip_tags(FORMAT::parse_attachs(FORMAT::parse_bbcode($val['message']))))); ?></p>
-												</div>
-											</div>
-										</section>
-									</div>
+									<h3 class="graf graf--h3 graf-after--figure graf--leading graf--title"><?php echo $val['question_content']; ?></h3>
+									<p class="graf--p graf-after--h3 graf--last"><?php echo nl2br(trim(strip_tags(FORMAT::parse_attachs(FORMAT::parse_bbcode($val['message']))))); ?></p>
 								</a>
 							<?php } else { ?>
 								<a href="article/<?php echo $val['id']; ?>">
-									<div class="postArticle-content js-postField">
-										<section class="section--body section--first section--last">
-											<div class="section-divider layoutSingleColumn"><hr class="section-divider"></div>
-											<div class="section-content">
-												<div class="section-inner layoutSingleColumn">
-													<h3 class="graf--h3 graf-after--figure graf--last graf--title"><?php echo $val['title']; ?></h3>
-													<p class="graf--p graf-after--h3 graf--last">
-														<?php echo FORMAT::parse_attachs(nl2br(FORMAT::parse_markdown(cjk_substr($val['message'], 0, 130, 'UTF-8', '...')))); ?>
-													</p>
-												</div>
-											</div>
-										</section>
-									</div>
+									<h3 class="graf graf--h3 graf-after--figure graf--leading graf--title"><?php echo $val['title']; ?></h3>
+									<p class="graf--p graf-after--h3 graf--last"><?php echo FORMAT::parse_attachs(nl2br(FORMAT::parse_markdown(cjk_substr($val['message'], 0, 130, 'UTF-8', '...')))); ?></p>
 								</a>
 							<?php } ?>
 						</div>

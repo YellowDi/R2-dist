@@ -1,58 +1,36 @@
 <?php TPL::output('global/header.tpl.htm'); ?>
-<div class="u-backgroundGrayLightest" style="height: 100vh;">
-
-	<div class="container u-maxWidth1000">
-		<div class="row">
-			<div class="col u-size8of12 u-sm-size12of12">
-
-				<div class="blockGroup blockGroup--posts js-blockGroupPosts blockGroup--inset blockGroup--list">
-					<div class="blockGroup-list layoutSingleColumn">
-						<a name="c_contents"></a>
-						<div class="aw-mod clearfix">
-
-							<div class="hero hero--standalone hero--alignLeft u-paddingTop40 u-paddingBottom20">
-								<h1 class="hero-title" id="main_title"><?php _e('最新动态'); ?></h1>
-							</div>
-							<!-- 动态页导航 -->
-							<div class="heading u-clearfix u-marginBottom25">
-								<div class="u-clearfix">
-									<div class="aw-mod heading-content u-floatLeft side-nav">
-										<ul class="heading-tabs">
-											<li class="heading-tabsItem u-inlineBlock">
-												<span class="heading-title u-inlineBlock"><a class="button button--unstyled" href="home/#all" rel="all">最新动态</a></span>
-											</li>
-											<li class="heading-tabsItem u-inlineBlock">
-												<span class="heading-title u-inlineBlock"><a class="button button--unstyled" href="home/#draft_list__draft" rel="draft_list__draft">草稿</a></span>
-											</li>
-											<li class="heading-tabsItem u-inlineBlock">
-												<span class="heading-title u-inlineBlock"><a class="button button--unstyled" href="home/#all__focus" rel="all__focus">我关注的问题</a></span>
-											</li>
-											<li class="heading-tabsItem u-inlineBlock">
-												<span class="heading-title u-inlineBlock"><a class="button button--unstyled" href="home/#focus_topic__focus" rel="all__focus">我关注的问题</a></span>
-											</li>
-											<li class="heading-tabsItem u-inlineBlock">
-												<span class="heading-title u-inlineBlock"><a class="button button--unstyled" href="home/#focus_topic__focus" rel="focus_topic__focus">我关注的话题</a></span>
-											</li>
-										</ul>
-									</div>
-								</div>
-							</div>
-							<!-- end 动态页标题 -->
-							<div class="mod-body aw-feed-list clearfix" id="main_contents"></div>
-
-							<div class="mod-footer">
-								<!-- 加载更多内容 -->
-								<a id="bp_more" class="aw-load-more-content" data-page="0">
-									<span><?php _e('更多'); ?></span>
-								</a>
-								<!-- end 加载更多内容 -->
-							</div>
-						</div>
+<div class="homeContainer js-homepage u-backgroundGrayLightest u-clearfix">
+	<div class="u-foreground homeContainer-content u-maxWidth1000 u-marginAuto u-clearfix u-sizeViewHeightMin100">
+		<div class="u-clearfix u-relative">
+			<div class="homeContainer-stream">
+				<div class="homeContainer-header">
+					<div class="homeContainer-headerDescription">
+						动态
+						<span class="homeContainer-topStoriesNav">
+							<a class="button button--chromeless u-baseColor--buttonNormal button--withIcon button--withSvgIcon button--withIconAndLabel button--withSvgIcon homeContainer-topStoriesPreviousDay" href="home/#all" rel="all">
+								<span class="button-label">最新</span>
+							</a>
+							<span class="middotDivider"></span>
+							<a class="button button--chromeless u-baseColor--buttonNormal button--withIcon button--withSvgIcon button--withIconAndLabel button--withSvgIcon homeContainer-topStoriesPreviousDay" href="home/#draft_list__draft" rel="draft_list__draft">
+								<span class="button-label">草稿</span>
+							</a>
+							<span class="middotDivider"></span>
+							<a class="button button--chromeless u-baseColor--buttonNormal button--withIcon button--withSvgIcon button--withIconAndLabel button--withSvgIcon homeContainer-topStoriesPreviousDay" href="home/#all__focus" rel="all__focus">
+								<span class="button-label">我关注的问题</span>
+							</a>
+							<span class="middotDivider"></span>
+							<a class="button button--chromeless u-baseColor--buttonNormal button--withIcon button--withSvgIcon button--withIconAndLabel button--withSvgIcon homeContainer-topStoriesPreviousDay" href="home/#focus_topic__focus" rel="focus_topic__focus">
+								<span class="button-label">我关注的标签</span>
+							</a>
+						</span>
 					</div>
 				</div>
+				<div class="js-homeStream">
+					<div class="mod-body aw-feed-list clearfix" id="main_contents"></div>
+				</div>
 			</div>
-			<div class="col u-size4of12 u-sm-hide aw-side-bar">
-				<div class="u-marginTop40">
+			<div class="sidebar">
+				<div class="sidebar-contentWrapper">
 					<?php TPL::output('block/sidebar_recommend_users_topics.tpl.htm'); ?>
 				</div>
 			</div>
