@@ -1,5 +1,6 @@
 <?php TPL::output('global/header_publish.tpl.htm'); ?>
-
+<link href="//cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+<main class="u-block u-marginTop65">
 <article class="u-sizeViewHeightMin100 postArticle postArticle--full">
 
 	<form action="publish/ajax/<?php if ($this->question_info['question_id']) { ?>modify<?php } else { ?>publish<?php } ?>_question/" method="post" id="question_form" onsubmit="return false;" class="layoutSingleColumn">
@@ -123,6 +124,7 @@
 	</form>
 
 </article>
+</main>
 </div>
 <script type="text/javascript">
 	var ATTACH_ACCESS_KEY = '<?php echo $this->attach_access_key; ?>';

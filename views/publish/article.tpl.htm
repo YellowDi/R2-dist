@@ -1,6 +1,7 @@
 <?php TPL::output('global/header_publish.tpl.htm'); ?>
-
-<article class="u-sizeViewHeightMin100 postArticle postArticle--full">
+<link href="//cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+<main class="u-block u-marginTop65">
+<article class=" u-sizeViewHeightMin100 postArticle postArticle--full">
 
 	<form action="publish/ajax/<?php if ($this->article_info['id']) { ?>modify<?php } else { ?>publish<?php } ?>_article/" method="post" id="question_form" onsubmit="return false;" class="layoutSingleColumn">
 		<input type="hidden" name="post_hash" value="<?php echo new_post_hash(); ?>" />
@@ -17,7 +18,7 @@
 				<h3><?php _e('文章标题'); ?>:</h3>
 				<!-- 文章标题 -->
 				<div class="aw-publish-title<?php if (!$this->article_category_list) { ?> active<?php } ?>">
-					<input type="text" name="title" value="<?php echo $this->article_info['title']; ?>" class="form-control" />
+					<input type="text" name="title" value="<?php echo $this->article_info['title']; ?>" placeholder="请输入标题" class="form-control" />
 					<?php if ($this->article_category_list) { ?>
 					<div class="aw-dropdown aw-question-dropdown">
 						<i class="aw-icon i-dropdown-triangle active"></i>
@@ -121,6 +122,7 @@
 		</div>
 	</form>
 </article>
+</main>
 
 <script type="text/javascript">
 	var ATTACH_ACCESS_KEY = '<?php echo $this->attach_access_key; ?>';
