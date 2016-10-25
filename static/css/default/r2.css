@@ -12,7 +12,7 @@ blockquote {
   line-height: 1.58;
   letter-spacing: -.003em;
 }
-.layoutSingleColumn a {
+.postArticle-content a {
   text-decoration: none;
   background-image: linear-gradient(to bottom,rgba(0,0,0,.6) 50%,rgba(0,0,0,0) 50%);
   background-repeat: repeat-x;

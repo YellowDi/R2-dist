@@ -3,7 +3,7 @@
 <main class="u-block u-marginTop65">
 <article class=" u-sizeViewHeightMin100 postArticle postArticle--full">
 
-	<form action="publish/ajax/<?php if ($this->article_info['id']) { ?>modify<?php } else { ?>publish<?php } ?>_article/" method="post" id="question_form" onsubmit="return false;" class="layoutSingleColumn">
+	<form action="publish/ajax/<?php if ($this->article_info['id']) { ?>modify<?php } else { ?>publish<?php } ?>_article/" method="post" id="question_form" onsubmit="return false;">
 		<input type="hidden" name="post_hash" value="<?php echo new_post_hash(); ?>" />
 		<input type="hidden" name="attach_access_key" value="<?php echo $this->attach_access_key; ?>" />
 		<input type="hidden" name="article_id" id="article_id" value="<?php echo $this->article_info['id']; ?>" />
